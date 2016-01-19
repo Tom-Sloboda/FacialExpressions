@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1EF8BCF4-C7BF-4AEC-BDAC-6E930A67D57C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>test2</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>FacialExpressions</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="dlib.props" />
+    <Import Project="opencv.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="opencv.props" />
+    <Import Project="dlib.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dirent.h" />
+    <ClInclude Include="dlib\external\libjpeg\jchuff.h" />
+    <ClInclude Include="dlib\external\libjpeg\jconfig.h" />
+    <ClInclude Include="dlib\external\libjpeg\jdct.h" />
+    <ClInclude Include="dlib\external\libjpeg\jdhuff.h" />
+    <ClInclude Include="dlib\external\libjpeg\jerror.h" />
+    <ClInclude Include="dlib\external\libjpeg\jinclude.h" />
+    <ClInclude Include="dlib\external\libjpeg\jmemsys.h" />
+    <ClInclude Include="dlib\external\libjpeg\jmorecfg.h" />
+    <ClInclude Include="dlib\external\libjpeg\jpegint.h" />
+    <ClInclude Include="dlib\external\libjpeg\jpeglib.h" />
+    <ClInclude Include="dlib\external\libjpeg\jversion.h" />
+    <ClInclude Include="dlib\external\libpng\png.h" />
+    <ClInclude Include="dlib\external\libpng\pngconf.h" />
+    <ClInclude Include="dlib\external\libpng\pngdebug.h" />
+    <ClInclude Include="dlib\external\libpng\pnginfo.h" />
+    <ClInclude Include="dlib\external\libpng\pnglibconf.h" />
+    <ClInclude Include="dlib\external\libpng\pngpriv.h" />
+    <ClInclude Include="dlib\external\libpng\pngstruct.h" />
+    <ClInclude Include="dlib\external\zlib\crc32.h" />
+    <ClInclude Include="dlib\external\zlib\deflate.h" />
+    <ClInclude Include="dlib\external\zlib\gzguts.h" />
+    <ClInclude Include="dlib\external\zlib\inffast.h" />
+    <ClInclude Include="dlib\external\zlib\inffixed.h" />
+    <ClInclude Include="dlib\external\zlib\inflate.h" />
+    <ClInclude Include="dlib\external\zlib\inftrees.h" />
+    <ClInclude Include="dlib\external\zlib\trees.h" />
+    <ClInclude Include="dlib\external\zlib\zconf.h" />
+    <ClInclude Include="dlib\external\zlib\zlib.h" />
+    <ClInclude Include="dlib\external\zlib\zutil.h" />
+    <ClInclude Include="FeatureExtractor.h" />
+    <ClInclude Include="Loader.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SVM.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dlib\all\source.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcapimin.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcapistd.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jccoefct.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jccolor.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcdctmgr.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jchuff.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcinit.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcmainct.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcmarker.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcmaster.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcomapi.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcparam.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcphuff.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcprepct.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jcsample.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdapimin.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdapistd.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdatadst.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdatasrc.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdcoefct.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdcolor.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jddctmgr.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdhuff.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdinput.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdmainct.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdmarker.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdmaster.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdmerge.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdphuff.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdpostct.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jdsample.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jerror.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jfdctflt.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jfdctfst.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jfdctint.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jidctflt.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jidctfst.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jidctint.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jidctred.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jmemmgr.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jmemnobs.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jquant1.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jquant2.cpp" />
+    <ClCompile Include="dlib\external\libjpeg\jutils.cpp" />
+    <ClCompile Include="dlib\external\libpng\png.c" />
+    <ClCompile Include="dlib\external\libpng\pngerror.c" />
+    <ClCompile Include="dlib\external\libpng\pngget.c" />
+    <ClCompile Include="dlib\external\libpng\pngmem.c" />
+    <ClCompile Include="dlib\external\libpng\pngpread.c" />
+    <ClCompile Include="dlib\external\libpng\pngread.c" />
+    <ClCompile Include="dlib\external\libpng\pngrio.c" />
+    <ClCompile Include="dlib\external\libpng\pngrtran.c" />
+    <ClCompile Include="dlib\external\libpng\pngrutil.c" />
+    <ClCompile Include="dlib\external\libpng\pngset.c" />
+    <ClCompile Include="dlib\external\libpng\pngtrans.c" />
+    <ClCompile Include="dlib\external\libpng\pngwio.c" />
+    <ClCompile Include="dlib\external\libpng\pngwrite.c" />
+    <ClCompile Include="dlib\external\libpng\pngwtran.c" />
+    <ClCompile Include="dlib\external\libpng\pngwutil.c" />
+    <ClCompile Include="dlib\external\zlib\adler32.c" />
+    <ClCompile Include="dlib\external\zlib\compress.c" />
+    <ClCompile Include="dlib\external\zlib\crc32.c" />
+    <ClCompile Include="dlib\external\zlib\deflate.c" />
+    <ClCompile Include="dlib\external\zlib\gzclose.c" />
+    <ClCompile Include="dlib\external\zlib\gzlib.c" />
+    <ClCompile Include="dlib\external\zlib\gzread.c" />
+    <ClCompile Include="dlib\external\zlib\gzwrite.c" />
+    <ClCompile Include="dlib\external\zlib\infback.c" />
+    <ClCompile Include="dlib\external\zlib\inffast.c" />
+    <ClCompile Include="dlib\external\zlib\inflate.c" />
+    <ClCompile Include="dlib\external\zlib\inftrees.c" />
+    <ClCompile Include="dlib\external\zlib\trees.c" />
+    <ClCompile Include="dlib\external\zlib\uncompr.c" />
+    <ClCompile Include="dlib\external\zlib\zutil.c" />
+    <ClCompile Include="FeatureExtractor.cpp" />
+    <ClCompile Include="Loader.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="FacialExpressions.cpp" />
+    <ClCompile Include="SVM.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
