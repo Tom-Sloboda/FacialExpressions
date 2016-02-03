@@ -16,10 +16,19 @@ Loader::Loader()
 		array2d<rgb_pixel> cimg;
 		for (int i = 0; i < img_list.size(); i++)
 		{
-			//cout << "!IMG - " << img_list.at(i) << "\n";
-			load_png(cimg, img_list.at(i));
+			//cout << "!IMG - " << img_list[i] << "\n";
+			std::vector<float> img1, img2;
+			load_png(cimg, img_list[i]);
+			img1 = FE.getFlattened(FE.detectFeatures(&cimg, FE.detectFaces(&cimg)));
 
-			data.push_back(FE.getFlattened(FE.detectFeatures(&cimg, FE.detectFaces(&cimg))));
+			string neutral_img_name = img_list[i];
+			//cout << "!IMG1 - " << neutral_img_name << "\n";
+			neutral_img_name[neutral_img_name.size() - 5] = '1';
+			neutral_img_name[neutral_img_name.size() - 6] = '0';
+			//cout << "!IMG2 - " << neutral_img_name << "\n";
+			load_png(cimg, neutral_img_name);
+			img2 = FE.getFlattened(FE.detectFeatures(&cimg, FE.detectFaces(&cimg)));
+			data.push_back(FE.getDifference(img2, img1));
 			//FE.showFlattned(data[i]);
 			//cout << "\n!!!! - " << FeatureExtractor::getFlattenedStr(data[i]) << "\n";
 

@@ -70,6 +70,17 @@ std::vector<float> FeatureExtractor::getFlattened(std::vector<dlib::full_object_
 	return flattened;
 }
 
+std::vector<float> FeatureExtractor::getDifference(std::vector<float> shapes1, std::vector<float> shapes2)
+{
+	std::vector<float> difference;
+	for (int i = 0; i < shapes1.size(); i++)
+	{
+		difference.push_back(shapes1[i]-shapes2[2]);
+	}
+	return difference;
+}
+
+
 string FeatureExtractor::getFlattenedStr(std::vector<float> flattened)
 {
 	//string out = "";

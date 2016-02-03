@@ -21,6 +21,7 @@ public:
 	std::vector<dlib::rectangle> detectFaces(dlib::array2d<dlib::rgb_pixel> *cimg);
 
 	std::vector<float> getFlattened(std::vector<dlib::full_object_detection> shapes);
+	std::vector<float> getDifference(std::vector<float> shapes1, std::vector<float> shapes2);
 	static std::string getFlattenedStr(std::vector<float> flattned);
 	void showFlattned(std::vector<float> flattened);
 
