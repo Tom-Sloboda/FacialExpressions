@@ -269,3 +269,68 @@ float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float>
 
 	return precision;
 }
+
+float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, std::vector<std::vector<float>> testData, std::vector<float> testLabels, float C, float gamma)
+{
+	int successfullyPredicted = 0;
+
+	cv::Mat trainingDataMat(trainingData.size(), trainingData[0].size(), CV_32FC1);
+	cv::Mat trainingLabelsMat((trainingLabels.size()), 1, CV_32FC1, trainingLabels.data());
+
+	for (int i = 0; i < trainingData.size(); i++)
+	{
+		for (int j = 0; j < trainingData[0].size(); j++)
+		{
+			trainingDataMat.at<float>(i, j) = trainingData.data()[i][j];
+		}
+	}
+	CvSVM svm;
+	CvSVMParams params;
+	params.kernel_type = CvSVM::RBF;
+	params.svm_type = CvSVM::C_SVC;
+	params.gamma = 0.000001;
+	params.C = 5000;
+	params.term_crit = cvTermCriteria(CV_TERMCRIT_ITER, 100, 0.1);
+	svm.train(trainingDataMat, trainingLabelsMat, cv::Mat(), cv::Mat(), params);
+	for (int i = 0; i < testLabels.size(); i++)
+	{
+		cv::Mat testDataMat(1, testData[i].size(), CV_32FC1, testData[i].data());
+		float predictedLabel = svm.predict(testDataMat);
+		std::cout << "Predicted: " << predictedLabel << "\n";
+		std::cout << "Actual: " << testLabels[i] << "\n";
+
+		if (floor(predictedLabel) == floor(testLabels[i]))
+		{
+			successfullyPredicted += 1;
+			std::cout << "\nSuccess\n\n";
+		}
+
+	}
+
+	float precision = ((float)successfullyPredicted / (testLabels.size()));
+
+	return precision;
+}
+
+float mySVM::go_auto(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, std::vector<std::vector<float>> testData, std::vector<float> testLabels, float start_C = 1e-7, float end_C = 1e7, float start_gamma = 1e-7, float end_gamma = 1e7)
+{
+	float best_C = start_C;
+	float best_gamma = start_gamma;
+	float best_precision = 0;
+
+	for (float C = start_C; C > end_C; C += (end_C - start_C) / 100)
+	{
+		for (float gamma = start_gamma; gamma > end_gamma; C += (end_gamma - start_gamma) / 100)
+		{
+			float precision = go(trainingData, trainingLabels, testData, testLabels, C, gamma);
+			if (precision > best_precision)
+			{
+				best_C = C;
+				best_gamma = C;
+				best_precision = precision;
+			}
+		}
+	}
+	cout << "Precision: " << best_precision << " C: " << best_C << " gamma: " << best_gamma << endl;
+	return best_precision;
+}
