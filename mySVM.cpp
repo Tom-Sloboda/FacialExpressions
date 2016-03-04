@@ -3,6 +3,15 @@
 
 mySVM::mySVM()
 {
+
+}
+
+mySVM::~mySVM()
+{
+}
+
+void mySVM::multiclassExample()
+{
 	// Data for visual representation
 	const int WIDTH = 512, HEIGHT = 512, NTRAINING_SAMPLES = 100;
 	float FRAC_LINEAR_SEP = 0.9f;
@@ -14,7 +23,7 @@ mySVM::mySVM()
 
 	RNG rng(100); // Random value generation class
 
-				  // Set up the linearly separable part of the training data
+	// Set up the linearly separable part of the training data
 	int nLinearSamples = (int)(FRAC_LINEAR_SEP * NTRAINING_SAMPLES);
 
 	// Generate random points for the class 1
@@ -110,6 +119,153 @@ mySVM::mySVM()
 	waitKey(0);
 }
 
-mySVM::~mySVM()
+void mySVM::simpleExample()
 {
+		// Data for visual representation
+		int width = 512, height = 512;
+		Mat image = Mat::zeros(height, width, CV_8UC3);
+
+		// Set up training data
+		float labels[4] = { 1.0, -1.0, -1.0, -1.0 };
+		Mat labelsMat(4, 1, CV_32FC1, labels);
+
+		float trainingData[4][2] = { { 501, 10 },{ 255, 10 },{ 501, 255 },{ 10, 501 } };
+		Mat trainingDataMat(4, 2, CV_32FC1, trainingData);
+
+		// Set up SVM's parameters
+		CvSVMParams params;
+		params.svm_type = CvSVM::C_SVC;
+		params.kernel_type = CvSVM::LINEAR;
+		params.term_crit = cvTermCriteria(CV_TERMCRIT_ITER, 100, 1e-6);
+
+		// Train the SVM
+		CvSVM SVM;
+		SVM.train(trainingDataMat, labelsMat, Mat(), Mat(), params);
+
+		Vec3b green(0, 255, 0), blue(255, 0, 0);
+		// Show the decision regions given by the SVM
+		for (int i = 0; i < image.rows; ++i)
+			for (int j = 0; j < image.cols; ++j)
+			{
+				Mat sampleMat = (Mat_<float>(1, 2) << j, i);
+				float response = SVM.predict(sampleMat);
+
+				if (response == 1)
+					image.at<Vec3b>(i, j) = green;
+				else if (response == -1)
+					image.at<Vec3b>(i, j) = blue;
+			}
+
+		// Show the training data
+		int thickness = -1;
+		int lineType = 8;
+		circle(image, Point(501, 10), 5, Scalar(0, 0, 0), thickness, lineType);
+		circle(image, Point(255, 10), 5, Scalar(255, 255, 255), thickness, lineType);
+		circle(image, Point(501, 255), 5, Scalar(255, 255, 255), thickness, lineType);
+		circle(image, Point(10, 501), 5, Scalar(255, 255, 255), thickness, lineType);
+
+		// Show support vectors
+		thickness = 2;
+		lineType = 8;
+		int c = SVM.get_support_vector_count();
+
+		for (int i = 0; i < c; ++i)
+		{
+			const float* v = SVM.get_support_vector(i);
+			circle(image, Point((int)v[0], (int)v[1]), 6, Scalar(128, 128, 128), thickness, lineType);
+		}
+
+		//imwrite("result.png", image);        // save the image
+
+		imshow("SVM Simple Example", image); // show it to the user
+		waitKey(0);
+}
+
+
+float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, std::vector<std::vector<float>> testData, std::vector<float> testLabels)
+{
+	int successfullyPredicted = 0;
+
+	cv::Mat trainingDataMat(trainingData.size(), trainingData[0].size(), CV_32FC1);
+	cv::Mat trainingLabelsMat((trainingLabels.size()), 1, CV_32FC1, trainingLabels.data());
+	
+	//cout << "\n Training Data\n";
+	//cout << trainingData[0].size() << " " << trainingData.size() << endl;
+	for (int i = 0; i < trainingData.size(); i++)
+	{
+		//cout << "\n#" << i << "\n";
+		for (int j = 0; j < trainingData[0].size(); j++)
+		{
+			trainingDataMat.at<float>(i, j) = trainingData.data()[i][j];
+			//cout << trainingData.data()[i][j] << " ";
+		}
+		//cout << endl;
+	}
+	//cin.get();
+	/*
+	cout << "\n Training Mat\n";
+	cout << trainingDataMat.size().width << " " << trainingDataMat.size().height << endl;
+	for (int i = 0; i < trainingDataMat.size().height; i++)
+	{
+		cout << "\n#" << i << "\n";
+		for (int j = 0; j < trainingDataMat.size().width; j++)
+			cout << trainingDataMat.at<float>(i, j) << " ";
+		cout << endl;
+	}
+	//cin.get();
+	*/
+	CvSVM svm;
+	std::cout << "Start training\n";
+	//svm.load("SVM.xml");
+	//if (svm.get_support_vector_count() == 0) {
+		CvSVMParams params;
+		params.kernel_type = CvSVM::RBF;
+		params.svm_type = CvSVM::C_SVC;
+		params.gamma = 0.000001 ;
+		params.C = 5000;
+		//params.nu = 0.1;
+		//params.p = 1.1;
+		params.term_crit = cvTermCriteria(CV_TERMCRIT_ITER, 100, 0.1);
+
+		svm.train(trainingDataMat, trainingLabelsMat, cv::Mat(), cv::Mat(), params);
+		
+		//svm.train_auto(trainingDataMat, trainingLabelsMat, cv::Mat(), cv::Mat(), params);
+		//params = svm.get_params();
+		svm.save("SVM.xml");
+	//}
+	for (int i = 0; i < testLabels.size(); i++)
+	{
+		cv::Mat testDataMat(1, testData[i].size(), CV_32FC1, testData[i].data());
+		/*
+		cout << "\n Test Mat\n";
+		cout << testDataMat.size().width << " " << testDataMat.size().height << endl;
+		for (int i = 0; i < testDataMat.size().height; i++)
+		{
+			cout << "\n#" << i << "\n";
+			for (int j = 0; j < testDataMat.size().width; j++)
+				cout << testDataMat.at<float>(i, j) << " ";
+			cout << endl;
+		}
+		//cin.get();
+		*/
+		float predictedLabel = svm.predict(testDataMat);
+		std::cout << "Predicted: " << predictedLabel << "\n";
+		std::cout << "Actual: " << testLabels[i] << "\n";
+		
+		if (floor(predictedLabel) == floor(testLabels[i]))
+		{
+			successfullyPredicted += 1;
+			std::cout << "\nSuccess\n\n";
+		}
+
+	}
+
+	//std::cout << "successfullyPredicted: " << successfullyPredicted << "\n";
+	//std::cout << "testLabels.size(): " << testLabels.size() << "\n";
+	//std::cout << "precision: " << ((float)successfullyPredicted / (float)(testLabels.size())) << "\n";
+
+	float precision = ((float)successfullyPredicted / (testLabels.size()));
+	//std::cout << fixed << setprecision(2) << "precision: " << ((float)successfullyPredicted / (testLabels.size())) << "\n";
+
+	return precision;
 }

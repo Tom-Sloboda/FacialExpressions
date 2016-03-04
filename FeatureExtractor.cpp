@@ -75,7 +75,7 @@ std::vector<float> FeatureExtractor::getDifference(std::vector<float> shapes1, s
 	std::vector<float> difference;
 	for (int i = 0; i < shapes1.size(); i++)
 	{
-		difference.push_back(shapes1[i]-shapes2[2]);
+		difference.push_back(shapes1[i]-shapes2[i]);
 	}
 	return difference;
 }

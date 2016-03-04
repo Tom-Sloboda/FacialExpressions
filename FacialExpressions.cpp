@@ -81,6 +81,28 @@ int main()
 		Loader LDR;
 		mySVM SVM;
 
+		std::vector<std::vector<float>> trainingData;
+		std::vector<float> trainingLabels;
+		//std::cout << "1";
+		int INDEX = 220;
+		for (int i = 0; i < LDR.labels.size()- INDEX; i++)
+		{
+			trainingData.push_back(LDR.data[i]);
+			trainingLabels.push_back(LDR.labels[i]);
+		}
+		
+		std::vector<std::vector<float>> testData;
+		std::vector<float> testLabels;
+		//std::cout << "2";
+		for (int i = LDR.labels.size() - INDEX; i < LDR.labels.size(); i++)
+		{
+			testData.push_back(LDR.data[i]);
+			testLabels.push_back(LDR.labels[i]);
+		}
+
+		float precision = SVM.go(trainingData, trainingLabels, testData, testLabels);
+		//cout << "Success rate: " << SVM.go(trainingData, trainingLabels, testData, testLabels) << "\n";
+		cout << "Success rate: " << setprecision(2) << precision << "\n";
 
 	}
 	catch (exception& e)

@@ -7,29 +7,34 @@ Loader::Loader()
 	loadProgress();
 	std::vector<std::string> file_list;
 	FindFilesRecursively(label_dir.c_str(), _T("*.txt"), &file_list);
+	//std::cout << "Done loading";
 	if (file_list.size() != label_list.size())
 	{
+		image_window  win;
 		label_list = file_list;
 		for each (string path in label_list) img_list.push_back(getImgPath(path));
 
 		FeatureExtractor FE;
-		array2d<rgb_pixel> cimg;
+		array2d<rgb_pixel> cimg1, cimg2, combined;
 		for (int i = 0; i < img_list.size(); i++)
 		{
 			//cout << "!IMG - " << img_list[i] << "\n";
 			std::vector<float> img1, img2;
-			load_png(cimg, img_list[i]);
-			img1 = FE.getFlattened(FE.detectFeatures(&cimg, FE.detectFaces(&cimg)));
+			load_png(cimg1, img_list[i]);
+			std::vector<dlib::full_object_detection> shape1 = FE.detectFeatures(&cimg1, FE.detectFaces(&cimg1));
+			img1 = FE.getFlattened(shape1);
 
 			string neutral_img_name = img_list[i];
 			//cout << "!IMG1 - " << neutral_img_name << "\n";
 			neutral_img_name[neutral_img_name.size() - 5] = '1';
 			neutral_img_name[neutral_img_name.size() - 6] = '0';
 			//cout << "!IMG2 - " << neutral_img_name << "\n";
-			load_png(cimg, neutral_img_name);
-			img2 = FE.getFlattened(FE.detectFeatures(&cimg, FE.detectFaces(&cimg)));
+			load_png(cimg2, neutral_img_name);
+			std::vector<dlib::full_object_detection> shape2 = FE.detectFeatures(&cimg2, FE.detectFaces(&cimg2));
+			img2 = FE.getFlattened(shape2);
 			data.push_back(FE.getDifference(img2, img1));
 			//FE.showFlattned(data[i]);
+			//cout << "SIZE - " << data[i].size() << "\n";
 			//cout << "\n!!!! - " << FeatureExtractor::getFlattenedStr(data[i]) << "\n";
 
 			/*
@@ -42,6 +47,16 @@ Loader::Loader()
 			labels.push_back(readLabel(label_list.at(i)));
 			//cout << labels.at(i) << "\n";
 			cout << i << "/" << img_list.size() <<"\n";
+
+			//shape1.insert(shape1.end(), shape2.begin(), shape2.end());
+			//cv::addWeighted(cimg1, 0.5, cimg2, 0.5, 0.0, combined);
+			win.clear_overlay();
+			win.set_image(cimg2);
+			win.add_overlay(render_face_detections(shape1));
+			win.add_overlay(render_face_detections(shape2));
+			
+			//cin.get();
+
 		}
 		cout << labels.size() << "\n";
 		cout << data.size() << "\n";
