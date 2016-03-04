@@ -221,8 +221,8 @@ float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float>
 		CvSVMParams params;
 		params.kernel_type = CvSVM::RBF;
 		params.svm_type = CvSVM::C_SVC;
-		params.gamma = 0.000001 ;
-		params.C = 5000;
+		params.gamma = 1.13906e-05; // 0.000001;
+		params.C = 24.879; //5000;
 		//params.nu = 0.1;
 		//params.p = 1.1;
 		params.term_crit = cvTermCriteria(CV_TERMCRIT_ITER, 100, 0.1);
@@ -288,21 +288,21 @@ float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float>
 	CvSVMParams params;
 	params.kernel_type = CvSVM::RBF;
 	params.svm_type = CvSVM::C_SVC;
-	params.gamma = 0.000001;
-	params.C = 5000;
+	params.gamma = gamma;
+	params.C = C;
 	params.term_crit = cvTermCriteria(CV_TERMCRIT_ITER, 100, 0.1);
 	svm.train(trainingDataMat, trainingLabelsMat, cv::Mat(), cv::Mat(), params);
 	for (int i = 0; i < testLabels.size(); i++)
 	{
 		cv::Mat testDataMat(1, testData[i].size(), CV_32FC1, testData[i].data());
 		float predictedLabel = svm.predict(testDataMat);
-		std::cout << "Predicted: " << predictedLabel << "\n";
-		std::cout << "Actual: " << testLabels[i] << "\n";
+		//std::cout << "Predicted: " << predictedLabel << "\n";
+		//std::cout << "Actual: " << testLabels[i] << "\n";
 
 		if (floor(predictedLabel) == floor(testLabels[i]))
 		{
 			successfullyPredicted += 1;
-			std::cout << "\nSuccess\n\n";
+			//std::cout << "\nSuccess\n\n";
 		}
 
 	}
@@ -312,25 +312,30 @@ float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float>
 	return precision;
 }
 
-float mySVM::go_auto(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, std::vector<std::vector<float>> testData, std::vector<float> testLabels, float start_C = 1e-7, float end_C = 1e7, float start_gamma = 1e-7, float end_gamma = 1e7)
+float mySVM::go_auto(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, std::vector<std::vector<float>> testData, std::vector<float> testLabels, float start_C, float end_C, float start_gamma, float end_gamma)
 {
 	float best_C = start_C;
 	float best_gamma = start_gamma;
 	float best_precision = 0;
 
-	for (float C = start_C; C > end_C; C += (end_C - start_C) / 100)
+	float inc_C = (end_C - start_C) / 100;
+	float inc_gamma = (end_gamma - start_gamma) / 100;
+	cout << "inc_C: " << inc_C << " inc_gamma: " << inc_gamma << endl;
+	cin.get();
+	for (float C = start_C; C < end_C; C *= 1.5)
 	{
-		for (float gamma = start_gamma; gamma > end_gamma; C += (end_gamma - start_gamma) / 100)
+		for (float gamma = start_gamma; gamma < end_gamma; gamma *= 1.5)
 		{
 			float precision = go(trainingData, trainingLabels, testData, testLabels, C, gamma);
+			cout << "Precision: " << precision << " C: " << C << " gamma: " << gamma << endl;
 			if (precision > best_precision)
 			{
 				best_C = C;
-				best_gamma = C;
+				best_gamma = gamma;
 				best_precision = precision;
 			}
 		}
 	}
-	cout << "Precision: " << best_precision << " C: " << best_C << " gamma: " << best_gamma << endl;
+	cout << "++Precision: " << best_precision << " C: " << best_C << " gamma: " << best_gamma << endl;
 	return best_precision;
 }
