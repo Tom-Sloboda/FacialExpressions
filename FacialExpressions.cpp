@@ -32,6 +32,7 @@ instructions.  Note that AVX is the fastest but requires a CPU from at least
 #include "mySVM.h"
 
 #include <opencv2/highgui/highgui.hpp>
+#include <opencv2/core/core.hpp>
 
 using namespace dlib;
 using namespace std;
@@ -77,14 +78,14 @@ int main()
 
 
 		*/
-		
+		//*
 		Loader LDR;
 		mySVM SVM;
 
 		std::vector<std::vector<float>> trainingData;
 		std::vector<float> trainingLabels;
 		//std::cout << "1";
-		int INDEX = 220;
+		int INDEX = 100;
 		for (int i = 0; i < LDR.labels.size()- INDEX; i++)
 		{
 			trainingData.push_back(LDR.data[i]);
@@ -100,11 +101,29 @@ int main()
 			testLabels.push_back(LDR.labels[i]);
 		}
 
-		float precision = SVM.go(trainingData, trainingLabels, testData, testLabels);
-		//float precision = SVM.go_auto(trainingData, trainingLabels, testData, testLabels);
-		//cout << "Success rate: " << SVM.go(trainingData, trainingLabels, testData, testLabels) << "\n";
+		float precision = SVM.go_auto(trainingData, trainingLabels, testData, testLabels);
 		cout << "Success rate: " << setprecision(2) << precision << "\n";
+		//*/
+		
+		/*
+		Mat image;
+		image = imread("img.png", CV_LOAD_IMAGE_COLOR);   // Read the file
 
+		if (!image.data)                              // Check for invalid input
+		{
+			cout << "Could not open or find the image" << std::endl;
+			return -1;
+		}
+
+		namedWindow("Display window", WINDOW_AUTOSIZE);// Create a window for display.
+                 // Show our image inside it.
+		imshow("Display window", image);
+		putText(image, "Differencing the two images.", cvPoint(30, 30),
+			FONT_HERSHEY_COMPLEX_SMALL, 0.8, cvScalar(200, 200, 250), 1, CV_AA);
+
+		waitKey(0);                                          // Wait for a keystroke in the window
+		return 0;
+		*/
 	}
 	catch (exception& e)
 	{

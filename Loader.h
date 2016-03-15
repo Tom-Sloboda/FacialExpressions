@@ -1,6 +1,8 @@
 #pragma once
 #pragma comment(lib, "shlwapi.lib")
 #include "FeatureExtractor.h"
+#include "ImgPreprocessor.h"
+#include "Face.h"
 
 #include <dlib/image_io.h>
 #include <fstream>
@@ -31,7 +33,11 @@ public:
 	std::vector<std::vector<float>> data;
 	std::vector<float> labels;
 	std::vector<std::string> img_list, label_list;
-	string img_dir = "C:\\Users\\dell490\\Downloads\\CK_dataset\\CK+\\extended-cohn-kanade-images\\cohn-kanade-images";
-	string label_dir = "C:\\Users\\dell490\\Downloads\\CK_dataset\\CK+\\Emotion_labels\\Emotion";
+	//string img_dir = "C:\\Users\\dell490\\Downloads\\CK_dataset\\CK+\\extended-cohn-kanade-images\\cohn-kanade-images";
+	string img_dir = "C:/Users/dell490/Downloads/CK_dataset/CK+/extended-cohn-kanade-images/cohn-kanade-images";
+	//string label_dir = "C:\\Users\\dell490\\Downloads\\CK_dataset\\CK+\\Emotion_labels\\Emotion";
+	string label_dir = "C:/Users//dell490/Downloads/CK_dataset/CK+/Emotion_labels/Emotion";
+
+	std::vector<Face> faces;
 };
 
