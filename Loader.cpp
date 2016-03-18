@@ -8,15 +8,18 @@ Loader::Loader()
 	std::vector<std::string> file_list;
 	FindFilesRecursively(label_dir.c_str(), _T("*.txt"), &file_list);
 	//std::cout << "Done loading";
-	if (file_list.size() != label_list.size())
+	if (true) //(file_list.size() != label_list.size())
 	{
 		//image_window  win;
 		Mat f1, f2, combined;
-		namedWindow( "Processing", WINDOW_AUTOSIZE);
+		namedWindow("Processing", WINDOW_AUTOSIZE);
+		namedWindow("Face1", WINDOW_AUTOSIZE);
+		namedWindow("Face2", WINDOW_AUTOSIZE);
 		label_list = file_list;
 		for each (string path in label_list) img_list.push_back(getImgPath(path));
 
 		FeatureExtractor FE;
+		ImgPreprocessor IP(&FE);
 		for (int i = 0; i < img_list.size(); i++)
 		{
 			//Get face with full expression
@@ -29,25 +32,23 @@ Loader::Loader()
 			neutral_img_name[neutral_img_name.size() - 6] = '0';
 			Face face2(&FE, neutral_img_name, 0);
 
-			data.push_back(FE.getDifference(face2.landmarks, face1.landmarks));
-			labels.push_back(readLabel(label_list.at(i)));
-			cout << i << "/" << img_list.size() <<"\n";
-
-
 			//win.clear_overlay();
 			//win.set_image(face1.img);
 			//win.add_overlay(render_face_detections(face1.shape));
 			//win.add_overlay(render_face_detections(face2.shape));
 
-			ImgPreprocessor IP;
-			IP.align(&face1, &face2);
-			face1.calcLandmarks(&FE);
-			face2.calcLandmarks(&FE);
+			IP.align(face1, face2);
+
 			f1 = face1.getLandmarkOverlay();
 			f2 = face2.getLandmarkOverlay();
 			cv::addWeighted(f1, 0.5, f2, 0.5, 0.0, combined);
 			imshow("Processing", combined);
+			imshow("Face1", face1.mat);
+			imshow("Face2", f2);
 			waitKey(0);
+			data.push_back(FE.getDifference(face2.landmarks, face1.landmarks));
+			labels.push_back(readLabel(label_list.at(i)));
+			cout << i << "/" << img_list.size() << "\n";
 
 		}
 		cout << labels.size() << "\n";

@@ -1,5 +1,6 @@
 #pragma once
 #include "Face.h"
+#include "FeatureExtractor.h"
 #include "opencv2/imgproc/imgproc.hpp"
 
 
@@ -7,9 +8,19 @@
 class ImgPreprocessor
 {
 public:
-	ImgPreprocessor();
+	ImgPreprocessor(FeatureExtractor *FE);
 	~ImgPreprocessor();
 
-	void align(Face *face1, Face *face2);
+	Face *faceTemplate;
+	FeatureExtractor *FE;
+
+	void align(Face &face);
+	void align(Face &face1, Face &face2);
+	//void rotate(cv::Mat &src, cv::Point2f center_of_rotation, float angle, float scale = 1.0);
+	void rotate(Face &face, cv::Point2f center_of_rotation, float angle, float scale = 1.0);
+	void transform(Face &face);
+	void transform(Face &face1, Face &face2);
+	void transformLandmarks(Face &face, Mat warp_mat);
+	void scale(Face &face);
 };
 

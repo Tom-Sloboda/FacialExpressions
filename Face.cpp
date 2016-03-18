@@ -2,7 +2,7 @@
 
 
 
-//Face::Face(){}
+Face::Face(){}
 
 Face::Face(FeatureExtractor *FE, Mat img, float label )
 {
@@ -15,7 +15,7 @@ Face::Face(FeatureExtractor *FE, Mat img, float label )
 
 Face::Face(FeatureExtractor *FE, std::string img, float label)
 {
-	cout << img << endl;
+	//cout << img << endl;
 	load_png(Face::img, img);
 	Face::mat = imread(img, CV_LOAD_IMAGE_COLOR);
 	/*
@@ -31,13 +31,16 @@ Face::Face(FeatureExtractor *FE, std::string img, float label)
 	waitKey(0);                                          // Wait for a keystroke in the window
 	*/
 	Face::shape = FE->detectFeatures(&(Face::img), FE->detectFaces(&(Face::img)));
-	Face::calcLandmarks(FE);
+	Face::landmarks = FE->getFlattened(shape);
 	Face::label = label;
 }
 
 void Face::calcLandmarks(FeatureExtractor *FE)
 {
-	Face::landmarks = FE->getFlattened(Face::shape);
+	assign_image(Face::img, cv_image<bgr_pixel>(Face::mat));
+	Face::shape = FE->detectFeatures(dlib::cv_image<bgr_pixel>(Face::mat), FE->detectFaces(dlib::cv_image<bgr_pixel>(Face::mat)));
+	Face::landmarks = FE->getFlattened(shape);
+	Face::label = label;
 }
 
 void Face::showLandmarks()
@@ -55,7 +58,8 @@ void Face::showLandmarks()
 
 Mat Face::getLandmarkOverlay()
 {
-	Mat landmark_overlay = Face::mat;
+	Mat landmark_overlay; 
+	Face::mat.copyTo(landmark_overlay);
 	//namedWindow(to_string(Face::label), WINDOW_AUTOSIZE);// Create a window for display.
 	for (int i = 0; i < Face::landmarks.size(); i += 2)
 	{

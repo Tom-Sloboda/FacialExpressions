@@ -101,7 +101,7 @@ int main()
 			testLabels.push_back(LDR.labels[i]);
 		}
 
-		float precision = SVM.go_auto(trainingData, trainingLabels, testData, testLabels);
+		float precision = SVM.go(trainingData, trainingLabels, testData, testLabels);
 		cout << "Success rate: " << setprecision(2) << precision << "\n";
 		//*/
 		

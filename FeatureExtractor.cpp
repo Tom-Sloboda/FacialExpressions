@@ -1,8 +1,5 @@
 #include "FeatureExtractor.h"
 
-using namespace dlib;
-using namespace std;
-
 FeatureExtractor::FeatureExtractor()
 {
 	try 
@@ -29,32 +26,51 @@ FeatureExtractor::~FeatureExtractor()
 {
 }
 
-std::vector<full_object_detection> FeatureExtractor::detectFeatures(cv_image<bgr_pixel> cimg, std::vector<rectangle> faces)
+
+
+std::vector<dlib::rectangle> FeatureExtractor::detectFaces(cv_image<bgr_pixel> cimg)
+{
+	//pyramid_up(cimg);
+	//image_window win;
+	//win.set_image(cimg);
+	//waitKey(0);
+	return detector(cimg);
+}
+
+std::vector<dlib::rectangle> FeatureExtractor::detectFaces(array2d<rgb_pixel> *cimg)
+{
+	//pyramid_up(*cimg);
+	//image_window win;
+	//win.set_image(*cimg);
+	//waitKey(0);
+	return detector(*cimg);
+}
+
+std::vector<full_object_detection> FeatureExtractor::detectFeatures(cv_image<bgr_pixel> cimg, std::vector<dlib::rectangle> faces)
 {
 	std::vector<full_object_detection> shapes;
+	if (faces.size() < 1)
+	{
+		cout << endl << "No face detected in detectFeatures()" << endl;
+		faces.push_back(dlib::rectangle(cimg.nc(), cimg.nr()));
+	}
 	for (unsigned long i = 0; i < faces.size(); ++i)
 		shapes.push_back(pose_model(cimg, faces[i]));
 	return shapes;
 }
 
-std::vector<rectangle> FeatureExtractor::detectFaces(cv_image<bgr_pixel> cimg)
-{
-	return detector(cimg);
-}
-
-std::vector<full_object_detection> FeatureExtractor::detectFeatures(array2d<rgb_pixel> *cimg, std::vector<rectangle> faces)
+std::vector<full_object_detection> FeatureExtractor::detectFeatures(array2d<rgb_pixel> *cimg, std::vector<dlib::rectangle> faces)
 {
 	std::vector<full_object_detection> shapes;
+	if (faces.size() < 1)
+	{
+		cout << endl << "faces.size() < 1 in detectFeatures()" << endl;
+		faces.push_back(dlib::rectangle(cimg->nc(), cimg->nr()));
+	}
 	for (unsigned long i = 0; i < faces.size(); ++i)
 		shapes.push_back(pose_model(*cimg, faces[i]));
 	return shapes;
 }
-
-std::vector<rectangle> FeatureExtractor::detectFaces(array2d<rgb_pixel> *cimg)
-{
-	return detector(*cimg);
-}
-
 
 std::vector<float> FeatureExtractor::getFlattened(std::vector<dlib::full_object_detection> shapes)
 {
@@ -79,7 +95,6 @@ std::vector<float> FeatureExtractor::getDifference(std::vector<float> shapes1, s
 	}
 	return difference;
 }
-
 
 string FeatureExtractor::getFlattenedStr(std::vector<float> flattened)
 {

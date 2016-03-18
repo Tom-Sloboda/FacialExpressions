@@ -18,7 +18,7 @@ using namespace cv;
 class Face
 {
 public:
-	//Face();
+	Face();
 	Face(FeatureExtractor *FE, Mat img, float label);
 	Face::Face(FeatureExtractor *FE, std::string img, float label);
 	~Face();

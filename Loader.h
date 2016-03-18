@@ -36,7 +36,7 @@ public:
 	//string img_dir = "C:\\Users\\dell490\\Downloads\\CK_dataset\\CK+\\extended-cohn-kanade-images\\cohn-kanade-images";
 	string img_dir = "C:/Users/dell490/Downloads/CK_dataset/CK+/extended-cohn-kanade-images/cohn-kanade-images";
 	//string label_dir = "C:\\Users\\dell490\\Downloads\\CK_dataset\\CK+\\Emotion_labels\\Emotion";
-	string label_dir = "C:/Users//dell490/Downloads/CK_dataset/CK+/Emotion_labels/Emotion";
+	string label_dir = "C:/Users/dell490/Downloads/CK_dataset/CK+/Emotion_labels/Emotion";
 
 	std::vector<Face> faces;
 };
