@@ -8,29 +8,18 @@ Face::Face(FeatureExtractor *FE, Mat img, float label )
 {
 	Face::mat = img;
 	assign_image(Face::img, cv_image<uchar>(img));
-	Face::shape = FE->detectFeatures(dlib::cv_image<bgr_pixel>(img), FE->detectFaces(dlib::cv_image<bgr_pixel>(img)));
+	Face::faceBoxes = FE->detectFaces(dlib::cv_image<bgr_pixel>(img));
+	Face::shape = FE->detectFeatures(dlib::cv_image<bgr_pixel>(img), Face::faceBoxes);
 	Face::landmarks = FE->getFlattened(shape);
 	Face::label = label;
 }
 
 Face::Face(FeatureExtractor *FE, std::string img, float label)
 {
-	//cout << img << endl;
 	load_png(Face::img, img);
 	Face::mat = imread(img, CV_LOAD_IMAGE_COLOR);
-	/*
-	if (!Face::mat.data)                              // Check for invalid input
-	{
-		cout << "Could not open or find the image" << std::endl;
-		return;
-	}
-
-	namedWindow("Display window", WINDOW_AUTOSIZE);// Create a window for display.
-	imshow("Display window", Face::mat);                   // Show our image inside it.
-
-	waitKey(0);                                          // Wait for a keystroke in the window
-	*/
-	Face::shape = FE->detectFeatures(&(Face::img), FE->detectFaces(&(Face::img)));
+	Face::faceBoxes = FE->detectFaces(&(Face::img));
+	Face::shape = FE->detectFeatures(&(Face::img), Face::faceBoxes);
 	Face::landmarks = FE->getFlattened(shape);
 	Face::label = label;
 }
@@ -38,7 +27,8 @@ Face::Face(FeatureExtractor *FE, std::string img, float label)
 void Face::calcLandmarks(FeatureExtractor *FE)
 {
 	assign_image(Face::img, cv_image<bgr_pixel>(Face::mat));
-	Face::shape = FE->detectFeatures(dlib::cv_image<bgr_pixel>(Face::mat), FE->detectFaces(dlib::cv_image<bgr_pixel>(Face::mat)));
+	Face::faceBoxes = FE->detectFaces(dlib::cv_image<bgr_pixel>(Face::mat));
+	Face::shape = FE->detectFeatures(dlib::cv_image<bgr_pixel>(Face::mat), Face::faceBoxes);
 	Face::landmarks = FE->getFlattened(shape);
 	Face::label = label;
 }

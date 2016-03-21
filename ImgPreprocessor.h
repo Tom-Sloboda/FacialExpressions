@@ -22,5 +22,7 @@ public:
 	void transform(Face &face1, Face &face2);
 	void transformLandmarks(Face &face, Mat warp_mat);
 	void scale(Face &face);
+	void crop(Face &face);
+	void resize(Face &face, int width=100, int height=100);
 };
 

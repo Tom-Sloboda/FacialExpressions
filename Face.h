@@ -31,6 +31,7 @@ public:
 	array2d<rgb_pixel> img;
 	std::vector<dlib::full_object_detection> shape;
 	std::vector<float> landmarks;
+	std::vector<dlib::rectangle> faceBoxes;
 	float label;
 };
 

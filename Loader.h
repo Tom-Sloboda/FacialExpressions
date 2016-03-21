@@ -13,10 +13,11 @@
 #include <Windows.h>
 #include <iostream>
 #include <stdio.h>
+#include <boost/algorithm/string.hpp>
 
 using namespace std;
 using namespace dlib;
-
+ 
 class Loader
 {
 public:
@@ -32,7 +33,7 @@ public:
 
 	std::vector<std::vector<float>> data;
 	std::vector<float> labels;
-	std::vector<std::string> img_list, label_list;
+	std::vector<std::string> img_path_list, label_path_list;
 	//string img_dir = "C:\\Users\\dell490\\Downloads\\CK_dataset\\CK+\\extended-cohn-kanade-images\\cohn-kanade-images";
 	string img_dir = "C:/Users/dell490/Downloads/CK_dataset/CK+/extended-cohn-kanade-images/cohn-kanade-images";
 	//string label_dir = "C:\\Users\\dell490\\Downloads\\CK_dataset\\CK+\\Emotion_labels\\Emotion";

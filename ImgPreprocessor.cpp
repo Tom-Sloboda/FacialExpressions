@@ -29,6 +29,8 @@ void ImgPreprocessor::align(Face &face)
 {
 	float angle1 = atan2f(face.RIGHT_EYE_OUTER_Y - face.LEFT_EYE_OUTER_Y, face.RIGHT_EYE_OUTER_X - face.LEFT_EYE_OUTER_X);
 	transform(face);
+	crop(face);
+	resize(face);
 }
 
 void ImgPreprocessor::align(Face &face1, Face &face2)
@@ -37,7 +39,12 @@ void ImgPreprocessor::align(Face &face1, Face &face2)
 	float angle2 = atan2f(face2.RIGHT_EYE_OUTER_Y - face2.LEFT_EYE_OUTER_Y, face2.RIGHT_EYE_OUTER_X - face2.LEFT_EYE_OUTER_X);
 	rotate(face1, Point2f(face1.LEFT_EYE_OUTER_X, face1.LEFT_EYE_OUTER_Y), angle1*(180/pi));
 	rotate(face2, Point2f(face2.LEFT_EYE_OUTER_X, face2.LEFT_EYE_OUTER_Y), angle2*(180/pi));
+	crop(face1);
+	crop(face2);
+	resize(face1, 300, 300);
+	resize(face2, 300, 300);
 	transform(face1, face2);
+
 }
 
 void ImgPreprocessor::rotate(Face &face, cv::Point2f center_of_rotation, float angle, float scale)
@@ -46,6 +53,48 @@ void ImgPreprocessor::rotate(Face &face, cv::Point2f center_of_rotation, float a
 	rot_mat = getRotationMatrix2D(center_of_rotation, angle, scale);
 	warpAffine(face.mat, face.mat, rot_mat, face.mat.size());
 	transformLandmarks(face, rot_mat);
+}
+
+void ImgPreprocessor::crop(Face &face)
+{
+	int minX = face.landmarks[0], maxX=face.landmarks[0], minY=face.landmarks[1], maxY=face.landmarks[1];
+	
+	for (int i = 0; i < face.landmarks.size(); i+=2)
+	{
+		if (face.landmarks[i] < minX)
+			minX = face.landmarks[i];
+		if (face.landmarks[i] > maxX)
+			maxX = face.landmarks[i];
+		if (face.landmarks[i+1] < minY)
+			minY = face.landmarks[i+1];
+		if (face.landmarks[i+1] > maxY)
+			maxY = face.landmarks[i+1];
+	}
+	//HACKY
+	minX -= 10;
+	minY -= 10;
+	maxX += 20;
+	maxY += 20;
+	face.mat = face.mat(cv::Rect(minX, minY, (maxX-minX), (maxY - minY)));
+	
+	for (int i = 0; i < face.landmarks.size(); i += 2)
+	{
+		face.landmarks[i] -= minX;
+		face.landmarks[i + 1] -= minY;
+	}
+}
+
+void ImgPreprocessor::resize(Face &face, int width, int height)
+{
+	float fx = (float)width / face.mat.cols;
+	float fy = (float)height / face.mat.rows;
+	cv::resize(face.mat, face.mat, cv::Size(width, height));
+
+	for (int i = 0; i < face.landmarks.size(); i += 2)
+	{
+		face.landmarks[i] *= fx;
+		face.landmarks[i + 1] *= fy;
+	}
 }
 
 void ImgPreprocessor::transform(Face &face)

@@ -221,8 +221,8 @@ float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float>
 		CvSVMParams params;
 		params.kernel_type = CvSVM::RBF;
 		params.svm_type = CvSVM::C_SVC;
-		params.gamma = 1.13906e-05; // 0.000001;
-		params.C = 24.879; //5000;
+		params.gamma = 3.375e-06; // 0.000001;
+		params.C = 83.9666; //5000;
 		//params.nu = 0.1;
 		//params.p = 1.1;
 		params.term_crit = cvTermCriteria(CV_TERMCRIT_ITER, 100, 0.1);
@@ -233,6 +233,7 @@ float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float>
 		//params = svm.get_params();
 		svm.save("SVM.xml");
 	//}
+		FeatureExtractor FE;
 	for (int i = 0; i < testLabels.size(); i++)
 	{
 		cv::Mat testDataMat(1, testData[i].size(), CV_32FC1, testData[i].data());
@@ -249,8 +250,8 @@ float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float>
 		//cin.get();
 		*/
 		float predictedLabel = svm.predict(testDataMat);
-		std::cout << "Predicted: " << predictedLabel << "\n";
-		std::cout << "Actual: " << testLabels[i] << "\n";
+		std::cout << "Predicted: " << classToEmotion(predictedLabel) << "\n";
+		std::cout << "Actual: " << classToEmotion(testLabels[i]) << "\n";
 		
 		if (floor(predictedLabel) == floor(testLabels[i]))
 		{
@@ -338,4 +339,29 @@ float mySVM::go_auto(std::vector<std::vector<float>> trainingData, std::vector<f
 	}
 	cout << "++Precision: " << best_precision << " C: " << best_C << " gamma: " << best_gamma << endl;
 	return best_precision;
+}
+
+std::string mySVM::classToEmotion(int n)
+{
+	switch (n)
+	{
+	case 1:
+		return "Anger";
+	case 2:
+		return "Contempt";
+	case 3:
+		return "Disgust";
+	case 4:
+		return "Fear";
+	case 5:
+		return "Happyness";
+	case 6:
+		return "Sadness";
+	case 7:
+		return "Surprise";
+	case 0:
+		return "Neutral";
+	default:
+		return "Undefined";
+	}
 }

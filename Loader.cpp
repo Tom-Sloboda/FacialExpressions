@@ -8,26 +8,28 @@ Loader::Loader()
 	std::vector<std::string> file_list;
 	FindFilesRecursively(label_dir.c_str(), _T("*.txt"), &file_list);
 	//std::cout << "Done loading";
-	if (true) //(file_list.size() != label_list.size())
+	if (file_list.size() != label_path_list.size())
 	{
+		img_path_list.clear();
+		label_path_list.clear();
 		//image_window  win;
 		Mat f1, f2, combined;
 		namedWindow("Processing", WINDOW_AUTOSIZE);
 		namedWindow("Face1", WINDOW_AUTOSIZE);
 		namedWindow("Face2", WINDOW_AUTOSIZE);
-		label_list = file_list;
-		for each (string path in label_list) img_list.push_back(getImgPath(path));
+		label_path_list = file_list;
+		for each (string path in label_path_list) 
+			img_path_list.push_back(getImgPath(path));
 
 		FeatureExtractor FE;
 		ImgPreprocessor IP(&FE);
-		for (int i = 0; i < img_list.size(); i++)
+		for (int i = 0; i < img_path_list.size(); i++)
 		{
 			//Get face with full expression
-			Face face1(&FE, img_list[i], readLabel(label_list.at(i)));
-
+			Face face1(&FE, img_path_list[i], readLabel(label_path_list.at(i)));
 
 			//Get neutral face
-			string neutral_img_name = img_list[i];
+			string neutral_img_name = img_path_list[i];
 			neutral_img_name[neutral_img_name.size() - 5] = '1';
 			neutral_img_name[neutral_img_name.size() - 6] = '0';
 			Face face2(&FE, neutral_img_name, 0);
@@ -43,12 +45,12 @@ Loader::Loader()
 			f2 = face2.getLandmarkOverlay();
 			cv::addWeighted(f1, 0.5, f2, 0.5, 0.0, combined);
 			imshow("Processing", combined);
-			imshow("Face1", face1.mat);
+			imshow("Face1", f1);
 			imshow("Face2", f2);
-			waitKey(0);
+			//waitKey(0);
 			data.push_back(FE.getDifference(face2.landmarks, face1.landmarks));
-			labels.push_back(readLabel(label_list.at(i)));
-			cout << i << "/" << img_list.size() << "\n";
+			labels.push_back(readLabel(label_path_list.at(i)));
+			cout << i << "/" << img_path_list.size() << "\n";
 
 		}
 		cout << labels.size() << "\n";
@@ -146,11 +148,11 @@ void Loader::loadProgress()
 		while (getline(savefile, line))
 		{
 			//cout << ++i << "/327" << "\n";
-			label_list.push_back(line);
+			label_path_list.push_back(line);
 			//cout << line << "\n";
 
 			getline(savefile, line);
-			img_list.push_back(line);
+			img_path_list.push_back(line);
 			//cout << line << "\n";
 
 			getline(savefile, line);
@@ -172,10 +174,10 @@ void Loader::saveProgress()
 {
 	ofstream savefile;
 	savefile.open("save.txt");
-	for (int i = 0; i < label_list.size(); i++)
+	for (int i = 0; i < label_path_list.size(); i++)
 	{
-		savefile << label_list[i] << "\n";
-		savefile << img_list[i] << "\n";
+		savefile << label_path_list[i] << "\n";
+		savefile << img_path_list[i] << "\n";
 		savefile << labels[i] << "\n";
 		savefile << FeatureExtractor::getFlattenedStr(data[i]) << "\n\n";
 	}
