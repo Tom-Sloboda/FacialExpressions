@@ -256,7 +256,7 @@ float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float>
 		if (floor(predictedLabel) == floor(testLabels[i]))
 		{
 			successfullyPredicted += 1;
-			std::cout << "\nSuccess\n\n";
+			std::cout << " << Success\n";
 		}
 
 	}

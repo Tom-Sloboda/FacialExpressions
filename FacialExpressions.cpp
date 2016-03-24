@@ -85,7 +85,7 @@ int main()
 		std::vector<std::vector<float>> trainingData;
 		std::vector<float> trainingLabels;
 		//std::cout << "1";
-		int INDEX = 220;
+		int INDEX = LDR.labels.size()/2;
 		for (int i = 0; i < LDR.labels.size()- INDEX; i++)
 		{
 			trainingData.push_back(LDR.data[i]);

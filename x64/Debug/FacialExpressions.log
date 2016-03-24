@@ -1,7 +1,2 @@
 ﻿  Loader.cpp
-  ImgPreprocessor.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  mySVM.cpp
-  FacialExpressions.cpp
   FacialExpressions.vcxproj -> C:\_Projects\FacialExpressions\x64\Debug\FacialExpressions.exe

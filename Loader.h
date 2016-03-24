@@ -13,23 +13,28 @@
 #include <Windows.h>
 #include <iostream>
 #include <stdio.h>
+#include <stdlib.h>
 #include <boost/algorithm/string.hpp>
+#include <boost/filesystem.hpp>
 
 using namespace std;
 using namespace dlib;
- 
+using namespace boost::filesystem;
+
 class Loader
 {
 public:
 	Loader();
 	~Loader();
 
-	void FindFilesRecursively(LPCTSTR lpFolder, LPCTSTR lpFilePattern, std::vector<std::string> *file_list);
+	//void findFilesRecursively(LPCTSTR lpFolder, LPCTSTR lpFilePattern, std::vector<std::string> *file_list);
+	void findFilesRecursively(const path &directory, const std::string extension, std::vector<std::string> *file_list);
 	float readLabel(string path);
 	string Loader::getImgPath(string path);
-	void saveProgress();
-	void loadProgress();
+	void saveProgress(string filename = "save.txt");
+	void loadProgress(string filename = "save.txt");
 	std::vector<float> Loader::strToFloatVec(string in);
+	void randomizeData();
 
 	std::vector<std::vector<float>> data;
 	std::vector<float> labels;
