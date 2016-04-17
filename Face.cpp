@@ -4,12 +4,24 @@
 
 Face::Face(){}
 
-Face::Face(FeatureExtractor *FE, Mat img, float label )
+Face::Face(FeatureExtractor *FE, Mat img, float label)
 {
 	Face::mat = img;
 	assign_image(Face::img, cv_image<uchar>(img));
 	Face::faceBoxes = FE->detectFaces(dlib::cv_image<bgr_pixel>(img));
 	Face::shape = FE->detectFeatures(dlib::cv_image<bgr_pixel>(img), Face::faceBoxes);
+	Face::landmarks = FE->getFlattened(shape);
+	Face::label = label;
+}
+
+Face::Face(FeatureExtractor *FE, Mat mat, array2d<rgb_pixel> *img, float label)
+{
+	assign_image(Face::img, *img);
+	Face::mat = mat;
+	//Face::mat.create(img.nr(), img.nc(), img.);
+	//assign_image(Face::mat, (cv_image<bgr_pixel>)img);
+	Face::faceBoxes = FE->detectFaces(img);
+	Face::shape = FE->detectFeatures(img, Face::faceBoxes);
 	Face::landmarks = FE->getFlattened(shape);
 	Face::label = label;
 }

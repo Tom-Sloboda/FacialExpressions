@@ -13,7 +13,9 @@ class mySVM
 public:
 	mySVM();
 	~mySVM();
-	
+
+	CvSVM svm;
+
 	void multiclassExample();
 	void simpleExample();
 

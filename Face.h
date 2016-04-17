@@ -20,7 +20,8 @@ class Face
 public:
 	Face();
 	Face(FeatureExtractor *FE, Mat img, float label);
-	Face::Face(FeatureExtractor *FE, std::string img, float label);
+	Face(FeatureExtractor *FE, std::string img, float label);
+	Face(FeatureExtractor *FE, Mat mat, array2d<rgb_pixel> *img, float label);
 	~Face();
 
 	void showLandmarks();

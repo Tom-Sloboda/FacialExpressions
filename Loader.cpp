@@ -2,34 +2,76 @@
 #include "Face.h"
 
 //TODO: Rewrite this
+
 Loader::Loader()
 {
+	FeatureExtractor FE;
+	Loader::Loader(&FE);
+}
+
+Loader::Loader(FeatureExtractor *FE)
+{
+	Loader::FE = FE;
 	cout << "\nWould you like to load existing data? y/n\n";
 	std::string input;
 	cin >> input;
 	if (input == "y") {
 		loadProgress();
-		std::cout << "Done loading\n";
+		std::cout << "Done loading: " << labels.size() << endl;
 	}
 	else
 	{
-		std::vector<std::string> file_list;
-		findFilesRecursively(label_dir.c_str(), ".txt", &file_list);
+		std::vector<std::string> directory_list;
 		img_path_list.clear();
 		label_path_list.clear();
 		labels.clear();
 		data.clear();
+		getAllDirectories(img_dir, &(directory_list));
+
+
+		//findFilesRecursively(label_dir.c_str(), ".txt", &file_list);
+
 		//image_window  win;
+		
 		Mat f1, f2, combined;
 		namedWindow("Processing", WINDOW_AUTOSIZE);
 		namedWindow("Face1", WINDOW_AUTOSIZE);
 		namedWindow("Face2", WINDOW_AUTOSIZE);
-		label_path_list = file_list;
-		for each (string path in label_path_list) 
-			img_path_list.push_back(getImgPath(path));
+		
+		ImgPreprocessor IP(FE);
+		int counter = 0;
+		for each (string path in directory_list)
+		{
+			string imgpath = img_dir + path;
+			
+			std::vector<boost::filesystem::path> imgpaths;
+			findFilesRecursively(imgpath.c_str(), ".png", &imgpaths);
+			string labelpath = Loader::label_dir + path + "/" + imgpaths.back().stem().string();
+			labelpath.append("_emotion.txt");
+			float label = readLabel(labelpath);
 
-		FeatureExtractor FE;
-		ImgPreprocessor IP(&FE);
+			Face neutral_face(FE, imgpaths[0].string(), 0);
+
+			for (int j = round(imgpaths.size() / 2); j < imgpaths.size(); j++)
+			{
+				Face face(FE, imgpaths[j].string(), 0);
+				IP.align(face, neutral_face);
+				data.push_back(FE->getDifference(neutral_face.landmarks, face.landmarks));
+				
+				f1 = face.getLandmarkOverlay();
+				f2 = neutral_face.getLandmarkOverlay();
+				cv::addWeighted(f1, 0.5, f2, 0.5, 0.0, combined);
+				imshow("Processing", combined);
+				imshow("Face1", f1);
+				imshow("Face2", f2);
+				waitKey(1);
+				
+				labels.push_back(label);
+			}
+
+			cout << counter++ << "/" << directory_list.size() << endl;
+		}
+		/*
 		for (int i = 0; i < img_path_list.size(); i++)
 		{
 			//Get face with full expression
@@ -52,20 +94,13 @@ Loader::Loader()
 				Face face1(&FE, current_img_path, readLabel(label_path_list.at(i)));
 
 				IP.align(face1, neutral_face);
-				/*
-				f1 = face1.getLandmarkOverlay();
-				f2 = neutral_face.getLandmarkOverlay();
-				cv::addWeighted(f1, 0.5, f2, 0.5, 0.0, combined);
-				imshow("Processing", combined);
-				imshow("Face1", f1);
-				imshow("Face2", f2);
-				waitKey(0);
-				*/
+
 				data.push_back(FE.getDifference(neutral_face.landmarks, face1.landmarks));
 				labels.push_back(readLabel(label_path_list.at(i)));
 				cout << i << "/" << img_path_list.size() << "\n";
 			}
 		}
+		*/
 		cout << labels.size() << "\n";
 		cout << data.size() << "\n";
 		saveProgress();
@@ -96,6 +131,8 @@ string Loader::getImgPath(string path)
 
 float Loader::readLabel(string path)
 {
+	if (!exists(path))
+		return 8.0;
 	std::ifstream t(path);
 	//cout << path;
 	std::stringstream buffer;
@@ -106,11 +143,11 @@ float Loader::readLabel(string path)
 	return label;
 }
 
-void Loader::findFilesRecursively(const path &directory, const std::string extension, std::vector<std::string> *file_list)
+void Loader::findFilesRecursively(const path &directory, const std::string extension, std::vector<boost::filesystem::path> *file_list)
 {
 	if (!exists(directory)) 
 	{
-		cout << "Directory doesn't exist/n";
+		cout << "Directory doesn't exist - " << directory.string() << endl;
 		return;
 	}
 	recursive_directory_iterator end_itr; // default construction yields past-the-end
@@ -118,7 +155,21 @@ void Loader::findFilesRecursively(const path &directory, const std::string exten
 		if (x.path().filename().extension() == extension)
 		{
 			//cout << x.path().string() << endl;
-			file_list->push_back(x.path().string());
+			file_list->push_back(x.path());
+		}
+	}
+}
+
+void Loader::getAllDirectories(const path &directory, std::vector<std::string> *img_dir_list)
+{
+	for (auto&& i : recursive_directory_iterator(directory)) {
+		if (is_directory(i.path())) {
+			if ((boost::count(i.path().string(), '\\')) >= (boost::count(directory.string(), '\\') + 2))
+			{
+				string path = i.path().generic_string().substr(directory.size(), i.path().size() - directory.size());
+				img_dir_list->push_back(path);
+				//cout << path << endl;
+			}
 		}
 	}
 }

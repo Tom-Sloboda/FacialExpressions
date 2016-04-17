@@ -30,6 +30,8 @@ instructions.  Note that AVX is the fastest but requires a CPU from at least
 #include "FeatureExtractor.h"
 #include "Loader.h"
 #include "mySVM.h"
+#include "Capture.h"
+#include "GUI.h"
 
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/core/core.hpp>
@@ -38,58 +40,43 @@ using namespace dlib;
 using namespace std;
 using namespace cv;
 
-int main()
+//int main()
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	try
 	{
-		//cv::VideoCapture cap(0);
-		//image_window win;
-
-		// Grab and process frames until the main window is closed by the user.
-		//while (!win.is_closed())
-
-			/*
-			//cv::Mat temp;
-			//cap >> temp;
-			//cv_image<bgr_pixel> cimg(temp);
-			
-			array2d<rgb_pixel> cimg;
-			load_png(cimg, "C:/Users/dell490/Downloads/CK_dataset/CK+/extended-cohn-kanade-images/cohn-kanade-images/S010/001/S010_001_00000014.png");
-			//load_png(cimg, "C:\\Users\\dell490\\Downloads\\CK_dataset\\CK+\\extended-cohn-kanade-images\\cohn-kanade-images\\S010\\001\\S010_001_00000014.png");
-			//pyramid_up(cimg);
-
-			FeatureExtractor FE;
-			std::vector<full_object_detection> shapes = FE.detectFeatures(&cimg, FE.detectFaces(&cimg));
-			
-			float* flat = (FE.getFlattened(shapes));
-
-			for (int i = 0; i < (68*2); i+=2)
-			{
-				std::cout << "{" << flat[i] << ", " << flat[i+1] << "}\n";
-			}
-			//cout << flat;
-
-			// Display it all on the screen
-			win.clear_overlay();
-			win.set_image(cimg);
-			win.add_overlay(render_face_detections(shapes));
-
-
-
-
-		*/
-		//*
-		Loader LDR;
+		GUI GUI;
+		GUI.console();
+		FeatureExtractor FE;
+		ImgPreprocessor IP(&FE);
+		Loader LDR(&FE);
 		mySVM SVM;
+		Capture CAP;
 
 		std::vector<std::vector<float>> trainingData;
 		std::vector<float> trainingLabels;
 		//std::cout << "1";
+		int wait;
+
+		int countArr[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+		for (int i = 0; i < LDR.labels.size(); i++)
+		{
+			countArr[(int)(LDR.labels[i])]++;
+		}
+		for (int i = 0; i < 9; i++)
+		{
+			cout << i << " - " << countArr[i] << endl;
+		}
+		//cin >> wait;
+
 		int INDEX = LDR.labels.size()/2;
 		for (int i = 0; i < LDR.labels.size()- INDEX; i++)
 		{
-			trainingData.push_back(LDR.data[i]);
-			trainingLabels.push_back(LDR.labels[i]);
+			if ((LDR.labels[i] != 8)&&(LDR.labels[i] != 0))
+			{
+				trainingData.push_back(LDR.data[i]);
+				trainingLabels.push_back(LDR.labels[i]);
+			}
 		}
 		
 		std::vector<std::vector<float>> testData;
@@ -97,13 +84,65 @@ int main()
 		//std::cout << "2";
 		for (int i = LDR.labels.size() - INDEX; i < LDR.labels.size(); i++)
 		{
-			testData.push_back(LDR.data[i]);
-			testLabels.push_back(LDR.labels[i]);
+			if ((LDR.labels[i] != 8) && (LDR.labels[i] != 0))
+			{
+				testData.push_back(LDR.data[i]);
+				testLabels.push_back(LDR.labels[i]);
+			}
 		}
 
 		float precision = SVM.go(trainingData, trainingLabels, testData, testLabels);
 		cout << "Success rate: " << setprecision(2) << precision << "\n";
-		//*/
+
+		HWND hwnd = GUI.createScrnCapWnd(hInstance);
+		Mat neutralFace, otherFace, currentImg;
+		array2d<rgb_pixel> dneutralFace, dotherFace;
+		Face *neutral = NULL, *other=NULL;
+		while (hwnd != NULL)
+		{
+			if (GUI.keyUpdateNeutral())
+			{
+				neutralFace = CAP.hwnd2mat(hwnd);
+				cv_image<rgb_alpha_pixel> cv_neutralFace = (cv_image<rgb_alpha_pixel>)neutralFace;
+				assign_image(dneutralFace, cv_neutralFace);
+				namedWindow("Neutral Face", WINDOW_AUTOSIZE);
+				imshow("Neutral Face", neutralFace);
+				waitKey(10);
+				GUI.keyClear();
+				std::vector<dlib::rectangle> faces = FE.detectFaces(&dneutralFace);
+				if (faces.size() > 0)
+				{
+					neutral = new Face(&FE, neutralFace, &dneutralFace, 0.0);
+				}
+				//cout << "Number of faces = " << faces.size() <<endl;
+			}
+			if (GUI.keyUpdateOther())
+			{
+				otherFace = CAP.hwnd2mat(hwnd);
+				cv_image<rgb_alpha_pixel> cv_otherFace = (cv_image<rgb_alpha_pixel>)otherFace;
+				assign_image(dotherFace, cv_otherFace);
+				namedWindow("Other Face", WINDOW_AUTOSIZE);
+				imshow("Other Face", otherFace);
+				waitKey(10);
+				GUI.keyClear();
+				std::vector<dlib::rectangle> faces = FE.detectFaces(&dotherFace);
+				if (faces.size() > 0)
+				{
+					other = new Face(&FE, otherFace, &dotherFace, 0.0);
+					IP.align(*other, *neutral);
+					std::vector<float> testData = FE.getDifference(neutral->landmarks, other->landmarks);
+					cv::Mat testDataMat(1, testData.size(), CV_32FC1, testData.data());
+					cout << SVM.classToEmotion(SVM.svm.predict(testDataMat)) << endl;
+				}
+			}
+			currentImg = CAP.hwnd2mat(hwnd);
+			namedWindow("CurrentImg", WINDOW_AUTOSIZE);
+			imshow("CurrentImg", currentImg);
+			waitKey(10);
+		}
+
+		cin >> wait;
+
 		
 		/*
 		Mat image;
@@ -128,6 +167,8 @@ int main()
 	catch (exception& e)
 	{
 		cout << e.what() << endl;
+		int wait;
+		cin >> wait;
 	}
 
 }
