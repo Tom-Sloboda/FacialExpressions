@@ -20,6 +20,7 @@ public:
 	void rotate(Face &face, cv::Point2f center_of_rotation, float angle, float scale = 1.0);
 	void transform(Face &face);
 	void transform(Face &face1, Face &face2);
+	void transformEEC(Face &face1, Face &face2);
 	void transformLandmarks(Face &face, Mat warp_mat);
 	void scale(Face &face);
 	void crop(Face &face, float area_around_face_percentage = 0.2);

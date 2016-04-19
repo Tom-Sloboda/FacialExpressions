@@ -8,8 +8,8 @@
 #define RIGHT_EYE_OUTER_Y landmarks[91]
 #define RIGHT_EYE_INNER_X landmarks[84]
 #define RIGHT_EYE_INNER_Y landmarks[85]
-#define NOSE1_X landmarks[54]
-#define NOSE1_Y landmarks[55]
+#define NOSE1_X landmarks[60]
+#define NOSE1_Y landmarks[61]
 #define NOSE2_X landmarks[56]
 #define NOSE2_Y landmarks[57]
 
@@ -39,12 +39,13 @@ void ImgPreprocessor::align(Face &face1, Face &face2)
 	//float angle2 = atan2f(face2.RIGHT_EYE_OUTER_Y - face2.LEFT_EYE_OUTER_Y, face2.RIGHT_EYE_OUTER_X - face2.LEFT_EYE_OUTER_X);
 	rotate(face1, Point2f(face1.LEFT_EYE_OUTER_X, face1.LEFT_EYE_OUTER_Y), angle1*(180/pi));
 	//rotate(face2, Point2f(face2.LEFT_EYE_OUTER_X, face2.LEFT_EYE_OUTER_Y), angle2*(180/pi));
+
+	//perspectiveTransform(face1, face2);
+	//transform(face1, face2);
 	crop(face1);
 	crop(face2);
 	resize(face1, 300, 300);
 	resize(face2, 300, 300);
-	perspectiveTransform(face1, face2);
-	//transform(face1, face2);
 }
 
 void ImgPreprocessor::rotate(Face &face, cv::Point2f center_of_rotation, float angle, float scale)
@@ -149,13 +150,25 @@ void ImgPreprocessor::transform(Face &face1, Face &face2)
 {
 	Point2f srcTri[3];
 	srcTri[0] = Point2f(face1.LEFT_EYE_OUTER_X, face1.LEFT_EYE_OUTER_Y);
-	srcTri[1] = Point2f(face1.NOSE2_X, face1.NOSE2_Y);
+	srcTri[1] = Point2f(face1.NOSE1_X, face1.NOSE1_Y);
 	srcTri[2] = Point2f(face1.RIGHT_EYE_OUTER_X, face1.RIGHT_EYE_OUTER_Y);
 	Point2f dstTri[3];
 	dstTri[0] = Point2f(face2.LEFT_EYE_OUTER_X, face2.LEFT_EYE_OUTER_Y);
-	dstTri[1] = Point2f(face2.NOSE2_X, face2.NOSE2_Y);
+	dstTri[1] = Point2f(face2.NOSE1_X, face2.NOSE1_Y);
 	dstTri[2] = Point2f(face2.RIGHT_EYE_OUTER_X, face2.RIGHT_EYE_OUTER_Y);
 	Mat warp_mat(2, 3, CV_32FC1);
+	//Mat warp_dst = Mat::zeros(face.mat.rows, face.mat.cols, face.mat.type());
+	warp_mat = getAffineTransform(srcTri, dstTri);
+	//warpAffine(face.mat, warp_dst, warp_mat, warp_dst.size());
+	warpAffine(face1.mat, face1.mat, warp_mat, face1.mat.size());
+	//warp_dst.assignTo(face.mat);
+	ImgPreprocessor::transformLandmarks(face1, warp_mat);
+}
+
+void ImgPreprocessor::transformEEC(Face &face1, Face &face2, int warp_mode)
+{
+
+	Mat warp_mat;
 	//Mat warp_dst = Mat::zeros(face.mat.rows, face.mat.cols, face.mat.type());
 	warp_mat = getAffineTransform(srcTri, dstTri);
 	//warpAffine(face.mat, warp_dst, warp_mat, warp_dst.size());

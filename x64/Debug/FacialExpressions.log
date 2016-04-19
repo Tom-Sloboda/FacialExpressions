@@ -1,11 +1,2 @@
-﻿  mySVM.cpp
-  Loader.cpp
-  GUI.cpp
-c:\_projects\facialexpressions\facialexpressions\gui.cpp(89): warning C4311: 'type cast': pointer truncation from 'HBRUSH' to 'LONG'
-c:\_projects\facialexpressions\facialexpressions\gui.cpp(89): warning C4302: 'type cast': truncation from 'HBRUSH' to 'LONG'
-c:\_projects\facialexpressions\facialexpressions\gui.cpp(96): warning C4244: '=': conversion from 'double' to 'BYTE', possible loss of data
-c:\_projects\facialexpressions\facialexpressions\gui.cpp(54): warning C4101: 'Msg': unreferenced local variable
-  FacialExpressions.cpp
-  Capture.cpp
-  Generating Code...
+﻿  Classifier.cpp
   FacialExpressions.vcxproj -> C:\_Projects\FacialExpressions\x64\Debug\FacialExpressions.exe
