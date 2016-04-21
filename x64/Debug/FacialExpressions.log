@@ -1,2 +1,9 @@
-﻿  Classifier.cpp
+﻿  mySVM.cpp
+  ImgPreprocessor.cpp
+  FacialExpressions.cpp
+  Generating Code...
+  Compiling...
+  Loader.cpp
+  Classifier.cpp
+  Generating Code...
   FacialExpressions.vcxproj -> C:\_Projects\FacialExpressions\x64\Debug\FacialExpressions.exe

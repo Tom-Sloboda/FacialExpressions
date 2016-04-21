@@ -27,7 +27,7 @@ class Loader
 {
 public:
 	Loader();
-	Loader(FeatureExtractor *FE);
+	Loader(FeatureExtractor *FE, ImgPreprocessor *IP);
 	~Loader();
 
 	//void findFilesRecursively(LPCTSTR lpFolder, LPCTSTR lpFilePattern, std::vector<std::string> *file_list);
@@ -41,6 +41,8 @@ public:
 	void randomizeData();
 
 	FeatureExtractor *FE;
+	ImgPreprocessor *IP;
+
 	std::vector<std::vector<float>> data;
 	std::vector<float> labels;
 	std::vector<std::string> img_path_list, label_path_list;

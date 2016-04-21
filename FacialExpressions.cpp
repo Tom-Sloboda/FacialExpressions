@@ -32,7 +32,7 @@ instructions.  Note that AVX is the fastest but requires a CPU from at least
 #include "mySVM.h"
 #include "Capture.h"
 #include "GUI.h"
-#include "Classifier.h"
+//#include "Classifier.h"
 
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/core/core.hpp>
@@ -49,11 +49,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		GUI GUI;
 		GUI.console();
 		FeatureExtractor FE;
-		ImgPreprocessor IP(&FE);
-		Loader LDR(&FE);
+		ImgPreprocessor IP;
+		Loader LDR(&FE, &IP);
 		mySVM SVM;
 		Capture CAP;
-		Classifier CLS;
+		//Classifier CLS;
 
 		std::vector<std::vector<float>> trainingData;
 		std::vector<float> trainingLabels;
@@ -94,8 +94,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		}
 
 		float precision = SVM.go(trainingData, trainingLabels, testData, testLabels);
-		CLS.go(trainingData, trainingLabels, testData, testLabels);
-		//cout << "Success rate: " << setprecision(2) << precision << "\n";
+		//CLS.go(trainingData, trainingLabels, testData, testLabels);
+		cout << "Success rate: " << setprecision(2) << precision << "\n";
 
 		HWND hwnd = GUI.createScrnCapWnd(hInstance);
 		Mat neutralFace, otherFace, currentImg;
@@ -116,7 +116,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				if (faces.size() > 0)
 				{
 					neutral = new Face(&FE, neutralFace, &dneutralFace, 0.0);
+					IP.align(*neutral);
 					imshow("Neutral Face", neutral->getLandmarkOverlay());
+					waitKey(10);
 				}
 				//cout << "Number of faces = " << faces.size() <<endl;
 			}
@@ -133,13 +135,19 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				if (faces.size() > 0)
 				{
 					other = new Face(&FE, otherFace, &dotherFace, 0.0);
-					IP.align(*other, *neutral);
-					imshow("Neutral Face", neutral->getLandmarkOverlay());
 					imshow("Other Face", other->getLandmarkOverlay());
 					waitKey(10);
-					std::vector<float> testData = FE.getDifference(neutral->landmarks, other->landmarks);
-					cv::Mat testDataMat(1, testData.size(), CV_32FC1, testData.data());
-					cout << SVM.classToEmotion(SVM.svm.predict(testDataMat)) << endl;
+					if (neutral != NULL) {
+						IP.align(*other, *neutral);
+						imshow("Neutral Face", neutral->getLandmarkOverlay());
+						imshow("Other Face", other->getLandmarkOverlay());
+						cv::addWeighted(neutral->getLandmarkOverlay(), 0.5, other->getLandmarkOverlay(), 0.5, 0.0, currentImg);
+						imshow("Combined", currentImg);
+						waitKey(10);
+						std::vector<float> testData = FE.getDifference(neutral->landmarks, other->landmarks);
+						cv::Mat testDataMat(1, testData.size(), CV_32FC1, testData.data());
+						cout << SVM.classToEmotion(SVM.svm->predict(testDataMat)) << endl;
+					}
 				}
 			}
 			/*

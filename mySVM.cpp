@@ -16,87 +16,56 @@ float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float>
 	int successfullyPredicted = 0;
 
 	cv::Mat trainingDataMat(trainingData.size(), trainingData[0].size(), CV_32FC1);
-	cv::Mat trainingLabelsMat((trainingLabels.size()), 1, CV_32FC1, trainingLabels.data());
-	
-	//cout << "\n Training Data\n";
-	//cout << trainingData[0].size() << " " << trainingData.size() << endl;
+	cv::Mat trainingLabelsMat((trainingLabels.size()), 1, CV_32SC1);
 	for (int i = 0; i < trainingData.size(); i++)
 	{
-		//cout << "\n#" << i << "\n";
+		trainingLabelsMat.at<int>(i) = (int)trainingLabels[i];
 		for (int j = 0; j < trainingData[0].size(); j++)
 		{
 			trainingDataMat.at<float>(i, j) = trainingData.data()[i][j];
-			//cout << trainingData.data()[i][j] << " ";
 		}
-		//cout << endl;
 	}
-	//cin.get();
-	/*
-	cout << "\n Training Mat\n";
-	cout << trainingDataMat.size().width << " " << trainingDataMat.size().height << endl;
-	for (int i = 0; i < trainingDataMat.size().height; i++)
+	cout << "\nWould you like to load SVM.xml? y/n\n";
+	std::string input;
+	cin >> input;
+	if (input == "y") {
+		svm = StatModel::load<SVM>("SVM.xml");
+	}
+	if (svm->empty())
 	{
-		cout << "\n#" << i << "\n";
-		for (int j = 0; j < trainingDataMat.size().width; j++)
-			cout << trainingDataMat.at<float>(i, j) << " ";
-		cout << endl;
-	}
-	//cin.get();
-	*/
+		std::cout << "Start training\n";
+		//svm.load("SVM.xml");
+		//if (svm.get_support_vector_count() == 0) {
+		svm = SVM::create();
+		svm->setType(ml::SVM::C_SVC);
+		svm->setKernel(ml::SVM::RBF);
+		svm->setGamma(3.375e-06);
+		svm->setC(83.9666);
+		svm->setTermCriteria(cvTermCriteria(CV_TERMCRIT_ITER, 100, 0.1));
+		Ptr<ml::TrainData> tData = ml::TrainData::create(trainingDataMat, ml::SampleTypes::ROW_SAMPLE, trainingLabelsMat);
 
-	std::cout << "Start training\n";
-	//svm.load("SVM.xml");
-	//if (svm.get_support_vector_count() == 0) {
-		CvSVMParams params;
-		params.kernel_type = CvSVM::RBF;
-		params.svm_type = CvSVM::C_SVC;
-		params.gamma = 3.375e-06; // 0.000001;
-		params.C = 83.9666; //5000;
-		//params.nu = 0.1;
-		//params.p = 1.1;
-		params.term_crit = cvTermCriteria(CV_TERMCRIT_ITER, 100, 0.1);
+		svm->train(tData);
 
-		svm.train(trainingDataMat, trainingLabelsMat, cv::Mat(), cv::Mat(), params);
-		
 		//svm.train_auto(trainingDataMat, trainingLabelsMat, cv::Mat(), cv::Mat(), params);
 		//params = svm.get_params();
-		svm.save("SVM.xml");
+		svm->save("SVM.xml");
+	}
 	//}
-		FeatureExtractor FE;
+	FeatureExtractor FE;
 	for (int i = 0; i < testLabels.size(); i++)
 	{
 		cv::Mat testDataMat(1, testData[i].size(), CV_32FC1, testData[i].data());
-		/*
-		cout << "\n Test Mat\n";
-		cout << testDataMat.size().width << " " << testDataMat.size().height << endl;
-		for (int i = 0; i < testDataMat.size().height; i++)
-		{
-			cout << "\n#" << i << "\n";
-			for (int j = 0; j < testDataMat.size().width; j++)
-				cout << testDataMat.at<float>(i, j) << " ";
-			cout << endl;
-		}
-		//cin.get();
-		*/
-		float predictedLabel = svm.predict(testDataMat);
-		std::cout << "Predicted: " << classToEmotion(predictedLabel) << "\n";
-		std::cout << "Actual: " << classToEmotion(testLabels[i]) << ((predictedLabel == testLabels[i])? " << Success\n" : "\n");
+		float predictedLabel = svm->predict(testDataMat);
+		//std::cout << "Predicted: " << classToEmotion(predictedLabel) << "\n";
+		//std::cout << "Actual: " << classToEmotion(testLabels[i]) << ((predictedLabel == testLabels[i])? " << Success\n" : "\n");
 		
 		if (floor(predictedLabel) == floor(testLabels[i]))
 		{
 			successfullyPredicted += 1;
-			//std::cout << " << Success\n";
 		}
 		
 	}
-
-	//std::cout << "successfullyPredicted: " << successfullyPredicted << "\n";
-	//std::cout << "testLabels.size(): " << testLabels.size() << "\n";
-	//std::cout << "precision: " << ((float)successfullyPredicted / (float)(testLabels.size())) << "\n";
-
 	float precision = ((float)successfullyPredicted / (testLabels.size()));
-	//std::cout << fixed << setprecision(2) << "precision: " << ((float)successfullyPredicted / (testLabels.size())) << "\n";
-
 	return precision;
 }
 
@@ -105,40 +74,48 @@ float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float>
 	int successfullyPredicted = 0;
 
 	cv::Mat trainingDataMat(trainingData.size(), trainingData[0].size(), CV_32FC1);
-	cv::Mat trainingLabelsMat((trainingLabels.size()), 1, CV_32FC1, trainingLabels.data());
-
+	cv::Mat trainingLabelsMat((trainingLabels.size()), 1, CV_32SC1);
 	for (int i = 0; i < trainingData.size(); i++)
 	{
+		trainingLabelsMat.at<int>(i) = (int)trainingLabels[i];
 		for (int j = 0; j < trainingData[0].size(); j++)
 		{
 			trainingDataMat.at<float>(i, j) = trainingData.data()[i][j];
 		}
 	}
-	CvSVM svm;
-	CvSVMParams params;
-	params.kernel_type = CvSVM::RBF;
-	params.svm_type = CvSVM::C_SVC;
-	params.gamma = gamma;
-	params.C = C;
-	params.term_crit = cvTermCriteria(CV_TERMCRIT_ITER, 100, 0.1);
-	svm.train(trainingDataMat, trainingLabelsMat, cv::Mat(), cv::Mat(), params);
+
+	std::cout << "Start training\n";
+	//svm.load("SVM.xml");
+	//if (svm.get_support_vector_count() == 0) {
+	svm = ml::SVM::create();
+	svm->setType(ml::SVM::C_SVC);
+	svm->setKernel(ml::SVM::RBF);
+	svm->setGamma(gamma);
+	svm->setC(C);
+	svm->setTermCriteria(cvTermCriteria(CV_TERMCRIT_ITER, 100, 0.1));
+	Ptr<ml::TrainData> tData = ml::TrainData::create(trainingDataMat, ml::SampleTypes::ROW_SAMPLE, trainingLabelsMat);
+
+	svm->train(tData);
+
+	//svm.train_auto(trainingDataMat, trainingLabelsMat, cv::Mat(), cv::Mat(), params);
+	//params = svm.get_params();
+	svm->save("SVM.xml");
+	//}
+	FeatureExtractor FE;
 	for (int i = 0; i < testLabels.size(); i++)
 	{
 		cv::Mat testDataMat(1, testData[i].size(), CV_32FC1, testData[i].data());
-		float predictedLabel = svm.predict(testDataMat);
-		//std::cout << "Predicted: " << predictedLabel << "\n";
-		//std::cout << "Actual: " << testLabels[i] << "\n";
+		float predictedLabel = svm->predict(testDataMat);
+		std::cout << "Predicted: " << classToEmotion(predictedLabel) << "\n";
+		std::cout << "Actual: " << classToEmotion(testLabels[i]) << ((predictedLabel == testLabels[i]) ? " << Success\n" : "\n");
 
 		if (floor(predictedLabel) == floor(testLabels[i]))
 		{
 			successfullyPredicted += 1;
-			//std::cout << "\nSuccess\n\n";
 		}
 
 	}
-
 	float precision = ((float)successfullyPredicted / (testLabels.size()));
-
 	return precision;
 }
 

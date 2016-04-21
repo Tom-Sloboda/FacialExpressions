@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jccolor.cpp</FILENAME>
+      <LINE>413</LINE>
+      <COLUMN>41</COLUMN>
+    </SFA>
+    <DEFECTCODE>6240</DEFECTCODE>
+    <DESCRIPTION>(&lt;expression&gt; &amp;&amp; &lt;non-zero constant&gt;) always evaluates to the result of &lt;expression&gt;.  Did you intend to use the bitwise-and operator?</DESCRIPTION>
+    <FUNCTION>jinit_color_converter</FUNCTION>
+    <DECORATED>jinit_color_converter</DECORATED>
+    <FUNCLINE>352</FUNCLINE>
+    <PATH />
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jccolor.cpp</FILENAME>
+      <LINE>413</LINE>
+      <COLUMN>58</COLUMN>
+    </SFA>
+    <DEFECTCODE>6326</DEFECTCODE>
+    <DESCRIPTION>Potential comparison of a constant with another constant.</DESCRIPTION>
+    <FUNCTION>jinit_color_converter</FUNCTION>
+    <DECORATED>jinit_color_converter</DECORATED>
+    <FUNCLINE>352</FUNCLINE>
+    <PATH />
+  </DEFECT>
+</DEFECTS>

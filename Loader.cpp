@@ -6,12 +6,14 @@
 Loader::Loader()
 {
 	FeatureExtractor FE;
-	Loader::Loader(&FE);
+	ImgPreprocessor IP;
+	Loader::Loader(&FE, &IP);
 }
 
-Loader::Loader(FeatureExtractor *FE)
+Loader::Loader(FeatureExtractor *FE, ImgPreprocessor *IP)
 {
 	Loader::FE = FE;
+	Loader::IP = IP;
 	cout << "\nWould you like to load existing data? y/n\n";
 	std::string input;
 	cin >> input;
@@ -38,7 +40,6 @@ Loader::Loader(FeatureExtractor *FE)
 		namedWindow("Face1", WINDOW_AUTOSIZE);
 		namedWindow("Face2", WINDOW_AUTOSIZE);
 		
-		ImgPreprocessor IP(FE);
 		int counter = 0;
 		for each (string path in directory_list)
 		{
@@ -55,7 +56,7 @@ Loader::Loader(FeatureExtractor *FE)
 			for (int j = round(imgpaths.size() / 2); j < imgpaths.size(); j++)
 			{
 				Face face(FE, imgpaths[j].string(), 0);
-				IP.align(face, neutral_face);
+				Loader::IP->align(face, neutral_face);
 				data.push_back(FE->getDifference(neutral_face.landmarks, face.landmarks));
 				
 				f1 = face.getLandmarkOverlay();

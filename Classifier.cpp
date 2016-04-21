@@ -61,8 +61,9 @@ float evaluate(cv::Mat& predicted, cv::Mat& actual) {	assert(predicted.rows ==
 }
 
 void Classifier::svm(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& testData, cv::Mat& testClasses) {
-	CvSVMParams param = CvSVMParams();
 	/*
+	CvSVMParams param = CvSVMParams();
+
 	param.svm_type = CvSVM::C_SVC;
 	param.kernel_type = CvSVM::RBF; //CvSVM::RBF, CvSVM::LINEAR ...
 	param.degree = 0; // for poly
@@ -73,7 +74,7 @@ void Classifier::svm(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& t
 	param.p = 0.0; // for CV_SVM_EPS_SVR	param.class_weights = NULL; // for CV_SVM_C_SVC
 	param.term_crit.type = CV_TERMCRIT_ITER + CV_TERMCRIT_EPS;
 	param.term_crit.max_iter = 1000;
-	param.term_crit.epsilon = 1e-6;	*/
+	param.term_crit.epsilon = 1e-6;
 	param.kernel_type = CvSVM::RBF;
 	param.svm_type = CvSVM::C_SVC;
 	param.gamma = 3.375e-06;
@@ -88,9 +89,11 @@ void Classifier::svm(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& t
 		predicted.at<float>(i, 0) = svm.predict(sample);
 	}
 	cout << "Accuracy_{SVM} = " << evaluate(predicted, testClasses) << endl;
+	*/
 }
 
 void Classifier::mlp(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& testData, cv::Mat& testClasses){
+	/*
 	cv::Mat layers = cv::Mat(6, 1, CV_32SC1);
 	layers.row(0) = cv::Scalar(trainingData.size().width);
 	layers.row(1) = cv::Scalar(trainingData.size().width*2);
@@ -99,18 +102,17 @@ void Classifier::mlp(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& t
 	layers.row(4) = cv::Scalar(trainingData.size().width*2);
 	layers.row(5) = cv::Scalar(1);
 
-	CvANN_MLP mlp;
-	CvANN_MLP_TrainParams params;
+	Ptr<ml::ANN_MLP> mlp = ml::ANN_MLP::create();
 	CvTermCriteria criteria;
 	criteria.max_iter = 100;
 	criteria.epsilon = 0.00001f;
 	criteria.type = CV_TERMCRIT_ITER | CV_TERMCRIT_EPS;
-	params.train_method = CvANN_MLP_TrainParams::BACKPROP;
-	params.bp_dw_scale = 0.05f;
-	params.bp_moment_scale = 0.05f;
-	params.term_crit = criteria;	mlp.create(layers);
+	mlp->setTrainMethod(ml::ANN_MLP::BACKPROP);
+	mlp->setBackpropWeightScale(0.05f);
+	mlp->setBackpropMomentumScale(0.05f);
+	mlp->setTermCriteria(criteria);	mlp.create(layers);
 	// train
-	mlp.train(trainingData, trainingClasses, cv::Mat(), cv::Mat(), params);
+	mlp->train(trainingData, trainingClasses, cv::Mat(), cv::Mat(), params);
 	cv::Mat response(1, 1, CV_32FC1);
 	cv::Mat predicted(testClasses.rows, 1, CV_32F);
 	for (int i = 0; i < testData.rows; i++) 
@@ -121,10 +123,12 @@ void Classifier::mlp(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& t
 		predicted.at<float>(i, 0) = response.at<float>(0, 0);
 	}
 	cout << "Accuracy_{MLP} = " << evaluate(predicted, testClasses) << endl;
+	*/
 }
 
 void Classifier::knn(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& testData, cv::Mat& testClasses, int K)
 {
+	/*
 	CvKNearest knn(trainingData, trainingClasses, cv::Mat(), false, K);
 	cv::Mat predicted(testClasses.rows, 1, CV_32F);
 	for (int i = 0; i < testData.rows; i++) 
@@ -133,9 +137,11 @@ void Classifier::knn(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& t
 		predicted.at<float>(i, 0) = knn.find_nearest(sample, K);
 	}
 	cout << "Accuracy_{KNN} = " << evaluate(predicted, testClasses) << endl;
+	*/
 }
 
 void Classifier::bayes(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& testData, cv::Mat& testClasses){
+	/*
 	CvNormalBayesClassifier bayes(trainingData, trainingClasses);
 	cv::Mat predicted(testClasses.rows, 1, CV_32F);
 	for (int i = 0; i < testData.rows; i++) 
@@ -144,9 +150,11 @@ void Classifier::bayes(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat&
 		predicted.at<float>(i, 0) = bayes.predict(sample);
 	}
 	cout << "Accuracy_{BAYES} = " << evaluate(predicted, testClasses) << endl;
+	*/
 }
 
 void Classifier::decisiontree(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& testData, cv::Mat& testClasses){
+	/*
 	CvDTree dtree;
 	cv::Mat var_type(3, 1, CV_8U);
 	// define attributes as numerical
@@ -162,4 +170,5 @@ void Classifier::decisiontree(cv::Mat& trainingData, cv::Mat& trainingClasses, c
 		predicted.at<float>(i, 0) = prediction->value;
 	}
 	cout << "Accuracy_{TREE} = " << evaluate(predicted, testClasses) << endl;
+	*/
 }

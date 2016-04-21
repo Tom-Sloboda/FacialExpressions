@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+      <FILENAME>gui.cpp</FILENAME>
+      <LINE>19</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'_Param_(1)' could be '0':  this does not adhere to the specification for the function 'WinMain'. </DESCRIPTION>
+    <FUNCTION>GUI::show</FUNCTION>
+    <DECORATED>?show@GUI@@QEAAXXZ</DECORATED>
+    <FUNCLINE>17</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+        <FILENAME>gui.cpp</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+      <FILENAME>gui.cpp</FILENAME>
+      <LINE>19</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'_Param_(3)' could be '0':  this does not adhere to the specification for the function 'WinMain'. </DESCRIPTION>
+    <FUNCTION>GUI::show</FUNCTION>
+    <DECORATED>?show@GUI@@QEAAXXZ</DECORATED>
+    <FUNCLINE>17</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+        <FILENAME>gui.cpp</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+      <FILENAME>gui.cpp</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>Return value ignored: 'freopen'.</DESCRIPTION>
+    <FUNCTION>GUI::console</FUNCTION>
+    <DECORATED>?console@GUI@@QEAAXXZ</DECORATED>
+    <FUNCLINE>44</FUNCLINE>
+    <PATH />
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+      <FILENAME>gui.cpp</FILENAME>
+      <LINE>48</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>Return value ignored: 'freopen'.</DESCRIPTION>
+    <FUNCTION>GUI::console</FUNCTION>
+    <DECORATED>?console@GUI@@QEAAXXZ</DECORATED>
+    <FUNCLINE>44</FUNCLINE>
+    <PATH />
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+      <FILENAME>gui.cpp</FILENAME>
+      <LINE>49</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>Return value ignored: 'freopen'.</DESCRIPTION>
+    <FUNCTION>GUI::console</FUNCTION>
+    <DECORATED>?console@GUI@@QEAAXXZ</DECORATED>
+    <FUNCLINE>44</FUNCLINE>
+    <PATH />
+  </DEFECT>
+</DEFECTS>

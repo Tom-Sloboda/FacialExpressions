@@ -6,6 +6,7 @@
 using namespace std;
 using namespace dlib;
 using namespace cv;
+using namespace cv::ml;
 
 
 class mySVM
@@ -14,7 +15,7 @@ public:
 	mySVM();
 	~mySVM();
 
-	CvSVM svm;
+	Ptr<ml::SVM> svm;
 
 	void multiclassExample();
 	void simpleExample();
