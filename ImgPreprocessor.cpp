@@ -35,17 +35,34 @@ void ImgPreprocessor::align(Face &face)
 	resize(face, 300, 300);
 }
 
+float ImgPreprocessor::distance(Point2f p1, Point2f p2)
+{
+	return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
+}
+
 void ImgPreprocessor::align(Face &face, Face &neutralFace)
 {
+	//The rotation/scale might seem redundant with transpositionAlign(), however it does appear to reduce some variability
 	float angle1 = atan2f(face.RIGHT_EYE_OUTER_Y - face.LEFT_EYE_OUTER_Y, face.RIGHT_EYE_OUTER_X - face.LEFT_EYE_OUTER_X);
-	float scale = sqrt((neutralFace.RIGHT_EYE_OUTER_X - neutralFace.LEFT_EYE_OUTER_X)*(neutralFace.RIGHT_EYE_OUTER_X - neutralFace.LEFT_EYE_OUTER_X) - (neutralFace.RIGHT_EYE_OUTER_Y - neutralFace.LEFT_EYE_OUTER_Y)*(neutralFace.RIGHT_EYE_OUTER_Y - neutralFace.LEFT_EYE_OUTER_Y))
-				/sqrt((face.RIGHT_EYE_OUTER_X - face.LEFT_EYE_OUTER_X)*(face.RIGHT_EYE_OUTER_X - face.LEFT_EYE_OUTER_X) - (face.RIGHT_EYE_OUTER_Y - face.LEFT_EYE_OUTER_Y)*(face.RIGHT_EYE_OUTER_Y - face.LEFT_EYE_OUTER_Y));
+	float scale = distance(Point2f(neutralFace.RIGHT_EYE_OUTER_X,	neutralFace.RIGHT_EYE_OUTER_Y), Point2f(neutralFace.LEFT_EYE_OUTER_X,	neutralFace.LEFT_EYE_OUTER_Y))
+				/ distance(Point2f(face.RIGHT_EYE_OUTER_X,			face.RIGHT_EYE_OUTER_Y),		Point2f(face.LEFT_EYE_OUTER_X,			face.LEFT_EYE_OUTER_Y));
+	rotate(face, Point2f(face.LEFT_EYE_OUTER_X, face.LEFT_EYE_OUTER_Y), angle1*(180 / pi) , scale);
+	crop(face, 0.1);
+	resize(face, 300, 300);
+	transpositionAlign(face, neutralFace);
+	/*
 	//resize(face, neutralFace.mat.cols*scale, neutralFace.mat.rows*scale);
 	//imshow("dbg", face.getLandmarkOverlay()); waitKey();
-	rotate(face, Point2f(face.LEFT_EYE_OUTER_X, face.LEFT_EYE_OUTER_Y), angle1*(180 / pi), scale);
-	imshow("dbg", face.getLandmarkOverlay()); waitKey(); 
-	transpositionAlign(face, neutralFace);
-	imshow("dbg", face.getLandmarkOverlay()); waitKey();
+	cout << "neutralFace - " << distance(Point2f(neutralFace.RIGHT_EYE_OUTER_X, neutralFace.RIGHT_EYE_OUTER_Y), Point2f(neutralFace.LEFT_EYE_OUTER_X,	neutralFace.LEFT_EYE_OUTER_Y)) << endl;
+	cout << "face - " <<		distance(Point2f(face.RIGHT_EYE_OUTER_X,		face.RIGHT_EYE_OUTER_Y),		Point2f(face.LEFT_EYE_OUTER_X,			face.LEFT_EYE_OUTER_Y)) << endl;
+
+	cout << "neutralFace - " << distance(Point2f(neutralFace.RIGHT_EYE_OUTER_X, neutralFace.RIGHT_EYE_OUTER_Y), Point2f(neutralFace.LEFT_EYE_OUTER_X,	neutralFace.LEFT_EYE_OUTER_Y)) << endl;
+	cout << "face - " <<		distance(Point2f(face.RIGHT_EYE_OUTER_X,		face.RIGHT_EYE_OUTER_Y),		Point2f(face.LEFT_EYE_OUTER_X,			face.LEFT_EYE_OUTER_Y)) << endl;
+	*/
+
+	//crop(face, 0.1);
+	//resize(face, 300, 300);
+
 	//float angle2 = atan2f(neutralFace.RIGHT_EYE_OUTER_Y - neutralFace.LEFT_EYE_OUTER_Y, neutralFace.RIGHT_EYE_OUTER_X - neutralFace.LEFT_EYE_OUTER_X);
 	//rotate(neutralFace, Point2f(neutralFace.LEFT_EYE_OUTER_X, neutralFace.LEFT_EYE_OUTER_Y), angle2*(180/pi));
 	//imshow("rotation", face.getLandmarkOverlay()); waitKey();
@@ -63,10 +80,7 @@ void ImgPreprocessor::align(Face &face, Face &neutralFace)
 	//resize(face, neutralFace.mat.cols, neutralFace.mat.rows);*/
 
 	//imshow("dbg", face.getLandmarkOverlay()); waitKey();
-	reshape(face, neutralFace.mat.size().width, neutralFace.mat.size().height);
-	imshow("dbg", face.getLandmarkOverlay()); waitKey();
 
-	
 }
 
 void ImgPreprocessor::rotate(Face &face, cv::Point2f center_of_rotation, float angle, float scale)
@@ -126,7 +140,7 @@ void ImgPreprocessor::resize(Face &face, int width, int height)
 	
 	float fx = (float)height / face.mat.rows;
 	float fy = (float)height / face.mat.rows;
-	cv::resize(face.mat, face.mat, cv::Size(width, height), fx, fy);
+	cv::resize(face.mat, face.mat, cv::Size(), fx, fy);
 
 	for (int i = 0; i < face.landmarks.size(); i += 2)
 	{
@@ -141,7 +155,7 @@ void ImgPreprocessor::reshape(Face &face, int width, int height)
 {
 	int max_width = (width > face.mat.size().width) ? width : face.mat.size().width;
 	int max_height = (height > face.mat.size().height) ? height : face.mat.size().height;
-	Mat reshapedMat = Mat::zeros(max_width, max_height, face.mat.type());
+	Mat reshapedMat = Mat::zeros(max_height, max_width, face.mat.type());
 	face.mat.copyTo(reshapedMat(Rect(0, 0, face.mat.size().width, face.mat.size().height)));
 	face.mat = reshapedMat;
 	face.mat = face.mat(cv::Rect(0, 0, width, height));
@@ -211,26 +225,26 @@ void ImgPreprocessor::transformEEC(Face &face1, Face &face2, int warp_mode)
 	ImgPreprocessor::transformPerspectiveLandmarks(face1, warp_matrix);
 }
 
-void ImgPreprocessor::transpositionAlign(Face & face1, Face & face2)
+void ImgPreprocessor::transpositionAlign(Face & face, Face & neutralFace)
 {
 	//int x, y;
 	//x = cos(60 * M_PI / 180.0) * (srcTri[0].x - srcTri[1].x) - sin(60 * M_PI / 180.0) * (srcTri[0].y - srcTri[1].y) + srcTri[1].x;
 	//y = sin(60 * M_PI / 180.0) * (srcTri[0].x - srcTri[1].x) + cos(60 * M_PI / 180.0) * (srcTri[0].y - srcTri[1].y) + srcTri[1].y;
 	long double M_PI = 3.141592653589793238L;
 	Point2f srcTri[3];
-	srcTri[0] = Point2f(face1.RIGHT_EYE_OUTER_X, face1.RIGHT_EYE_OUTER_Y);
-	srcTri[1] = Point2f(face1.LEFT_EYE_OUTER_X, face1.LEFT_EYE_OUTER_Y); 
+	srcTri[0] = Point2f(face.RIGHT_EYE_OUTER_X, face.RIGHT_EYE_OUTER_Y);
+	srcTri[1] = Point2f(face.LEFT_EYE_OUTER_X, face.LEFT_EYE_OUTER_Y); 
 	srcTri[2] = Point2f(cos(60 * pi / 180.0) * (srcTri[0].x - srcTri[1].x) - sin(60 * pi / 180.0) * (srcTri[0].y - srcTri[1].y) + srcTri[1].x,
 						sin(60 * pi / 180.0) * (srcTri[0].x - srcTri[1].x) + cos(60 * pi / 180.0) * (srcTri[0].y - srcTri[1].y) + srcTri[1].y);
 	Point2f dstTri[3];
-	dstTri[0] = Point2f(face2.RIGHT_EYE_OUTER_X, face2.RIGHT_EYE_OUTER_Y); 
-	dstTri[1] = Point2f(face2.LEFT_EYE_OUTER_X, face2.LEFT_EYE_OUTER_Y);
+	dstTri[0] = Point2f(neutralFace.RIGHT_EYE_OUTER_X, neutralFace.RIGHT_EYE_OUTER_Y); 
+	dstTri[1] = Point2f(neutralFace.LEFT_EYE_OUTER_X, neutralFace.LEFT_EYE_OUTER_Y);
 	dstTri[2] = Point2f(cos(60 * pi / 180.0) * (dstTri[0].x - dstTri[1].x) - sin(60 * pi / 180.0) * (dstTri[0].y - dstTri[1].y) + dstTri[1].x,
 						sin(60 * pi / 180.0) * (dstTri[0].x - dstTri[1].x) + cos(60 * pi / 180.0) * (dstTri[0].y - dstTri[1].y) + dstTri[1].y);
 	Mat warp_mat(2, 3, CV_32FC1);
 	warp_mat = getAffineTransform(srcTri, dstTri);
-	warpAffine(face1.mat, face1.mat, warp_mat, face1.mat.size());
-	ImgPreprocessor::transformLandmarks(face1, warp_mat);
+	warpAffine(face.mat, face.mat, warp_mat, face.mat.size());
+	ImgPreprocessor::transformLandmarks(face, warp_mat);
 }
 
 void ImgPreprocessor::transformLandmarks(Face &face, Mat warp_mat)

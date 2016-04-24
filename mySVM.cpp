@@ -31,7 +31,7 @@ float mySVM::go(std::vector<std::vector<float>> trainingData, std::vector<float>
 	if (input == "y") {
 		svm = StatModel::load<SVM>("SVM.xml");
 	}
-	if (svm->empty())
+	if (svm==NULL)
 	{
 		std::cout << "Start training\n";
 		//svm.load("SVM.xml");

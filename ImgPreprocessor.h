@@ -4,7 +4,7 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include <opencv2/video/video.hpp>
 #include <math.h>
-
+#include <cmath>
 
 
 class ImgPreprocessor
@@ -18,6 +18,7 @@ public:
 
 	void align(Face &face);
 	void align(Face &face1, Face &face2);
+	float distance(Point2f p1, Point2f p2);
 	//void rotate(cv::Mat &src, cv::Point2f center_of_rotation, float angle, float scale = 1.0);
 	void rotate(Face &face, cv::Point2f center_of_rotation, float angle, float scale = 1.0);
 	//void transform(Face &face);

@@ -14,12 +14,6 @@ public:
 	GUI();
 	~GUI();
 
-	static int lastKeyPress;
-
-	bool keyUpdateNeutral();
-	bool keyUpdateOther();
-	void keyClear();
-
 	HWND createScrnCapWnd(HINSTANCE hInstance);
 	//static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 

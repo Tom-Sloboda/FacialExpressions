@@ -59,7 +59,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		std::vector<float> trainingLabels;
 		//std::cout << "1";
 		int wait;
-
+		
 		int countArr[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 		for (int i = 0; i < LDR.labels.size(); i++)
 		{
@@ -74,7 +74,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		int INDEX = LDR.labels.size()/2;
 		for (int i = 0; i < LDR.labels.size()- INDEX; i++)
 		{
-			if ((LDR.labels[i] != 8)&&(LDR.labels[i] != 0))
+			if (LDR.labels[i] != 8)//&&(LDR.labels[i] != 0))
 			{
 				trainingData.push_back(LDR.data[i]);
 				trainingLabels.push_back(LDR.labels[i]);
@@ -86,7 +86,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//std::cout << "2";
 		for (int i = LDR.labels.size() - INDEX; i < LDR.labels.size(); i++)
 		{
-			if ((LDR.labels[i] != 8) && (LDR.labels[i] != 0))
+			if (LDR.labels[i] != 8)// && (LDR.labels[i] != 0))
 			{
 				testData.push_back(LDR.data[i]);
 				testLabels.push_back(LDR.labels[i]);
@@ -96,66 +96,82 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		float precision = SVM.go(trainingData, trainingLabels, testData, testLabels);
 		//CLS.go(trainingData, trainingLabels, testData, testLabels);
 		cout << "Success rate: " << setprecision(2) << precision << "\n";
-
+		
 		HWND hwnd = GUI.createScrnCapWnd(hInstance);
-		Mat neutralFace, otherFace, currentImg;
+		Mat neutralFace, otherFace, combined;
 		array2d<rgb_pixel> dneutralFace, dotherFace;
 		Face *neutral = NULL, *other=NULL;
 		while (hwnd != NULL)
 		{
-			if (GUI.keyUpdateNeutral())
+			MSG msg;
+			if (GetMessage(&msg, NULL, 0, 0) > 0)
 			{
-				neutralFace = CAP.hwnd2mat(hwnd);
-				cv_image<rgb_alpha_pixel> cv_neutralFace = (cv_image<rgb_alpha_pixel>)neutralFace;
-				assign_image(dneutralFace, cv_neutralFace);
-				namedWindow("Neutral Face", WINDOW_AUTOSIZE);
-				imshow("Neutral Face", neutralFace);
-				waitKey(10);
-				GUI.keyClear();
-				std::vector<dlib::rectangle> faces = FE.detectFaces(&dneutralFace);
-				if (faces.size() > 0)
-				{
-					neutral = new Face(&FE, neutralFace, &dneutralFace, 0.0);
-					IP.align(*neutral);
-					imshow("Neutral Face", neutral->getLandmarkOverlay());
-					waitKey(10);
-				}
-				//cout << "Number of faces = " << faces.size() <<endl;
+				TranslateMessage(&msg);
+				DispatchMessage(&msg);
 			}
-			if (GUI.keyUpdateOther())
+			if (msg.message == WM_KEYUP) 
 			{
-				otherFace = CAP.hwnd2mat(hwnd);
-				cv_image<rgb_alpha_pixel> cv_otherFace = (cv_image<rgb_alpha_pixel>)otherFace;
-				assign_image(dotherFace, cv_otherFace);
-				namedWindow("Other Face", WINDOW_AUTOSIZE);
-				imshow("Other Face", otherFace);
-				waitKey(10);
-				GUI.keyClear();
-				std::vector<dlib::rectangle> faces = FE.detectFaces(&dotherFace);
-				if (faces.size() > 0)
+				cout << msg.wParam << endl;
+				if (msg.wParam == 'N')
 				{
-					other = new Face(&FE, otherFace, &dotherFace, 0.0);
-					imshow("Other Face", other->getLandmarkOverlay());
+					neutralFace = CAP.hwnd2mat(hwnd);
+					cv_image<rgb_alpha_pixel> cv_neutralFace = (cv_image<rgb_alpha_pixel>)neutralFace;
+					assign_image(dneutralFace, cv_neutralFace);
+					namedWindow("Neutral Face", WINDOW_AUTOSIZE);
+					imshow("Neutral Face", neutralFace);
 					waitKey(10);
-					if (neutral != NULL) {
-						IP.align(*other, *neutral);
+					std::vector<dlib::rectangle> faces = FE.detectFaces(&dneutralFace);
+					if (faces.size() > 0)
+					{
+						neutral = new Face(&FE, neutralFace, &dneutralFace, 0.0);
+						IP.align(*neutral);
 						imshow("Neutral Face", neutral->getLandmarkOverlay());
-						imshow("Other Face", other->getLandmarkOverlay());
-						cv::addWeighted(neutral->getLandmarkOverlay(), 0.5, other->getLandmarkOverlay(), 0.5, 0.0, currentImg);
-						imshow("Combined", currentImg);
 						waitKey(10);
-						std::vector<float> testData = FE.getDifference(neutral->landmarks, other->landmarks);
-						cv::Mat testDataMat(1, testData.size(), CV_32FC1, testData.data());
-						cout << SVM.classToEmotion(SVM.svm->predict(testDataMat)) << endl;
+					}
+					//cout << "Number of faces = " << faces.size() <<endl;
+				}
+				if (msg.wParam == ' ')
+				{
+					otherFace = CAP.hwnd2mat(hwnd);
+					cv_image<rgb_alpha_pixel> cv_otherFace = (cv_image<rgb_alpha_pixel>)otherFace;
+					assign_image(dotherFace, cv_otherFace);
+					namedWindow("Other Face", WINDOW_AUTOSIZE);
+					imshow("Other Face", otherFace);
+					waitKey(10);
+					std::vector<dlib::rectangle> faces = FE.detectFaces(&dotherFace);
+					if (faces.size() > 0)
+					{
+						other = new Face(&FE, otherFace, &dotherFace, 0.0);
+						imshow("Other Face", other->getLandmarkOverlay());
+						waitKey(10);
+						if (neutral != NULL) {
+							IP.align(*other, *neutral);
+							imshow("Neutral Face", neutral->getLandmarkOverlay());
+							imshow("Other Face", other->getLandmarkOverlay());
+
+							int max_width = (neutral->mat.size().width > other->mat.size().width) ? neutral->mat.size().width : other->mat.size().width;
+							int max_height = (neutral->mat.size().height > other->mat.size().height) ? neutral->mat.size().height : other->mat.size().height;
+							Mat combined = Mat::zeros(max_height, max_width, other->mat.type());
+
+							Mat reshapedMat = Mat::zeros(max_height, max_width, other->mat.type());
+							neutral->mat.copyTo(reshapedMat(Rect(0, 0, neutral->mat.size().width, neutral->mat.size().height)));
+							neutral->mat = reshapedMat.clone();
+
+							reshapedMat = Mat::zeros(max_height, max_width, other->mat.type());
+							other->mat.copyTo(reshapedMat(Rect(0, 0, other->mat.size().width, other->mat.size().height)));
+							other->mat = reshapedMat.clone();
+
+							cv::addWeighted(neutral->getLandmarkOverlay(), 0.5, other->getLandmarkOverlay(), 0.5, 0.0, combined);
+							imshow("Combined", combined);
+							waitKey(10);
+							std::vector<float> testData = FE.getDifference(neutral->landmarks, other->landmarks);
+							cv::Mat testDataMat(1, testData.size(), CV_32FC1, testData.data());
+							cout << SVM.classToEmotion(SVM.svm->predict(testDataMat)) << endl;
+						}
 					}
 				}
 			}
-			/*
-			LPMSG msg = NULL;
-			if (GetMessage(msg, NULL, 0, 0)) {
-				TranslateMessage(msg);
-				DispatchMessage(msg);
-			}
+			
 			/*
 			currentImg.empty();
 			currentImg = CAP.hwnd2mat(hwnd);
@@ -164,12 +180,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			waitKey(100);
 			*/
 			//sleep(100);
-			MSG msg;
-			if (GetMessage(&msg, NULL, 0, 0) > 0)
-			{
-				TranslateMessage(&msg);
-				DispatchMessage(&msg);
-			}
 		}
 
 		cin >> wait;

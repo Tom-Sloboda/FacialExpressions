@@ -4,10 +4,7 @@
 
 GUI::GUI()
 {
-	lastKeyPress = 0;
 }
-
-int GUI::lastKeyPress = 0;
 
 GUI::~GUI()
 {
@@ -19,8 +16,7 @@ void GUI::show()
 	int win = WinMain(NULL, NULL, NULL, 0);
 }
 
-//const char g_szClassName[] = "myWindowClass";
-// Step 4: the Window Procedure
+
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
 	switch (msg)
@@ -30,10 +26,6 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);
-		break;
-	case WM_KEYUP:
-		//cout << (wchar_t)wParam << endl;
-		GUI::lastKeyPress = wParam;
 		break;
 	default:
 		return DefWindowProc(hwnd, msg, wParam, lParam);
@@ -113,21 +105,4 @@ HWND GUI::createScrnCapWnd(HINSTANCE hInstance)// LPSTR lpCmdLine, int nCmdShow)
 	*/
 	SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, 200, 200, SWP_SHOWWINDOW);
 	return hwnd;
-}
-
-bool GUI::keyUpdateNeutral()
-{
-	//cout << "KEY - " << GUI::lastKeyPress << endl;
-	return (GUI::lastKeyPress == 78); //n
-}
-
-bool GUI::keyUpdateOther()
-{
-	//cout << "KEY - " << GUI::lastKeyPress << endl;
-	return (GUI::lastKeyPress == ' ');
-}
-
-void GUI::keyClear()
-{
-	lastKeyPress = 0;
 }

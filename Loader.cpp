@@ -36,10 +36,11 @@ Loader::Loader(FeatureExtractor *FE, ImgPreprocessor *IP)
 		//image_window  win;
 		
 		Mat f1, f2, combined;
+		/*
 		namedWindow("Processing", WINDOW_AUTOSIZE);
 		namedWindow("Face1", WINDOW_AUTOSIZE);
 		namedWindow("Face2", WINDOW_AUTOSIZE);
-		
+		*/
 		int counter = 0;
 		for each (string path in directory_list)
 		{
@@ -52,13 +53,15 @@ Loader::Loader(FeatureExtractor *FE, ImgPreprocessor *IP)
 			float label = readLabel(labelpath);
 
 			Face neutral_face(FE, imgpaths[0].string(), 0);
+			IP->align(neutral_face);
 
-			for (int j = round(imgpaths.size() / 2); j < imgpaths.size(); j++)
+			for (int j = 0; j < 2; j++)
 			{
 				Face face(FE, imgpaths[j].string(), 0);
 				Loader::IP->align(face, neutral_face);
 				data.push_back(FE->getDifference(neutral_face.landmarks, face.landmarks));
-				
+				labels.push_back(0);
+				/*
 				f1 = face.getLandmarkOverlay();
 				f2 = neutral_face.getLandmarkOverlay();
 				cv::addWeighted(f1, 0.5, f2, 0.5, 0.0, combined);
@@ -66,42 +69,28 @@ Loader::Loader(FeatureExtractor *FE, ImgPreprocessor *IP)
 				imshow("Face1", f1);
 				imshow("Face2", f2);
 				waitKey(1);
-				
+				*/
+			}
+			for (int j = round(imgpaths.size() / 2); j < imgpaths.size(); j++)
+			{
+				Face face(FE, imgpaths[j].string(), 0);
+				Loader::IP->align(face, neutral_face);
+				data.push_back(FE->getDifference(neutral_face.landmarks, face.landmarks));
 				labels.push_back(label);
+				/*
+				f1 = face.getLandmarkOverlay();
+				f2 = neutral_face.getLandmarkOverlay();
+				cv::addWeighted(f1, 0.5, f2, 0.5, 0.0, combined);
+				imshow("Processing", combined);
+				imshow("Face1", f1);
+				imshow("Face2", f2);
+				waitKey(1);
+				*/
+
 			}
 
 			cout << counter++ << "/" << directory_list.size() << endl;
 		}
-		/*
-		for (int i = 0; i < img_path_list.size(); i++)
-		{
-			//Get face with full expression
-			string num; 
-			num += img_path_list[i][img_path_list[i].size() - 6];
-			num += img_path_list[i][img_path_list[i].size() - 5];
-			int num_of_images_in_sequence = stoi(num);
-
-			//Get neutral face
-			string neutral_img_path = img_path_list[i];
-			neutral_img_path[neutral_img_path.size() - 5] = '1';
-			neutral_img_path[neutral_img_path.size() - 6] = '0';
-			Face neutral_face(&FE, neutral_img_path, 0);
-
-			for (int j = round(num_of_images_in_sequence / 2); j < num_of_images_in_sequence; j++)
-			{
-				string current_img_path = img_path_list[i];
-				current_img_path[current_img_path.size() - 6] = to_string(j/10)[0];
-				current_img_path[current_img_path.size() - 5] = to_string(j%10)[0];
-				Face face1(&FE, current_img_path, readLabel(label_path_list.at(i)));
-
-				IP.align(face1, neutral_face);
-
-				data.push_back(FE.getDifference(neutral_face.landmarks, face1.landmarks));
-				labels.push_back(readLabel(label_path_list.at(i)));
-				cout << i << "/" << img_path_list.size() << "\n";
-			}
-		}
-		*/
 		cout << labels.size() << "\n";
 		cout << data.size() << "\n";
 		saveProgress();
