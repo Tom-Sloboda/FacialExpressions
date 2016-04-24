@@ -1,7 +1,182 @@
-﻿  ImgPreprocessor.cpp
+﻿  Capture.cpp
+  Classifier.cpp
+  source.cpp
+  jcapimin.cpp
+  jcapistd.cpp
+  jccoefct.cpp
+  jccolor.cpp
+  jcdctmgr.cpp
+  jchuff.cpp
+  jcinit.cpp
+  jcmainct.cpp
+  jcmarker.cpp
+  jcmaster.cpp
+  jcomapi.cpp
+  jcparam.cpp
+  jcphuff.cpp
+  jcprepct.cpp
+  jcsample.cpp
+  jdapimin.cpp
+  jdapistd.cpp
+  Running Code Analysis for C/C++...
+  Compiling...
+  jdatadst.cpp
+  jdatasrc.cpp
+  jdcoefct.cpp
+  jdcolor.cpp
+  jddctmgr.cpp
+  jdhuff.cpp
+  jdinput.cpp
+  jdmainct.cpp
+  jdmarker.cpp
+  jdmaster.cpp
+  jdmerge.cpp
+  jdphuff.cpp
+  jdpostct.cpp
+  jdsample.cpp
+  jerror.cpp
+  jfdctflt.cpp
+  jfdctfst.cpp
+  jfdctint.cpp
+  jidctflt.cpp
+  jidctfst.cpp
+  Running Code Analysis for C/C++...
+  Compiling...
+  jidctint.cpp
+  jidctred.cpp
+  jmemmgr.cpp
+  jmemnobs.cpp
+  jquant1.cpp
+  jquant2.cpp
+  jutils.cpp
+  Face.cpp
+  FeatureExtractor.cpp
+  GUI.cpp
+GUI.cpp(35): warning C4244: '=': conversion from 'WPARAM' to 'int', possible loss of data
+GUI.cpp(92): warning C4311: 'type cast': pointer truncation from 'HBRUSH' to 'LONG'
+GUI.cpp(92): warning C4302: 'type cast': truncation from 'HBRUSH' to 'LONG'
+GUI.cpp(99): warning C4244: '=': conversion from 'double' to 'BYTE', possible loss of data
+  ImgPreprocessor.cpp
+  Loader.cpp
+  stdafx.cpp
+  FacialExpressions.cpp
+  mySVM.cpp
+  Running Code Analysis for C/C++...
+  png.c
+  pngerror.c
+  pngget.c
+  pngmem.c
+  pngpread.c
+  pngread.c
+  pngrio.c
+  pngrtran.c
+  pngrutil.c
+  pngset.c
+  pngtrans.c
+  pngwio.c
+  pngwrite.c
+  pngwtran.c
+  pngwutil.c
+  adler32.c
+  compress.c
+  crc32.c
+  deflate.c
+  gzclose.c
+  Running Code Analysis for C/C++...
+  Compiling...
+  gzlib.c
+  gzread.c
+  gzwrite.c
+  infback.c
+  inffast.c
+  inflate.c
+  inftrees.c
+  trees.c
+  uncompr.c
+  zutil.c
+  Running Code Analysis for C/C++...
   Generating code
-  158 of 10192 functions ( 1.6%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    70 functions had inline decision re-evaluated but remain unchanged
+  All 10161 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   FacialExpressions.vcxproj -> C:\_Projects\FacialExpressions\x64\Release\FacialExpressions.exe
+c:\opencv-3.1\opencv\build\include\opencv2\core\mat.inl.hpp(412): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+c:\opencv-3.1\opencv\build\include\opencv2\core\mat.inl.hpp(445): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+c:\opencv-3.1\opencv\build\include\opencv2\core\mat.inl.hpp(1886): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+c:\opencv-3.1\opencv\build\include\opencv2\core\mat.inl.hpp(2330): warning C6011: Dereferencing NULL pointer 'm'. See line 2327 for an earlier location where this can occur
+c:\opencv-3.1\opencv\build\include\opencv2\core\mat.inl.hpp(2344): warning C6011: Dereferencing NULL pointer 'm'. See line 2341 for an earlier location where this can occur
+c:\opencv-3.1\opencv\build\include\opencv2\core\utility.hpp(341): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(513): warning C6294: Ill-defined for-loop:  initial condition does not satisfy test.  Loop body not executed.
+c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(513): warning C6201: Index '3' is out of valid index range '0' to '2' for possibly stack allocated buffer 'this->val'.
+c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(505): warning C6294: Ill-defined for-loop:  initial condition does not satisfy test.  Loop body not executed.
+c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(505): warning C6201: Index '2' is out of valid index range '0' to '1' for possibly stack allocated buffer 'this->val'.
+c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(521): warning C6294: Ill-defined for-loop:  initial condition does not satisfy test.  Loop body not executed.
+c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(521): warning C6201: Index '4' is out of valid index range '0' to '3' for possibly stack allocated buffer 'this->val'.
+c:\dlib\dlib\threads\threads_kernel_1.h(46): warning C28125: The function 'InitializeCriticalSection' must be called from within a try/except block:  The requirement might be conditional.
+c:\dlib\dlib\serialize.h(289): warning C6385: Reading invalid data from 'buf':  the readable size is '8' bytes, but '-2' bytes may be read.
+c:\dlib\dlib\serialize.h(401): warning C6385: Reading invalid data from 'buf':  the readable size is '8' bytes, but '-2' bytes may be read.
+c:\dlib\dlib\rand\mersenne_twister.h(185): warning C6385: Reading invalid data from 'this->x':  the readable size is '4992' bytes, but 'i' bytes may be read.
+c:\dlib\dlib\entropy_decoder_model\entropy_decoder_model_kernel_5.h(531): warning C6011: Dereferencing NULL pointer 'new_node'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\unicode\unicode.cpp(120): warning C6386: Buffer overrun while writing to 'wstr':  the writable size is '(wlen+1)*2' bytes, but '4' bytes might be written.
+c:\_projects\facialexpressions\facialexpressions\dlib\threads\threads_kernel_1.h(46): warning C28125: The function 'InitializeCriticalSection' must be called from within a try/except block:  The requirement might be conditional.
+c:\_projects\facialexpressions\facialexpressions\dlib\sockets\sockets_kernel_1.cpp(81): warning C6031: Return value ignored: 'WSAStartup'.
+c:\_projects\facialexpressions\facialexpressions\dlib\serialize.h(289): warning C6385: Reading invalid data from 'buf':  the readable size is '8' bytes, but '-2' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\serialize.h(401): warning C6385: Reading invalid data from 'buf':  the readable size is '8' bytes, but '-2' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\rand\mersenne_twister.h(185): warning C6385: Reading invalid data from 'this->x':  the readable size is '4992' bytes, but 'i' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\entropy_decoder_model\entropy_decoder_model_kernel_5.h(531): warning C6011: Dereferencing NULL pointer 'new_node'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\gui_widgets\nativefont.h(234): warning C28183: 'hBmp' could be '0', and is a copy of the value found in 'CreateDIBSection()`233':  this does not adhere to the specification for the function 'SelectObject'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jccoefct.cpp(194): warning C6385: Reading invalid data from 'coef->MCU_buffer':  the readable size is '80' bytes, but '-8' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(85): warning C28182: Dereferencing NULL pointer. 'qtbl' contains the same NULL value as 'cinfo->quant_tbl_ptrs[qtblno]' did. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(145): warning C6385: Reading invalid data from 'fdct->float_divisors':  the readable size is '32' bytes, but 'qtblno' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(146): warning C6386: Buffer overrun while writing to 'fdct->float_divisors':  the writable size is '32' bytes, but 'qtblno' bytes might be written.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(78): warning C6385: Reading invalid data from 'fdct->divisors':  the readable size is '32' bytes, but 'qtblno' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(69): warning C6385: Reading invalid data from 'cinfo->quant_tbl_ptrs':  the readable size is '32' bytes, but 'qtblno' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(79): warning C6386: Buffer overrun while writing to 'fdct->divisors':  the writable size is '32' bytes, but 'qtblno' bytes might be written.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(142): warning C6387: 'entropy->dc_count_ptrs[dctbl]' could be '0':  this does not adhere to the specification for the function 'memset'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(138): warning C6385: Reading invalid data from 'entropy->dc_count_ptrs':  the readable size is '32' bytes, but 'dctbl' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(139): warning C6386: Buffer overrun while writing to 'entropy->dc_count_ptrs':  the writable size is '32' bytes, but 'dctbl' bytes might be written.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(144): warning C6386: Buffer overrun while writing to 'entropy->ac_count_ptrs':  the writable size is '32' bytes, but 'actbl' bytes might be written.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(143): warning C6385: Reading invalid data from 'entropy->ac_count_ptrs':  the readable size is '32' bytes, but 'actbl' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(147): warning C6387: 'entropy->ac_count_ptrs[actbl]' could be '0':  this does not adhere to the specification for the function 'memset'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(212): warning C6011: Dereferencing NULL pointer 'htbl'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcmarker.cpp(157): warning C6011: Dereferencing NULL pointer 'qtbl'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcmarker.cpp(200): warning C6011: Dereferencing NULL pointer 'htbl'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcmaster.cpp(235): warning C6001: Using uninitialized memory 'component_sent'.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcphuff.cpp(165): warning C6385: Reading invalid data from 'entropy->count_ptrs':  the readable size is '32' bytes, but 'tbl' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcphuff.cpp(166): warning C6386: Buffer overrun while writing to 'entropy->count_ptrs':  the writable size is '32' bytes, but 'tbl' bytes might be written.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcphuff.cpp(169): warning C6387: 'entropy->count_ptrs[tbl]' could be '0':  this does not adhere to the specification for the function 'memset'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdhuff.cpp(223): warning C6385: Reading invalid data from 'huffcode':  the readable size is '1028' bytes, but '-8' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdinput.cpp(240): warning C28183: 'qtbl' could be '0', and is a copy of the value found in 'compptr->quant_table':  this does not adhere to the specification for the function 'memcpy'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdinput.cpp(240): warning C6387: 'cinfo->quant_tbl_ptrs[qtblno]' could be '0':  this does not adhere to the specification for the function 'memcpy'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdinput.cpp(240): warning C6385: Reading invalid data from 'cinfo->quant_tbl_ptrs':  the readable size is '32' bytes, but 'qtblno' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdmarker.cpp(513): warning C6386: Buffer overrun while writing to 'cinfo->quant_tbl_ptrs':  the writable size is '32' bytes, but 'n' bytes might be written.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdmarker.cpp(512): warning C6385: Reading invalid data from 'cinfo->quant_tbl_ptrs':  the readable size is '32' bytes, but 'n' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(278): warning C6385: Reading invalid data from 'mem->small_list':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(291): warning C6385: Reading invalid data from 'first_pool_slop':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(293): warning C6385: Reading invalid data from 'extra_pool_slop':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(312): warning C6386: Buffer overrun while writing to 'mem->small_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(369): warning C6011: Dereferencing NULL pointer 'hdr_ptr'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(369): warning C6385: Reading invalid data from 'mem->large_list':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(375): warning C6386: Buffer overrun while writing to 'mem->large_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(824): warning C6011: Dereferencing NULL pointer 'ptr->mem_buffer'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(909): warning C6011: Dereferencing NULL pointer 'ptr->mem_buffer'. 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(967): warning C6385: Reading invalid data from 'mem->large_list':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(981): warning C6385: Reading invalid data from 'mem->small_list':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(968): warning C6386: Buffer overrun while writing to 'mem->large_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(982): warning C6386: Buffer overrun while writing to 'mem->small_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(1067): warning C6011: Dereferencing NULL pointer 'mem'. 
+c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(130): warning C28252: Inconsistent annotation for 'strcpy': _Param_(1) has 'SAL_writableTo(elementCount(_String_length_(__formal(1,parameter1))+1))' on the prior instance. See <no file>(0). 
+c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(130): warning C28253: Inconsistent annotation for 'strcpy': _Param_(1) has 'SAL_writableTo(elementCount(_String_length_(_Source)+1))' on this instance. See <no file>(0). 
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\pngrtran.c(4646): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\pngrtran.c(4807): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\pngrtran.c(4861): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\pngrtran.c(4884): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\gzread.c(95): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\gzread.c(453): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\gzread.c(469): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\trees.c(536): warning C6385: Reading invalid data from 's->bl_count':  the readable size is '32' bytes, but '-2' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\trees.c(552): warning C6385: Reading invalid data from 's->bl_count':  the readable size is '32' bytes, but 'bits' bytes may be read.
+c:\_projects\facialexpressions\facialexpressions\gui.cpp(19): warning C6387: '_Param_(1)' could be '0':  this does not adhere to the specification for the function 'WinMain'. 
+c:\_projects\facialexpressions\facialexpressions\gui.cpp(48): warning C6031: Return value ignored: 'freopen'.
+c:\_projects\facialexpressions\facialexpressions\gui.cpp(49): warning C6031: Return value ignored: 'freopen'.
+c:\_projects\facialexpressions\facialexpressions\gui.cpp(50): warning C6031: Return value ignored: 'freopen'.
+c:\_projects\facialexpressions\facialexpressions\facialexpressions.cpp(45): warning C28251: Inconsistent annotation for 'WinMain': this instance has no annotations. See c:\program files (x86)\windows kits\8.1\include\um\winbase.h(905). 

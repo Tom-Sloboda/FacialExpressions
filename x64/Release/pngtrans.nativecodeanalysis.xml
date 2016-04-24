@@ -12,7 +12,7 @@
     <FUNCTION>strcpy</FUNCTION>
     <DECORATED>strcpy</DECORATED>
     <FUNCLINE>130</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -26,6 +26,6 @@
     <FUNCTION>strcpy</FUNCTION>
     <DECORATED>strcpy</DECORATED>
     <FUNCLINE>130</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
 </DEFECTS>

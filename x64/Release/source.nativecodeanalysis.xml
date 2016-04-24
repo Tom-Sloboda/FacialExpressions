@@ -377,7 +377,7 @@
     <FUNCTION>dlib::mutex::{ctor}</FUNCTION>
     <DECORATED>??0mutex@dlib@@QEAA@XZ</DECORATED>
     <FUNCLINE>43</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -445,7 +445,7 @@
     <FUNCTION>dlib::sockets_startupdown::{ctor}</FUNCTION>
     <DECORATED>??0sockets_startupdown@dlib@@QEAA@XZ</DECORATED>
     <FUNCLINE>77</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -459,7 +459,7 @@
     <FUNCTION>dlib::bdf_font_helpers::bdf_parser::parse_header</FUNCTION>
     <DECORATED>?parse_header@bdf_parser@bdf_font_helpers@dlib@@QEAA_NAEAUheader_info@123@@Z</DECORATED>
     <FUNCLINE>250</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -473,7 +473,7 @@
     <FUNCTION>dlib::bdf_font_helpers::bdf_parser::parse_glyph</FUNCTION>
     <DECORATED>?parse_glyph@bdf_parser@bdf_font_helpers@dlib@@QEAAHAEAUchar_info@123@AEAI@Z</DECORATED>
     <FUNCLINE>294</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -634,7 +634,7 @@
           <ID>4</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:156)</MESSAGE>
+          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:160)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
@@ -870,7 +870,7 @@
           <ID>4</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:156)</MESSAGE>
+          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:160)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
@@ -1106,7 +1106,7 @@
           <ID>4</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:156)</MESSAGE>
+          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:160)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
@@ -1931,7 +1931,7 @@
     <FUNCTION>dlib::scale_columns</FUNCTION>
     <DECORATED>??$scale_columns@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@YA?BV?$matrix_op@U?$op_scale_columns@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@dlib@@@0@@Z</DECORATED>
     <FUNCLINE>3101</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1945,7 +1945,7 @@
     <FUNCTION>dlib::scale_columns</FUNCTION>
     <DECORATED>??$scale_columns@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@YA?BV?$matrix_op@U?$op_scale_columns@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@dlib@@@0@@Z</DECORATED>
     <FUNCLINE>3101</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>

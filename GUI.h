@@ -21,7 +21,8 @@ public:
 	void keyClear();
 
 	HWND createScrnCapWnd(HINSTANCE hInstance);
-	//static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	//static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
 	void console();
 
 	void show();

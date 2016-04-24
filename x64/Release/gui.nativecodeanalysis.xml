@@ -56,20 +56,6 @@
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
       <FILENAME>gui.cpp</FILENAME>
-      <LINE>47</LINE>
-      <COLUMN>8</COLUMN>
-    </SFA>
-    <DEFECTCODE>6031</DEFECTCODE>
-    <DESCRIPTION>Return value ignored: 'freopen'.</DESCRIPTION>
-    <FUNCTION>GUI::console</FUNCTION>
-    <DECORATED>?console@GUI@@QEAAXXZ</DECORATED>
-    <FUNCLINE>44</FUNCLINE>
-    <PATH />
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-      <FILENAME>gui.cpp</FILENAME>
       <LINE>48</LINE>
       <COLUMN>8</COLUMN>
     </SFA>
@@ -77,8 +63,8 @@
     <DESCRIPTION>Return value ignored: 'freopen'.</DESCRIPTION>
     <FUNCTION>GUI::console</FUNCTION>
     <DECORATED>?console@GUI@@QEAAXXZ</DECORATED>
-    <FUNCLINE>44</FUNCLINE>
-    <PATH />
+    <FUNCLINE>45</FUNCLINE>
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -91,7 +77,21 @@
     <DESCRIPTION>Return value ignored: 'freopen'.</DESCRIPTION>
     <FUNCTION>GUI::console</FUNCTION>
     <DECORATED>?console@GUI@@QEAAXXZ</DECORATED>
-    <FUNCLINE>44</FUNCLINE>
-    <PATH />
+    <FUNCLINE>45</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+      <FILENAME>gui.cpp</FILENAME>
+      <LINE>50</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>Return value ignored: 'freopen'.</DESCRIPTION>
+    <FUNCTION>GUI::console</FUNCTION>
+    <DECORATED>?console@GUI@@QEAAXXZ</DECORATED>
+    <FUNCLINE>45</FUNCLINE>
+    <PATH></PATH>
   </DEFECT>
 </DEFECTS>

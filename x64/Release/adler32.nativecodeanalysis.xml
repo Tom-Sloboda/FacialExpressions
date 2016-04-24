@@ -12,7 +12,7 @@
     <FUNCTION>strcpy</FUNCTION>
     <DECORATED>strcpy</DECORATED>
     <FUNCLINE>130</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -26,7 +26,7 @@
     <FUNCTION>strcpy</FUNCTION>
     <DECORATED>strcpy</DECORATED>
     <FUNCLINE>130</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -40,6 +40,6 @@
     <FUNCTION>adler32_combine64</FUNCTION>
     <DECORATED>adler32_combine64</DECORATED>
     <FUNCLINE>173</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
 </DEFECTS>

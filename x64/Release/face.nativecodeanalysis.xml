@@ -12,7 +12,7 @@
     <FUNCTION>cv::Mat::{ctor}</FUNCTION>
     <DECORATED>??0Mat@cv@@QEAA@HHHPEAX_K@Z</DECORATED>
     <FUNCLINE>405</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -26,7 +26,7 @@
     <FUNCTION>cv::Mat::{ctor}</FUNCTION>
     <DECORATED>??0Mat@cv@@QEAA@V?$Size_@H@1@HPEAX_K@Z</DECORATED>
     <FUNCLINE>438</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -40,7 +40,7 @@
     <FUNCTION>cv::SparseMat::elemSize</FUNCTION>
     <DECORATED>?elemSize@SparseMat@cv@@QEBA_KXZ</DECORATED>
     <FUNCLINE>1884</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -202,7 +202,7 @@
     <FUNCTION>cv::getElemSize</FUNCTION>
     <DECORATED>?getElemSize@cv@@YA_KH@Z</DECORATED>
     <FUNCLINE>341</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -216,7 +216,7 @@
     <FUNCTION>dlib::mutex::{ctor}</FUNCTION>
     <DECORATED>??0mutex@dlib@@QEAA@XZ</DECORATED>
     <FUNCLINE>43</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -473,7 +473,7 @@
     <FUNCTION>dlib::matrix&lt;std::complex&lt;double&gt;,0,1,dlib::memory_manager_stateless_kernel_1&lt;char&gt;,dlib::row_major_layout&gt;::set_size</FUNCTION>
     <DECORATED>?set_size@?$matrix@V?$complex@N@std@@$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@4@@dlib@@QEAAXJ@Z</DECORATED>
     <FUNCLINE>1245</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -487,7 +487,7 @@
     <FUNCTION>dlib::matrix&lt;dlib::matrix&lt;double,0,1,dlib::memory_manager_stateless_kernel_1&lt;char&gt;,dlib::row_major_layout&gt;,0,1,dlib::memory_manager_stateless_kernel_1&lt;char&gt;,dlib::row_major_layout&gt;::set_size</FUNCTION>
     <DECORATED>?set_size@?$matrix@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@$0A@$00V?$memory_manager_stateless_kernel_1@D@2@Urow_major_layout@2@@dlib@@QEAAXJ@Z</DECORATED>
     <FUNCLINE>1245</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -501,7 +501,7 @@
     <FUNCTION>dlib::matrix&lt;float,0,1,dlib::memory_manager_stateless_kernel_1&lt;char&gt;,dlib::row_major_layout&gt;::set_size</FUNCTION>
     <DECORATED>?set_size@?$matrix@M$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@QEAAXJ@Z</DECORATED>
     <FUNCLINE>1245</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -515,7 +515,7 @@
     <FUNCTION>dlib::matrix&lt;float,0,1,dlib::memory_manager_stateless_kernel_1&lt;char&gt;,dlib::row_major_layout&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$matrix@M$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@QEAA@J@Z</DECORATED>
     <FUNCLINE>1011</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -529,7 +529,7 @@
     <FUNCTION>dlib::matrix&lt;double,0,1,dlib::memory_manager_stateless_kernel_1&lt;char&gt;,dlib::row_major_layout&gt;::set_size</FUNCTION>
     <DECORATED>?set_size@?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@QEAAXJ@Z</DECORATED>
     <FUNCLINE>1245</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -648,7 +648,7 @@
           <ID>4</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:156)</MESSAGE>
+          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:160)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
@@ -884,7 +884,7 @@
           <ID>4</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:156)</MESSAGE>
+          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:160)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
@@ -1120,7 +1120,7 @@
           <ID>4</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:156)</MESSAGE>
+          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:160)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
@@ -1415,7 +1415,7 @@
     <FUNCTION>dlib::*</FUNCTION>
     <DECORATED>??$?DV?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@1@@dlib@@YA?BV?$matrix_op@U?$op_scale_rows_diag@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_diag_exp@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@dlib@@@0@AEBV?$matrix_exp@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@0@@Z</DECORATED>
     <FUNCLINE>3281</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1429,7 +1429,7 @@
     <FUNCTION>dlib::*</FUNCTION>
     <DECORATED>??$?DV?$matrix_multiply_exp@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_trans@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@2@@dlib@@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@1@@dlib@@YA?BV?$matrix_op@U?$op_scale_columns_diag@V?$matrix_multiply_exp@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_trans@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@2@@dlib@@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix_multiply_exp@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_trans@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_diag_exp@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@dlib@@@0@@Z</DECORATED>
     <FUNCLINE>3162</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1443,7 +1443,7 @@
     <FUNCTION>cv::Matx&lt;float,3,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$02$00@cv@@QEAA@MMM@Z</DECORATED>
     <FUNCLINE>509</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1457,7 +1457,7 @@
     <FUNCTION>cv::Matx&lt;float,3,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$02$00@cv@@QEAA@MMM@Z</DECORATED>
     <FUNCLINE>509</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1471,7 +1471,7 @@
     <FUNCTION>cv::Matx&lt;double,3,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@N$02$00@cv@@QEAA@NNN@Z</DECORATED>
     <FUNCLINE>509</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1485,7 +1485,7 @@
     <FUNCTION>cv::Matx&lt;double,3,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@N$02$00@cv@@QEAA@NNN@Z</DECORATED>
     <FUNCLINE>509</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1891,7 +1891,7 @@
     <FUNCTION>dlib::matrix&lt;double,0,1,dlib::memory_manager_stateless_kernel_1&lt;char&gt;,dlib::row_major_layout&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@QEAA@J@Z</DECORATED>
     <FUNCLINE>1011</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1905,7 +1905,7 @@
     <FUNCTION>cv::Matx&lt;float,2,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$01$00@cv@@QEAA@MM@Z</DECORATED>
     <FUNCLINE>501</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1919,7 +1919,7 @@
     <FUNCTION>cv::Matx&lt;float,2,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$01$00@cv@@QEAA@MM@Z</DECORATED>
     <FUNCLINE>501</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1933,7 +1933,7 @@
     <FUNCTION>cv::Matx&lt;double,2,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@N$01$00@cv@@QEAA@NN@Z</DECORATED>
     <FUNCLINE>501</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1947,7 +1947,7 @@
     <FUNCTION>cv::Matx&lt;double,2,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@N$01$00@cv@@QEAA@NN@Z</DECORATED>
     <FUNCLINE>501</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1961,7 +1961,7 @@
     <FUNCTION>cv::Matx&lt;float,4,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$03$00@cv@@QEAA@MMMM@Z</DECORATED>
     <FUNCLINE>517</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1975,7 +1975,7 @@
     <FUNCTION>cv::Matx&lt;float,4,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$03$00@cv@@QEAA@MMMM@Z</DECORATED>
     <FUNCLINE>517</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1989,7 +1989,7 @@
     <FUNCTION>cv::Matx&lt;double,4,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@N$03$00@cv@@QEAA@NNNN@Z</DECORATED>
     <FUNCLINE>517</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -2003,7 +2003,7 @@
     <FUNCTION>cv::Matx&lt;double,4,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@N$03$00@cv@@QEAA@NNNN@Z</DECORATED>
     <FUNCLINE>517</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -2017,7 +2017,7 @@
     <FUNCTION>dlib::scale_columns</FUNCTION>
     <DECORATED>??$scale_columns@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@YA?BV?$matrix_op@U?$op_scale_columns@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@dlib@@@0@@Z</DECORATED>
     <FUNCLINE>3101</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -2031,7 +2031,7 @@
     <FUNCTION>dlib::scale_columns</FUNCTION>
     <DECORATED>??$scale_columns@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@YA?BV?$matrix_op@U?$op_scale_columns@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@dlib@@@0@@Z</DECORATED>
     <FUNCLINE>3101</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>

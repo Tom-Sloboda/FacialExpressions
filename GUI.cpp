@@ -31,7 +31,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		break;
-	case WM_KEYUP:		//cout << (wchar_t)wParam << endl;
+	case WM_KEYUP:
+		//cout << (wchar_t)wParam << endl;
 		GUI::lastKeyPress = wParam;
 		break;
 	default:

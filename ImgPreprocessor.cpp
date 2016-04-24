@@ -139,7 +139,9 @@ void ImgPreprocessor::resize(Face &face, int width, int height)
 
 void ImgPreprocessor::reshape(Face &face, int width, int height)
 {
-	Mat reshapedMat = Mat::zeros(max(width, face.mat.size().width), max(height, face.mat.size().height), face.mat.type());
+	int max_width = (width > face.mat.size().width) ? width : face.mat.size().width;
+	int max_height = (height > face.mat.size().height) ? height : face.mat.size().height;
+	Mat reshapedMat = Mat::zeros(max_width, max_height, face.mat.type());
 	face.mat.copyTo(reshapedMat(Rect(0, 0, face.mat.size().width, face.mat.size().height)));
 	face.mat = reshapedMat;
 	face.mat = face.mat(cv::Rect(0, 0, width, height));

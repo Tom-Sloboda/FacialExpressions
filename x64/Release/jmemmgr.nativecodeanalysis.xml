@@ -120,6 +120,170 @@
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
       <FILENAME>jmemmgr.cpp</FILENAME>
+      <LINE>291</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'first_pool_slop':  the readable size is '16' bytes, but 'pool_id' bytes may be read.</DESCRIPTION>
+    <FUNCTION>alloc_small</FUNCTION>
+    <DECORATED>?alloc_small@@YAPEAXPEAUjpeg_common_struct@@H_K@Z</DECORATED>
+    <FUNCLINE>257</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>260</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>261</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>261</LINE>
+        <COLUMN>26</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>262</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>263</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>263</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>263</LINE>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>266</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>270</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>271</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>275</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'pool_id&lt;0||pool_id&gt;=2')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>276</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>277</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>278</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>279</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'hdr_ptr!=0' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>287</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'hdr_ptr==0')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>289</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>290</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'prev_hdr_ptr==0')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>291</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'first_pool_slop[2]', (readable range is 0 to 1)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jmemmgr.cpp</FILENAME>
       <LINE>293</LINE>
       <COLUMN>11</COLUMN>
     </SFA>
@@ -312,170 +476,6 @@
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
           <MESSAGE>Invalid read from 'extra_pool_slop[2]', (readable range is 0 to 1)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-    </PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-      <FILENAME>jmemmgr.cpp</FILENAME>
-      <LINE>291</LINE>
-      <COLUMN>11</COLUMN>
-    </SFA>
-    <DEFECTCODE>6385</DEFECTCODE>
-    <DESCRIPTION>Reading invalid data from 'first_pool_slop':  the readable size is '16' bytes, but 'pool_id' bytes may be read.</DESCRIPTION>
-    <FUNCTION>alloc_small</FUNCTION>
-    <DECORATED>?alloc_small@@YAPEAXPEAUjpeg_common_struct@@H_K@Z</DECORATED>
-    <FUNCLINE>257</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>4</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>260</LINE>
-        <COLUMN>13</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>261</LINE>
-        <COLUMN>17</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>261</LINE>
-        <COLUMN>26</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>262</LINE>
-        <COLUMN>9</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>263</LINE>
-        <COLUMN>9</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>263</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>263</LINE>
-        <COLUMN>33</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>266</LINE>
-        <COLUMN>19</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>270</LINE>
-        <COLUMN>12</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>271</LINE>
-        <COLUMN>16</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>275</LINE>
-        <COLUMN>18</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'pool_id&lt;0||pool_id&gt;=2')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>276</LINE>
-        <COLUMN>4</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>277</LINE>
-        <COLUMN>15</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>278</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>279</LINE>
-        <COLUMN>17</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Skip this loop, (assume 'hdr_ptr!=0' is false)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>287</LINE>
-        <COLUMN>14</COLUMN>
-        <KEYEVENT>
-          <ID>3</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'hdr_ptr==0')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>289</LINE>
-        <COLUMN>16</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>290</LINE>
-        <COLUMN>21</COLUMN>
-        <KEYEVENT>
-          <ID>4</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'prev_hdr_ptr==0')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>291</LINE>
-        <COLUMN>11</COLUMN>
-        <KEYEVENT>
-          <ID>5</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>Invalid read from 'first_pool_slop[2]', (readable range is 0 to 1)</MESSAGE>
         </KEYEVENT>
       </SFA>
     </PATH>
@@ -1458,98 +1458,6 @@
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
       <FILENAME>jmemmgr.cpp</FILENAME>
-      <LINE>968</LINE>
-      <COLUMN>27</COLUMN>
-    </SFA>
-    <DEFECTCODE>6386</DEFECTCODE>
-    <DESCRIPTION>Buffer overrun while writing to 'mem-&gt;large_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.</DESCRIPTION>
-    <FUNCTION>free_pool</FUNCTION>
-    <DECORATED>?free_pool@@YAXPEAUjpeg_common_struct@@H@Z</DECORATED>
-    <FUNCLINE>930</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>4</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>932</LINE>
-        <COLUMN>13</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>933</LINE>
-        <COLUMN>17</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>934</LINE>
-        <COLUMN>17</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>935</LINE>
-        <COLUMN>9</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>937</LINE>
-        <COLUMN>18</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'pool_id&lt;0||pool_id&gt;=2')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>938</LINE>
-        <COLUMN>4</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>946</LINE>
-        <COLUMN>14</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'pool_id' may equal 1 (Skip this branch)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>967</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>968</LINE>
-        <COLUMN>27</COLUMN>
-        <KEYEVENT>
-          <ID>3</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>Invalid write to 'mem-&gt;large_list[2]', (writable range is 0 to 1)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-    </PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-      <FILENAME>jmemmgr.cpp</FILENAME>
       <LINE>981</LINE>
       <COLUMN>11</COLUMN>
     </SFA>
@@ -1646,6 +1554,98 @@
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
           <MESSAGE>Invalid read from 'mem-&gt;small_list[2]', (readable range is 0 to 1)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jmemmgr.cpp</FILENAME>
+      <LINE>968</LINE>
+      <COLUMN>27</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'mem-&gt;large_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.</DESCRIPTION>
+    <FUNCTION>free_pool</FUNCTION>
+    <DECORATED>?free_pool@@YAXPEAUjpeg_common_struct@@H@Z</DECORATED>
+    <FUNCLINE>930</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>932</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>933</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>934</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>935</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>937</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'pool_id&lt;0||pool_id&gt;=2')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>938</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>946</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'pool_id' may equal 1 (Skip this branch)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>967</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>968</LINE>
+        <COLUMN>27</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'mem-&gt;large_list[2]', (writable range is 0 to 1)</MESSAGE>
         </KEYEVENT>
       </SFA>
     </PATH>
@@ -1772,7 +1772,7 @@
     <FUNCTION>jinit_memory_mgr</FUNCTION>
     <DECORATED>jinit_memory_mgr</DECORATED>
     <FUNCLINE>1028</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -1786,7 +1786,7 @@
     <FUNCTION>jinit_memory_mgr</FUNCTION>
     <DECORATED>jinit_memory_mgr</DECORATED>
     <FUNCLINE>1028</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>

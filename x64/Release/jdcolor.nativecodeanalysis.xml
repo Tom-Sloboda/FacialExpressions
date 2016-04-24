@@ -12,7 +12,7 @@
     <FUNCTION>jinit_color_deconverter</FUNCTION>
     <DECORATED>jinit_color_deconverter</DECORATED>
     <FUNCLINE>304</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
@@ -26,6 +26,6 @@
     <FUNCTION>jinit_color_deconverter</FUNCTION>
     <DECORATED>jinit_color_deconverter</DECORATED>
     <FUNCLINE>304</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT>
 </DEFECTS>

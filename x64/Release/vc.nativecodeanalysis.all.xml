@@ -10,7 +10,7 @@
     <FUNCTION>cv::Mat::{ctor}</FUNCTION>
     <DECORATED>??0Mat@cv@@QEAA@HHHPEAX_K@Z</DECORATED>
     <FUNCLINE>405</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\opencv-3.1\opencv\build\include\opencv2\core\</FILEPATH>
@@ -23,7 +23,7 @@
     <FUNCTION>cv::Mat::{ctor}</FUNCTION>
     <DECORATED>??0Mat@cv@@QEAA@V?$Size_@H@1@HPEAX_K@Z</DECORATED>
     <FUNCLINE>438</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\opencv-3.1\opencv\build\include\opencv2\core\</FILEPATH>
@@ -36,7 +36,7 @@
     <FUNCTION>cv::SparseMat::elemSize</FUNCTION>
     <DECORATED>?elemSize@SparseMat@cv@@QEBA_KXZ</DECORATED>
     <FUNCLINE>1884</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\opencv-3.1\opencv\build\include\opencv2\core\</FILEPATH>
@@ -195,7 +195,7 @@
     <FUNCTION>cv::getElemSize</FUNCTION>
     <DECORATED>?getElemSize@cv@@YA_KH@Z</DECORATED>
     <FUNCLINE>341</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\opencv-3.1\opencv\build\include\opencv2\core\</FILEPATH>
@@ -208,7 +208,7 @@
     <FUNCTION>cv::Matx&lt;float,3,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$02$00@cv@@QEAA@MMM@Z</DECORATED>
     <FUNCLINE>509</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\opencv-3.1\opencv\build\include\opencv2\core\</FILEPATH>
@@ -221,7 +221,7 @@
     <FUNCTION>cv::Matx&lt;float,3,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$02$00@cv@@QEAA@MMM@Z</DECORATED>
     <FUNCLINE>509</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\opencv-3.1\opencv\build\include\opencv2\core\</FILEPATH>
@@ -234,7 +234,7 @@
     <FUNCTION>cv::Matx&lt;float,2,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$01$00@cv@@QEAA@MM@Z</DECORATED>
     <FUNCLINE>501</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\opencv-3.1\opencv\build\include\opencv2\core\</FILEPATH>
@@ -247,7 +247,7 @@
     <FUNCTION>cv::Matx&lt;float,2,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$01$00@cv@@QEAA@MM@Z</DECORATED>
     <FUNCLINE>501</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\opencv-3.1\opencv\build\include\opencv2\core\</FILEPATH>
@@ -260,7 +260,7 @@
     <FUNCTION>cv::Matx&lt;float,4,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$03$00@cv@@QEAA@MMMM@Z</DECORATED>
     <FUNCLINE>517</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\opencv-3.1\opencv\build\include\opencv2\core\</FILEPATH>
@@ -273,7 +273,7 @@
     <FUNCTION>cv::Matx&lt;float,4,1&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$Matx@M$03$00@cv@@QEAA@MMMM@Z</DECORATED>
     <FUNCLINE>517</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\dlib\dlib\threads\</FILEPATH>
@@ -286,7 +286,7 @@
     <FUNCTION>dlib::mutex::{ctor}</FUNCTION>
     <DECORATED>??0mutex@dlib@@QEAA@XZ</DECORATED>
     <FUNCLINE>43</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\dlib\dlib\threads\</FILEPATH>
@@ -531,7 +531,7 @@
     <FUNCTION>dlib::matrix&lt;std::complex&lt;double&gt;,0,1,dlib::memory_manager_stateless_kernel_1&lt;char&gt;,dlib::row_major_layout&gt;::set_size</FUNCTION>
     <DECORATED>?set_size@?$matrix@V?$complex@N@std@@$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@4@@dlib@@QEAAXJ@Z</DECORATED>
     <FUNCLINE>1245</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\dlib\dlib\matrix\</FILEPATH>
@@ -544,7 +544,7 @@
     <FUNCTION>dlib::matrix&lt;float,0,1,dlib::memory_manager_stateless_kernel_1&lt;char&gt;,dlib::row_major_layout&gt;::{ctor}</FUNCTION>
     <DECORATED>??0?$matrix@M$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@QEAA@J@Z</DECORATED>
     <FUNCLINE>1011</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\dlib\dlib\</FILEPATH>
@@ -662,7 +662,7 @@
           <ID>4</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:156)</MESSAGE>
+          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:160)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
@@ -897,7 +897,7 @@
           <ID>4</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:156)</MESSAGE>
+          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:160)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
@@ -1146,7 +1146,7 @@
     <FUNCTION>dlib::*</FUNCTION>
     <DECORATED>??$?DV?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@1@@dlib@@YA?BV?$matrix_op@U?$op_scale_rows_diag@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_diag_exp@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@dlib@@@0@AEBV?$matrix_exp@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@0@@Z</DECORATED>
     <FUNCLINE>3281</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\dlib\dlib\matrix\</FILEPATH>
@@ -1159,7 +1159,7 @@
     <FUNCTION>dlib::*</FUNCTION>
     <DECORATED>??$?DV?$matrix_multiply_exp@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_trans@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@2@@dlib@@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@1@@dlib@@YA?BV?$matrix_op@U?$op_scale_columns_diag@V?$matrix_multiply_exp@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_trans@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@2@@dlib@@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix_multiply_exp@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_trans@V?$matrix@N$0A@$0A@V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_diag_exp@V?$matrix_diag_op@U?$op_diagm@V?$matrix@N$0A@$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@dlib@@@dlib@@@0@@Z</DECORATED>
     <FUNCLINE>3162</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\dlib\dlib\entropy_decoder_model\</FILEPATH>
@@ -1477,7 +1477,7 @@
     <FUNCTION>dlib::scale_columns</FUNCTION>
     <DECORATED>??$scale_columns@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@YA?BV?$matrix_op@U?$op_scale_columns@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@dlib@@@0@@Z</DECORATED>
     <FUNCLINE>3101</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\dlib\dlib\matrix\</FILEPATH>
@@ -1903,7 +1903,7 @@
     <FUNCTION>dlib::mutex::{ctor}</FUNCTION>
     <DECORATED>??0mutex@dlib@@QEAA@XZ</DECORATED>
     <FUNCLINE>43</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\threads\</FILEPATH>
@@ -1968,7 +1968,7 @@
     <FUNCTION>dlib::sockets_startupdown::{ctor}</FUNCTION>
     <DECORATED>??0sockets_startupdown@dlib@@QEAA@XZ</DECORATED>
     <FUNCLINE>77</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\gui_widgets\</FILEPATH>
@@ -1981,7 +1981,7 @@
     <FUNCTION>dlib::bdf_font_helpers::bdf_parser::parse_header</FUNCTION>
     <DECORATED>?parse_header@bdf_parser@bdf_font_helpers@dlib@@QEAA_NAEAUheader_info@123@@Z</DECORATED>
     <FUNCLINE>250</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\gui_widgets\</FILEPATH>
@@ -1994,7 +1994,7 @@
     <FUNCTION>dlib::bdf_font_helpers::bdf_parser::parse_glyph</FUNCTION>
     <DECORATED>?parse_glyph@bdf_parser@bdf_font_helpers@dlib@@QEAAHAEAUchar_info@123@AEAI@Z</DECORATED>
     <FUNCLINE>294</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\gui_widgets\</FILEPATH>
@@ -2152,7 +2152,7 @@
           <ID>4</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:156)</MESSAGE>
+          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:160)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
@@ -2387,7 +2387,7 @@
           <ID>4</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:156)</MESSAGE>
+          <MESSAGE>'buf' is an Output from 'std::basic_streambuf&lt;char,std::char_traits&lt;char&gt; &gt;::sgetn' (declared at c:\microsoft visual studio 14.0\vc\include\streambuf:160)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
@@ -3079,7 +3079,7 @@
     <FUNCTION>dlib::scale_columns</FUNCTION>
     <DECORATED>??$scale_columns@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@YA?BV?$matrix_op@U?$op_scale_columns@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix@N$02$02V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@@0@AEBV?$matrix_exp@V?$matrix_op@U?$op_reciprocal@V?$matrix_op@U?$op_round_zeros@V?$matrix@N$02$00V?$memory_manager_stateless_kernel_1@D@dlib@@Urow_major_layout@2@@dlib@@N@dlib@@@dlib@@@dlib@@@dlib@@@0@@Z</DECORATED>
     <FUNCLINE>3101</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\matrix\</FILEPATH>
@@ -3447,7 +3447,7 @@
     <FUNCTION>jinit_color_converter</FUNCTION>
     <DECORATED>jinit_color_converter</DECORATED>
     <FUNCLINE>352</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
@@ -3460,424 +3460,7 @@
     <FUNCTION>jinit_color_converter</FUNCTION>
     <DECORATED>jinit_color_converter</DECORATED>
     <FUNCLINE>352</FUNCLINE>
-    <PATH />
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-      <FILENAME>jcdctmgr.cpp</FILENAME>
-      <LINE>69</LINE>
-      <COLUMN>9</COLUMN>
-    </SFA>
-    <DEFECTCODE>6385</DEFECTCODE>
-    <DESCRIPTION>Reading invalid data from 'cinfo-&gt;quant_tbl_ptrs':  the readable size is '32' bytes, but 'qtblno' bytes may be read.</DESCRIPTION>
-    <FUNCTION>start_pass_fdctmgr</FUNCTION>
-    <DECORATED>?start_pass_fdctmgr@@YAXPEAUjpeg_compress_struct@@@Z</DECORATED>
-    <FUNCLINE>54</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>4</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>56</LINE>
-        <COLUMN>14</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>57</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>57</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>57</LINE>
-        <COLUMN>18</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>58</LINE>
-        <COLUMN>23</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>59</LINE>
-        <COLUMN>15</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>60</LINE>
-        <COLUMN>12</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>62</LINE>
-        <COLUMN>13</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>62</LINE>
-        <COLUMN>46</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;num_components')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>64</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>66</LINE>
-        <COLUMN>47</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>68</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>69</LINE>
-        <COLUMN>9</COLUMN>
-        <KEYEVENT>
-          <ID>3</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>Invalid read from 'cinfo-&gt;quant_tbl_ptrs[4]', (readable range is 0 to 3)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-    </PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-      <FILENAME>jcdctmgr.cpp</FILENAME>
-      <LINE>78</LINE>
-      <COLUMN>33</COLUMN>
-    </SFA>
-    <DEFECTCODE>6385</DEFECTCODE>
-    <DESCRIPTION>Reading invalid data from 'fdct-&gt;divisors':  the readable size is '32' bytes, but 'qtblno' bytes may be read.</DESCRIPTION>
-    <FUNCTION>start_pass_fdctmgr</FUNCTION>
-    <DECORATED>?start_pass_fdctmgr@@YAXPEAUjpeg_compress_struct@@@Z</DECORATED>
-    <FUNCLINE>54</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>4</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>56</LINE>
-        <COLUMN>14</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>57</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>57</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>57</LINE>
-        <COLUMN>18</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>58</LINE>
-        <COLUMN>23</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>59</LINE>
-        <COLUMN>15</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>60</LINE>
-        <COLUMN>12</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>62</LINE>
-        <COLUMN>13</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>62</LINE>
-        <COLUMN>46</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;num_components')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>64</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>66</LINE>
-        <COLUMN>47</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>68</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>69</LINE>
-        <COLUMN>9</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>72</LINE>
-        <COLUMN>17</COLUMN>
-        <KEYEVENT>
-          <ID>3</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Assume switch ( 'cinfo-&gt;dct_method' ) resolves to case JDCT_ISLOW: </MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>74</LINE>
-        <COLUMN>4</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>78</LINE>
-        <COLUMN>33</COLUMN>
-        <KEYEVENT>
-          <ID>4</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Skip this branch, (assume 'fdct-&gt;divisors[qtblno]==0' is false)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>78</LINE>
-        <COLUMN>33</COLUMN>
-        <KEYEVENT>
-          <ID>5</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>Invalid read from 'fdct-&gt;divisors[4]', (readable range is 0 to 3)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-    </PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-      <FILENAME>jcdctmgr.cpp</FILENAME>
-      <LINE>79</LINE>
-      <COLUMN>24</COLUMN>
-    </SFA>
-    <DEFECTCODE>6386</DEFECTCODE>
-    <DESCRIPTION>Buffer overrun while writing to 'fdct-&gt;divisors':  the writable size is '32' bytes, but 'qtblno' bytes might be written.</DESCRIPTION>
-    <FUNCTION>start_pass_fdctmgr</FUNCTION>
-    <DECORATED>?start_pass_fdctmgr@@YAXPEAUjpeg_compress_struct@@@Z</DECORATED>
-    <FUNCLINE>54</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>4</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>56</LINE>
-        <COLUMN>14</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>57</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>57</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>57</LINE>
-        <COLUMN>18</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>58</LINE>
-        <COLUMN>23</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>59</LINE>
-        <COLUMN>15</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>60</LINE>
-        <COLUMN>12</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>62</LINE>
-        <COLUMN>13</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>62</LINE>
-        <COLUMN>46</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;num_components')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>64</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>66</LINE>
-        <COLUMN>47</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>68</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>69</LINE>
-        <COLUMN>9</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>72</LINE>
-        <COLUMN>17</COLUMN>
-        <KEYEVENT>
-          <ID>3</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Assume switch ( 'cinfo-&gt;dct_method' ) resolves to case JDCT_ISLOW: </MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>74</LINE>
-        <COLUMN>4</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>78</LINE>
-        <COLUMN>33</COLUMN>
-        <KEYEVENT>
-          <ID>4</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'fdct-&gt;divisors[qtblno]==0')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jcdctmgr.cpp</FILENAME>
-        <LINE>79</LINE>
-        <COLUMN>24</COLUMN>
-        <KEYEVENT>
-          <ID>5</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>Invalid write to 'fdct-&gt;divisors[4]', (writable range is 0 to 3)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-    </PATH>
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
@@ -4394,6 +3977,706 @@
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jcdctmgr.cpp</FILENAME>
+      <LINE>78</LINE>
+      <COLUMN>33</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'fdct-&gt;divisors':  the readable size is '32' bytes, but 'qtblno' bytes may be read.</DESCRIPTION>
+    <FUNCTION>start_pass_fdctmgr</FUNCTION>
+    <DECORATED>?start_pass_fdctmgr@@YAXPEAUjpeg_compress_struct@@@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>56</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>58</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>59</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>60</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>62</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>62</LINE>
+        <COLUMN>46</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;num_components')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>64</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>66</LINE>
+        <COLUMN>47</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>68</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>69</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>72</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'cinfo-&gt;dct_method' ) resolves to case JDCT_ISLOW: </MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>74</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>78</LINE>
+        <COLUMN>33</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'fdct-&gt;divisors[qtblno]==0' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>78</LINE>
+        <COLUMN>33</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'fdct-&gt;divisors[4]', (readable range is 0 to 3)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jcdctmgr.cpp</FILENAME>
+      <LINE>69</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'cinfo-&gt;quant_tbl_ptrs':  the readable size is '32' bytes, but 'qtblno' bytes may be read.</DESCRIPTION>
+    <FUNCTION>start_pass_fdctmgr</FUNCTION>
+    <DECORATED>?start_pass_fdctmgr@@YAXPEAUjpeg_compress_struct@@@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>56</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>58</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>59</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>60</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>62</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>62</LINE>
+        <COLUMN>46</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;num_components')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>64</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>66</LINE>
+        <COLUMN>47</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>68</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>69</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'cinfo-&gt;quant_tbl_ptrs[4]', (readable range is 0 to 3)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jcdctmgr.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'fdct-&gt;divisors':  the writable size is '32' bytes, but 'qtblno' bytes might be written.</DESCRIPTION>
+    <FUNCTION>start_pass_fdctmgr</FUNCTION>
+    <DECORATED>?start_pass_fdctmgr@@YAXPEAUjpeg_compress_struct@@@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>56</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>58</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>59</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>60</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>62</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>62</LINE>
+        <COLUMN>46</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;num_components')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>64</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>66</LINE>
+        <COLUMN>47</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>68</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>69</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>72</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'cinfo-&gt;dct_method' ) resolves to case JDCT_ISLOW: </MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>74</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>78</LINE>
+        <COLUMN>33</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'fdct-&gt;divisors[qtblno]==0')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jcdctmgr.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>24</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'fdct-&gt;divisors[4]', (writable range is 0 to 3)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jchuff.cpp</FILENAME>
+      <LINE>142</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'entropy-&gt;dc_count_ptrs[dctbl]' could be '0':  this does not adhere to the specification for the function 'memset'. </DESCRIPTION>
+    <FUNCTION>start_pass_huff</FUNCTION>
+    <DECORATED>?start_pass_huff@@YAXPEAUjpeg_compress_struct@@H@Z</DECORATED>
+    <FUNCLINE>106</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>108</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>109</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>109</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>109</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>110</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>112</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>114</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>115</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>124</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>124</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;comps_in_scan')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>125</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>126</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>127</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>128</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>132</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>134</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>138</LINE>
+        <COLUMN>40</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>139</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>142</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'dc_count_ptrs' is an In/Out argument to 'memset' (declared at c:\microsoft visual studio 14.0\vc\include\vcruntime_string.h:60)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>143</LINE>
+        <COLUMN>40</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>147</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>158</LINE>
+        <COLUMN>35</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>124</LINE>
+        <COLUMN>44</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>124</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Continue this loop, (assume 'ci&lt;cinfo-&gt;comps_in_scan')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>125</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>126</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>127</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>128</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>132</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>134</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>138</LINE>
+        <COLUMN>40</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>139</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>142</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>9</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'dc_count_ptrs' is an In/Out argument to 'memset' (declared at c:\microsoft visual studio 14.0\vc\include\vcruntime_string.h:60)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>142</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>10</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'entropy-&gt;dc_count_ptrs[dctbl]' should not be NULL, because this is not consistent with the SAL annotation on 'memset'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
       <FILENAME>jchuff.cpp</FILENAME>
       <LINE>138</LINE>
       <COLUMN>40</COLUMN>
@@ -4726,289 +5009,6 @@
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
           <MESSAGE>Invalid write to 'entropy-&gt;dc_count_ptrs[4]', (writable range is 0 to 3)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-    </PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-      <FILENAME>jchuff.cpp</FILENAME>
-      <LINE>142</LINE>
-      <COLUMN>6</COLUMN>
-    </SFA>
-    <DEFECTCODE>6387</DEFECTCODE>
-    <DESCRIPTION>'entropy-&gt;dc_count_ptrs[dctbl]' could be '0':  this does not adhere to the specification for the function 'memset'. </DESCRIPTION>
-    <FUNCTION>start_pass_huff</FUNCTION>
-    <DECORATED>?start_pass_huff@@YAXPEAUjpeg_compress_struct@@H@Z</DECORATED>
-    <FUNCLINE>106</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>4</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>108</LINE>
-        <COLUMN>19</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>109</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>109</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>109</LINE>
-        <COLUMN>17</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>110</LINE>
-        <COLUMN>24</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>112</LINE>
-        <COLUMN>6</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>114</LINE>
-        <COLUMN>28</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>115</LINE>
-        <COLUMN>29</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>124</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>124</LINE>
-        <COLUMN>18</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;comps_in_scan')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>125</LINE>
-        <COLUMN>12</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>126</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>127</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>128</LINE>
-        <COLUMN>8</COLUMN>
-        <KEYEVENT>
-          <ID>3</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>132</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>134</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>138</LINE>
-        <COLUMN>40</COLUMN>
-        <KEYEVENT>
-          <ID>4</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>139</LINE>
-        <COLUMN>31</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>142</LINE>
-        <COLUMN>6</COLUMN>
-        <KEYEVENT>
-          <ID>5</ID>
-          <KIND>declaration</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'dc_count_ptrs' is an In/Out argument to 'memset' (declared at c:\microsoft visual studio 14.0\vc\include\vcruntime_string.h:60)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>143</LINE>
-        <COLUMN>40</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>147</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>158</LINE>
-        <COLUMN>35</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>124</LINE>
-        <COLUMN>44</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>124</LINE>
-        <COLUMN>18</COLUMN>
-        <KEYEVENT>
-          <ID>6</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Continue this loop, (assume 'ci&lt;cinfo-&gt;comps_in_scan')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>125</LINE>
-        <COLUMN>12</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>126</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>127</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>128</LINE>
-        <COLUMN>8</COLUMN>
-        <KEYEVENT>
-          <ID>7</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>132</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>134</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>138</LINE>
-        <COLUMN>40</COLUMN>
-        <KEYEVENT>
-          <ID>8</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>139</LINE>
-        <COLUMN>31</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>142</LINE>
-        <COLUMN>6</COLUMN>
-        <KEYEVENT>
-          <ID>9</ID>
-          <KIND>declaration</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'dc_count_ptrs' is an In/Out argument to 'memset' (declared at c:\microsoft visual studio 14.0\vc\include\vcruntime_string.h:60)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>142</LINE>
-        <COLUMN>6</COLUMN>
-        <KEYEVENT>
-          <ID>10</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>'entropy-&gt;dc_count_ptrs[dctbl]' should not be NULL, because this is not consistent with the SAL annotation on 'memset'</MESSAGE>
         </KEYEVENT>
       </SFA>
     </PATH>
@@ -7152,7 +7152,7 @@
     <FUNCTION>jinit_color_deconverter</FUNCTION>
     <DECORATED>jinit_color_deconverter</DECORATED>
     <FUNCLINE>304</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
@@ -7165,7 +7165,7 @@
     <FUNCTION>jinit_color_deconverter</FUNCTION>
     <DECORATED>jinit_color_deconverter</DECORATED>
     <FUNCLINE>304</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
@@ -8498,6 +8498,169 @@
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
       <FILENAME>jmemmgr.cpp</FILENAME>
+      <LINE>291</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'first_pool_slop':  the readable size is '16' bytes, but 'pool_id' bytes may be read.</DESCRIPTION>
+    <FUNCTION>alloc_small</FUNCTION>
+    <DECORATED>?alloc_small@@YAPEAXPEAUjpeg_common_struct@@H_K@Z</DECORATED>
+    <FUNCLINE>257</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>260</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>261</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>261</LINE>
+        <COLUMN>26</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>262</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>263</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>263</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>263</LINE>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>266</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>270</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>271</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>275</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'pool_id&lt;0||pool_id&gt;=2')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>276</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>277</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>278</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>279</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'hdr_ptr!=0' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>287</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'hdr_ptr==0')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>289</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>290</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'prev_hdr_ptr==0')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>291</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'first_pool_slop[2]', (readable range is 0 to 1)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jmemmgr.cpp</FILENAME>
       <LINE>293</LINE>
       <COLUMN>11</COLUMN>
     </SFA>
@@ -8690,169 +8853,6 @@
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
           <MESSAGE>Invalid read from 'extra_pool_slop[2]', (readable range is 0 to 1)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-    </PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-      <FILENAME>jmemmgr.cpp</FILENAME>
-      <LINE>291</LINE>
-      <COLUMN>11</COLUMN>
-    </SFA>
-    <DEFECTCODE>6385</DEFECTCODE>
-    <DESCRIPTION>Reading invalid data from 'first_pool_slop':  the readable size is '16' bytes, but 'pool_id' bytes may be read.</DESCRIPTION>
-    <FUNCTION>alloc_small</FUNCTION>
-    <DECORATED>?alloc_small@@YAPEAXPEAUjpeg_common_struct@@H_K@Z</DECORATED>
-    <FUNCLINE>257</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>4</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>260</LINE>
-        <COLUMN>13</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>261</LINE>
-        <COLUMN>17</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>261</LINE>
-        <COLUMN>26</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>262</LINE>
-        <COLUMN>9</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>263</LINE>
-        <COLUMN>9</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>263</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>263</LINE>
-        <COLUMN>33</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>266</LINE>
-        <COLUMN>19</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>270</LINE>
-        <COLUMN>12</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>271</LINE>
-        <COLUMN>16</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>275</LINE>
-        <COLUMN>18</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'pool_id&lt;0||pool_id&gt;=2')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>276</LINE>
-        <COLUMN>4</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>277</LINE>
-        <COLUMN>15</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>278</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>279</LINE>
-        <COLUMN>17</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Skip this loop, (assume 'hdr_ptr!=0' is false)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>287</LINE>
-        <COLUMN>14</COLUMN>
-        <KEYEVENT>
-          <ID>3</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'hdr_ptr==0')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>289</LINE>
-        <COLUMN>16</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>290</LINE>
-        <COLUMN>21</COLUMN>
-        <KEYEVENT>
-          <ID>4</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'prev_hdr_ptr==0')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>291</LINE>
-        <COLUMN>11</COLUMN>
-        <KEYEVENT>
-          <ID>5</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>Invalid read from 'first_pool_slop[2]', (readable range is 0 to 1)</MESSAGE>
         </KEYEVENT>
       </SFA>
     </PATH>
@@ -9827,97 +9827,6 @@
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
       <FILENAME>jmemmgr.cpp</FILENAME>
-      <LINE>968</LINE>
-      <COLUMN>27</COLUMN>
-    </SFA>
-    <DEFECTCODE>6386</DEFECTCODE>
-    <DESCRIPTION>Buffer overrun while writing to 'mem-&gt;large_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.</DESCRIPTION>
-    <FUNCTION>free_pool</FUNCTION>
-    <DECORATED>?free_pool@@YAXPEAUjpeg_common_struct@@H@Z</DECORATED>
-    <FUNCLINE>930</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>4</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>932</LINE>
-        <COLUMN>13</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>933</LINE>
-        <COLUMN>17</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>934</LINE>
-        <COLUMN>17</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>935</LINE>
-        <COLUMN>9</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>937</LINE>
-        <COLUMN>18</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'pool_id&lt;0||pool_id&gt;=2')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>938</LINE>
-        <COLUMN>4</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>946</LINE>
-        <COLUMN>14</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>'pool_id' may equal 1 (Skip this branch)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>967</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jmemmgr.cpp</FILENAME>
-        <LINE>968</LINE>
-        <COLUMN>27</COLUMN>
-        <KEYEVENT>
-          <ID>3</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>Invalid write to 'mem-&gt;large_list[2]', (writable range is 0 to 1)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-    </PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-      <FILENAME>jmemmgr.cpp</FILENAME>
       <LINE>981</LINE>
       <COLUMN>11</COLUMN>
     </SFA>
@@ -10014,6 +9923,97 @@
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
           <MESSAGE>Invalid read from 'mem-&gt;small_list[2]', (readable range is 0 to 1)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jmemmgr.cpp</FILENAME>
+      <LINE>968</LINE>
+      <COLUMN>27</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'mem-&gt;large_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.</DESCRIPTION>
+    <FUNCTION>free_pool</FUNCTION>
+    <DECORATED>?free_pool@@YAXPEAUjpeg_common_struct@@H@Z</DECORATED>
+    <FUNCLINE>930</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>932</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>933</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>934</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>935</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>937</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'pool_id&lt;0||pool_id&gt;=2')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>938</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>946</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'pool_id' may equal 1 (Skip this branch)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>967</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jmemmgr.cpp</FILENAME>
+        <LINE>968</LINE>
+        <COLUMN>27</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'mem-&gt;large_list[2]', (writable range is 0 to 1)</MESSAGE>
         </KEYEVENT>
       </SFA>
     </PATH>
@@ -10138,7 +10138,7 @@
     <FUNCTION>jinit_memory_mgr</FUNCTION>
     <DECORATED>jinit_memory_mgr</DECORATED>
     <FUNCLINE>1028</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
@@ -10151,7 +10151,7 @@
     <FUNCTION>jinit_memory_mgr</FUNCTION>
     <DECORATED>jinit_memory_mgr</DECORATED>
     <FUNCLINE>1028</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
@@ -10279,7 +10279,7 @@
     <FUNCTION>strcpy</FUNCTION>
     <DECORATED>strcpy</DECORATED>
     <FUNCLINE>130</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\</FILEPATH>
@@ -10292,7 +10292,7 @@
     <FUNCTION>strcpy</FUNCTION>
     <DECORATED>strcpy</DECORATED>
     <FUNCLINE>130</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\</FILEPATH>
@@ -10305,7 +10305,7 @@
     <FUNCTION>png_do_expand_palette</FUNCTION>
     <DECORATED>png_do_expand_palette</DECORATED>
     <FUNCLINE>4543</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\</FILEPATH>
@@ -10318,7 +10318,7 @@
     <FUNCTION>png_do_expand</FUNCTION>
     <DECORATED>png_do_expand</DECORATED>
     <FUNCLINE>4696</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\</FILEPATH>
@@ -10331,7 +10331,7 @@
     <FUNCTION>png_do_expand</FUNCTION>
     <DECORATED>png_do_expand</DECORATED>
     <FUNCLINE>4696</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\</FILEPATH>
@@ -10344,7 +10344,7 @@
     <FUNCTION>png_do_expand</FUNCTION>
     <DECORATED>png_do_expand</DECORATED>
     <FUNCLINE>4696</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\</FILEPATH>
@@ -10357,7 +10357,7 @@
     <FUNCTION>adler32_combine64</FUNCTION>
     <DECORATED>adler32_combine64</DECORATED>
     <FUNCLINE>173</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\</FILEPATH>
@@ -10370,7 +10370,7 @@
     <FUNCTION>crc32_combine64</FUNCTION>
     <DECORATED>crc32_combine64</DECORATED>
     <FUNCLINE>419</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\</FILEPATH>
@@ -10383,7 +10383,7 @@
     <FUNCTION>gz_look</FUNCTION>
     <DECORATED>gz_look</DECORATED>
     <FUNCLINE>86</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\</FILEPATH>
@@ -10396,7 +10396,7 @@
     <FUNCTION>gzungetc</FUNCTION>
     <DECORATED>gzungetc</DECORATED>
     <FUNCLINE>423</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\</FILEPATH>
@@ -10409,7 +10409,7 @@
     <FUNCTION>gzungetc</FUNCTION>
     <DECORATED>gzungetc</DECORATED>
     <FUNCLINE>423</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\</FILEPATH>
@@ -11102,7 +11102,7 @@
     <FUNCTION>zlibCompileFlags</FUNCTION>
     <DECORATED>zlibCompileFlags</DECORATED>
     <FUNCLINE>35</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\</FILEPATH>
@@ -11115,7 +11115,7 @@
     <FUNCTION>zlibCompileFlags</FUNCTION>
     <DECORATED>zlibCompileFlags</DECORATED>
     <FUNCLINE>35</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\</FILEPATH>
@@ -11128,7 +11128,7 @@
     <FUNCTION>zlibCompileFlags</FUNCTION>
     <DECORATED>zlibCompileFlags</DECORATED>
     <FUNCLINE>35</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\</FILEPATH>
@@ -11141,7 +11141,7 @@
     <FUNCTION>zlibCompileFlags</FUNCTION>
     <DECORATED>zlibCompileFlags</DECORATED>
     <FUNCLINE>35</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
@@ -11171,19 +11171,6 @@
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
       <FILENAME>gui.cpp</FILENAME>
-      <LINE>47</LINE>
-      <COLUMN>8</COLUMN>
-    </SFA>
-    <DEFECTCODE>6031</DEFECTCODE>
-    <DESCRIPTION>Return value ignored: 'freopen'.</DESCRIPTION>
-    <FUNCTION>GUI::console</FUNCTION>
-    <DECORATED>?console@GUI@@QEAAXXZ</DECORATED>
-    <FUNCLINE>44</FUNCLINE>
-    <PATH />
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-      <FILENAME>gui.cpp</FILENAME>
       <LINE>48</LINE>
       <COLUMN>8</COLUMN>
     </SFA>
@@ -11191,8 +11178,8 @@
     <DESCRIPTION>Return value ignored: 'freopen'.</DESCRIPTION>
     <FUNCTION>GUI::console</FUNCTION>
     <DECORATED>?console@GUI@@QEAAXXZ</DECORATED>
-    <FUNCLINE>44</FUNCLINE>
-    <PATH />
+    <FUNCLINE>45</FUNCLINE>
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
@@ -11204,8 +11191,21 @@
     <DESCRIPTION>Return value ignored: 'freopen'.</DESCRIPTION>
     <FUNCTION>GUI::console</FUNCTION>
     <DECORATED>?console@GUI@@QEAAXXZ</DECORATED>
-    <FUNCLINE>44</FUNCLINE>
-    <PATH />
+    <FUNCLINE>45</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+      <FILENAME>gui.cpp</FILENAME>
+      <LINE>50</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>Return value ignored: 'freopen'.</DESCRIPTION>
+    <FUNCTION>GUI::console</FUNCTION>
+    <DECORATED>?console@GUI@@QEAAXXZ</DECORATED>
+    <FUNCLINE>45</FUNCLINE>
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
@@ -11218,13 +11218,13 @@
     <FUNCTION>WinMain</FUNCTION>
     <DECORATED>WinMain</DECORATED>
     <FUNCLINE>45</FUNCLINE>
-    <PATH />
+    <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
       <FILENAME>facialexpressions.cpp</FILENAME>
-      <LINE>143</LINE>
-      <COLUMN>24</COLUMN>
+      <LINE>147</LINE>
+      <COLUMN>25</COLUMN>
     </SFA>
     <DEFECTCODE>6246</DEFECTCODE>
     <DESCRIPTION>Local declaration of 'testData' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '84' of 'c:\_projects\facialexpressions\facialexpressions\facialexpressions.cpp'.</DESCRIPTION>
@@ -11237,499 +11237,6 @@
         <FILENAME>facialexpressions.cpp</FILENAME>
         <LINE>84</LINE>
         <COLUMN>42</COLUMN>
-      </SFA>
-    </PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-      <FILENAME>facialexpressions.cpp</FILENAME>
-      <LINE>139</LINE>
-      <COLUMN>13</COLUMN>
-    </SFA>
-    <DEFECTCODE>6011</DEFECTCODE>
-    <DESCRIPTION>Dereferencing NULL pointer 'neutral'. </DESCRIPTION>
-    <FUNCTION>WinMain</FUNCTION>
-    <DECORATED>WinMain</DECORATED>
-    <FUNCLINE>45</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>4</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>49</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>50</LINE>
-        <COLUMN>13</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>51</LINE>
-        <COLUMN>19</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>52</LINE>
-        <COLUMN>18</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>53</LINE>
-        <COLUMN>9</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>54</LINE>
-        <COLUMN>8</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>55</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>58</LINE>
-        <COLUMN>34</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>59</LINE>
-        <COLUMN>21</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>61</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>63</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>64</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>64</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>68</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>68</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>70</LINE>
-        <COLUMN>37</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>68</LINE>
-        <COLUMN>26</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>68</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>70</LINE>
-        <COLUMN>37</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>68</LINE>
-        <COLUMN>26</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>68</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>74</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>75</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>75</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>84</LINE>
-        <COLUMN>34</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>85</LINE>
-        <COLUMN>21</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>87</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>87</LINE>
-        <COLUMN>44</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>96</LINE>
-        <COLUMN>67</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>96</LINE>
-        <COLUMN>57</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>96</LINE>
-        <COLUMN>41</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>96</LINE>
-        <COLUMN>27</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>96</LINE>
-        <COLUMN>8</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>98</LINE>
-        <COLUMN>59</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>100</LINE>
-        <COLUMN>7</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>101</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>101</LINE>
-        <COLUMN>19</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>101</LINE>
-        <COLUMN>30</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>102</LINE>
-        <COLUMN>21</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>102</LINE>
-        <COLUMN>35</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>103</LINE>
-        <COLUMN>7</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>declaration</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>'neutral' is NULL</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>103</LINE>
-        <COLUMN>24</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>104</LINE>
-        <COLUMN>14</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this loop, (assume 'hwnd!=0')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>106</LINE>
-        <COLUMN>27</COLUMN>
-        <KEYEVENT>
-          <ID>3</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Skip this branch, (assume 'GUI.keyUpdateNeutral()' is false)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>124</LINE>
-        <COLUMN>25</COLUMN>
-        <KEYEVENT>
-          <ID>4</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'GUI.keyUpdateOther()')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>126</LINE>
-        <COLUMN>14</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>126</LINE>
-        <COLUMN>19</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>126</LINE>
-        <COLUMN>14</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>127</LINE>
-        <COLUMN>72</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>127</LINE>
-        <COLUMN>30</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>128</LINE>
-        <COLUMN>16</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>129</LINE>
-        <COLUMN>15</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>129</LINE>
-        <COLUMN>16</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>129</LINE>
-        <COLUMN>15</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>130</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>130</LINE>
-        <COLUMN>25</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>130</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>130</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>130</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>131</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>132</LINE>
-        <COLUMN>16</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>133</LINE>
-        <COLUMN>33</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>134</LINE>
-        <COLUMN>21</COLUMN>
-        <KEYEVENT>
-          <ID>5</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'faces.size()&gt;0')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>136</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>137</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>137</LINE>
-        <COLUMN>31</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>137</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>137</LINE>
-        <COLUMN>51</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>137</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>137</LINE>
-        <COLUMN>12</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>137</LINE>
-        <COLUMN>11</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>138</LINE>
-        <COLUMN>12</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
-        <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>139</LINE>
-        <COLUMN>13</COLUMN>
-        <KEYEVENT>
-          <ID>6</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>'neutral' is dereferenced, but may still be NULL</MESSAGE>
-        </KEYEVENT>
       </SFA>
     </PATH>
   </DEFECT></DEFECTS>
