@@ -29,7 +29,7 @@ instructions.  Note that AVX is the fastest but requires a CPU from at least
 
 #include "FeatureExtractor.h"
 #include "Loader.h"
-#include "mySVM.h"
+#include "Classifiers/MulticlassSVM.h"
 #include "Capture.h"
 #include "GUI.h"
 //#include "Classifier.h"
@@ -51,10 +51,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		FeatureExtractor FE;
 		ImgPreprocessor IP;
 		Loader LDR(&FE, &IP);
-		mySVM SVM;
+		MulticlassSVM SVM;
 		Capture CAP;
 		//Classifier CLS;
-
+		LDR.saveProgressCSV();
 		std::vector<std::vector<float>> trainingData;
 		std::vector<float> trainingLabels;
 		//std::cout << "1";

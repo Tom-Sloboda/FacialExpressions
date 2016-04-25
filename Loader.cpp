@@ -250,6 +250,21 @@ void Loader::saveProgress(string filename)
 	savefile.close();
 }
 
+void Loader::saveProgressCSV(string filename)
+{
+	std::ofstream savefile;
+	savefile.open(filename);
+	string dataStr;
+	for (int i = 0; i < Loader::labels.size(); i++)
+	{
+		//savefile << label_path_list[i] << "\n";
+		//savefile << img_path_list[i] << "\n";
+		savefile << labels[i] << ", ";
+		savefile << boost::replace_all_copy(FeatureExtractor::getFlattenedStr(data[i]), " ", ",") << "\n";
+	}
+	savefile.close();
+}
+
 std::vector<float> Loader::strToFloatVec(string in)
 {
 	//cout << "!!!strToFloatVec - " << in << "\n";

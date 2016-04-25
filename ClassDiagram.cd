@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="Capture" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAQCAAIBAAAAAAAAA=</HashCode>
+      <FileName>Capture.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mySVM" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAABAAACAQAAAAACAAIABAgAAAAAAIAAA=</HashCode>
+      <FileName>mySVM.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Loader" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCAAAAAAKAEcABAAAAAAAICAIBAQAAAAAAASIAACQAA=</HashCode>
+      <FileName>Loader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImgPreprocessor" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABIAgAAAACCgAAAEAAAQAAAAAEQGAAAAAQIAAAAAAAA=</HashCode>
+      <FileName>ImgPreprocessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAABBAAAAAABAAAAAAABAA=</HashCode>
+      <FileName>GUI.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FeatureExtractor" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAAAQAAAAAAAACABAEAAAAkQAAAAAAAAAACAAAA=</HashCode>
+      <FileName>FeatureExtractor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Face" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAgQAAEBAAAIAABAAAAgAABAAAACAAAAAABAA=</HashCode>
+      <FileName>Face.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Classifier" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAQAAAIAAgBAAAAAAAAAAAICAA=</HashCode>
+      <FileName>Classifier.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

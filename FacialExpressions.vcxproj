@@ -157,7 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Capture.h" />
-    <ClInclude Include="Classifier.h" />
+    <ClInclude Include="Classifiers\Classifiers.h" />
     <ClInclude Include="dirent.h" />
     <ClInclude Include="dlib\external\libjpeg\jchuff.h" />
     <ClInclude Include="dlib\external\libjpeg\jconfig.h" />
@@ -193,13 +193,14 @@
     <ClInclude Include="GUI.h" />
     <ClInclude Include="ImgPreprocessor.h" />
     <ClInclude Include="Loader.h" />
+    <ClInclude Include="Classifiers\MLP.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="mySVM.h" />
+    <ClInclude Include="Classifiers\MulticlassSVM.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Capture.cpp" />
-    <ClCompile Include="Classifier.cpp" />
+    <ClCompile Include="Classifiers\Classifiers.cpp" />
     <ClCompile Include="dlib\all\source.cpp" />
     <ClCompile Include="dlib\external\libjpeg\jcapimin.cpp" />
     <ClCompile Include="dlib\external\libjpeg\jcapistd.cpp" />
@@ -280,9 +281,13 @@
     <ClCompile Include="GUI.cpp" />
     <ClCompile Include="ImgPreprocessor.cpp" />
     <ClCompile Include="Loader.cpp" />
+    <ClCompile Include="Classifiers\MLP.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="FacialExpressions.cpp" />
-    <ClCompile Include="mySVM.cpp" />
+    <ClCompile Include="Classifiers\MulticlassSVM.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,2 +1,110 @@
-﻿  ImgPreprocessor.cpp
-  FacialExpressions.vcxproj -> C:\_Projects\FacialExpressions\x64\Debug\FacialExpressions.exe
+﻿Build started 25-Apr-16 02:26:38 AM.
+     1>Project "C:\_Projects\FacialExpressions\FacialExpressions\FacialExpressions.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "x64\Debug\FacialEx.1EF8BCF4.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\opencv-3.1\opencv\build\include" /IC:\boost /IC:\DLIB\dlib\external /IC:\DLIB\dlib\external\zlib /IC:\DLIB\dlib\external\libjpeg /IC:\DLIB\dlib\external\libpng /IC:\DLIB /ZI /nologo /W3 /WX- /sdl /Od /D _CRT_SECURE_NO_WARNINGS /D DLIB_JPEG_SUPPORT /D DLIB_PNG_SUPPORT /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Classifiers\Classifiers.cpp ImgPreprocessor.cpp Loader.cpp Classifiers\MLP.cpp FacialExpressions.cpp Classifiers\MulticlassSVM.cpp
+         MulticlassSVM.cpp
+         FacialExpressions.cpp
+         MLP.cpp
+         Loader.cpp
+         ImgPreprocessor.cpp
+         Classifiers.cpp
+         Generating Code...
+         All outputs are up-to-date.
+       Link:
+         C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\_Projects\FacialExpressions\x64\Debug\FacialExpressions.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\opencv-3.1\opencv\build\x64\vc14\lib" /LIBPATH:C:\boost\lib opencv_world310d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\_Projects\FacialExpressions\x64\Debug\FacialExpressions.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\_Projects\FacialExpressions\x64\Debug\FacialExpressions.lib" /MACHINE:X64 x64\Debug\Capture.obj
+         x64\Debug\Classifiers.obj
+         x64\Debug\source.obj
+         x64\Debug\jcapimin.obj
+         x64\Debug\jcapistd.obj
+         x64\Debug\jccoefct.obj
+         x64\Debug\jccolor.obj
+         x64\Debug\jcdctmgr.obj
+         x64\Debug\jchuff.obj
+         x64\Debug\jcinit.obj
+         x64\Debug\jcmainct.obj
+         x64\Debug\jcmarker.obj
+         x64\Debug\jcmaster.obj
+         x64\Debug\jcomapi.obj
+         x64\Debug\jcparam.obj
+         x64\Debug\jcphuff.obj
+         x64\Debug\jcprepct.obj
+         x64\Debug\jcsample.obj
+         x64\Debug\jdapimin.obj
+         x64\Debug\jdapistd.obj
+         x64\Debug\jdatadst.obj
+         x64\Debug\jdatasrc.obj
+         x64\Debug\jdcoefct.obj
+         x64\Debug\jdcolor.obj
+         x64\Debug\jddctmgr.obj
+         x64\Debug\jdhuff.obj
+         x64\Debug\jdinput.obj
+         x64\Debug\jdmainct.obj
+         x64\Debug\jdmarker.obj
+         x64\Debug\jdmaster.obj
+         x64\Debug\jdmerge.obj
+         x64\Debug\jdphuff.obj
+         x64\Debug\jdpostct.obj
+         x64\Debug\jdsample.obj
+         x64\Debug\jerror.obj
+         x64\Debug\jfdctflt.obj
+         x64\Debug\jfdctfst.obj
+         x64\Debug\jfdctint.obj
+         x64\Debug\jidctflt.obj
+         x64\Debug\jidctfst.obj
+         x64\Debug\jidctint.obj
+         x64\Debug\jidctred.obj
+         x64\Debug\jmemmgr.obj
+         x64\Debug\jmemnobs.obj
+         x64\Debug\jquant1.obj
+         x64\Debug\jquant2.obj
+         x64\Debug\jutils.obj
+         x64\Debug\png.obj
+         x64\Debug\pngerror.obj
+         x64\Debug\pngget.obj
+         x64\Debug\pngmem.obj
+         x64\Debug\pngpread.obj
+         x64\Debug\pngread.obj
+         x64\Debug\pngrio.obj
+         x64\Debug\pngrtran.obj
+         x64\Debug\pngrutil.obj
+         x64\Debug\pngset.obj
+         x64\Debug\pngtrans.obj
+         x64\Debug\pngwio.obj
+         x64\Debug\pngwrite.obj
+         x64\Debug\pngwtran.obj
+         x64\Debug\pngwutil.obj
+         x64\Debug\adler32.obj
+         x64\Debug\compress.obj
+         x64\Debug\crc32.obj
+         x64\Debug\deflate.obj
+         x64\Debug\gzclose.obj
+         x64\Debug\gzlib.obj
+         x64\Debug\gzread.obj
+         x64\Debug\gzwrite.obj
+         x64\Debug\infback.obj
+         x64\Debug\inffast.obj
+         x64\Debug\inflate.obj
+         x64\Debug\inftrees.obj
+         x64\Debug\trees.obj
+         x64\Debug\uncompr.obj
+         x64\Debug\zutil.obj
+         x64\Debug\Face.obj
+         x64\Debug\FeatureExtractor.obj
+         x64\Debug\GUI.obj
+         x64\Debug\ImgPreprocessor.obj
+         x64\Debug\Loader.obj
+         x64\Debug\MLP.obj
+         x64\Debug\stdafx.obj
+         x64\Debug\FacialExpressions.obj
+         x64\Debug\MulticlassSVM.obj
+         FacialExpressions.vcxproj -> C:\_Projects\FacialExpressions\x64\Debug\FacialExpressions.exe
+       FinalizeBuildStatus:
+         Deleting file "x64\Debug\FacialEx.1EF8BCF4.tlog\unsuccessfulbuild".
+         Touching "x64\Debug\FacialEx.1EF8BCF4.tlog\FacialExpressions.lastbuildstate".
+     1>Done Building Project "C:\_Projects\FacialExpressions\FacialExpressions\FacialExpressions.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:46.93

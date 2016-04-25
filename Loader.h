@@ -18,6 +18,7 @@
 #include <boost/filesystem.hpp>
 #include <boost/foreach.hpp>
 #include <boost/range/algorithm/count.hpp>
+#include <boost/algorithm/string/replace.hpp>
 
 using namespace std;
 using namespace dlib;
@@ -36,6 +37,7 @@ public:
 	float readLabel(string path);
 	string Loader::getImgPath(string path);
 	void saveProgress(string filename = "save.txt");
+	void saveProgressCSV(string filename  = "save.csv");
 	void loadProgress(string filename = "save.txt");
 	std::vector<float> Loader::strToFloatVec(string in);
 	void randomizeData();
