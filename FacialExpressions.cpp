@@ -94,7 +94,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//CLS.train(trainingData, trainingLabels);
 		//cout << "ALL CLASSIFIERS TRAINED\n";
 
-
+		CLS.multiSvm.go(trainingData, trainingLabels, testData, testLabels);
+		cin >> wait;
 		std::vector<float> res;
 		CLS.multiSvm.train(trainingData, trainingLabels);
 		CLS.multiSvm.predict(testData, testLabels, res);

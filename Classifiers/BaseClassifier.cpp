@@ -123,7 +123,6 @@ Mat BaseClassifier::convertFloatToIntMat(Mat mat)
 	Mat intMat(mat.rows, mat.cols, CV_32SC1);
 	for (int j = 0; j <  mat.cols; j++)
 	{
-
 		for (int i = 0; i < mat.rows; i++)
 		{
 			intMat.at<float>(i, j) = (int)(mat.at<float>(i, j));

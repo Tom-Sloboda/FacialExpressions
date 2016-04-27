@@ -1,13 +1,11 @@
-﻿Build started 27-Apr-16 05:39:59 AM.
+﻿Build started 27-Apr-16 06:46:31 AM.
      1>Project "C:\_Projects\FacialExpressions\FacialExpressions\FacialExpressions.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
-         Creating "x64\Release\FacialEx.1EF8BCF4.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "x64\Release\FacialEx.1EF8BCF4.tlog\unsuccessfulbuild".
        ClCompile:
-         C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\opencv-3.1\opencv\build\include" /IC:\boost /IC:\DLIB\dlib\external /IC:\DLIB\dlib\external\zlib /IC:\DLIB\dlib\external\libjpeg /IC:\DLIB\dlib\external\libpng /IC:\DLIB /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _CRT_SECURE_NO_WARNINGS /D DLIB_JPEG_SUPPORT /D DLIB_PNG_SUPPORT /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc140.pdb" /Gd /TP /errorReport:prompt Classifiers\Bayes.cpp Classifiers\Classifiers.cpp Classifiers\LinearSVM.cpp Classifiers\MLP.cpp Classifiers\MulticlassSVM.cpp FacialExpressions.cpp
-         Bayes.cpp
+         C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\opencv-3.1\opencv\build\include" /IC:\boost /IC:\DLIB\dlib\external /IC:\DLIB\dlib\external\zlib /IC:\DLIB\dlib\external\libjpeg /IC:\DLIB\dlib\external\libpng /IC:\DLIB /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _CRT_SECURE_NO_WARNINGS /D DLIB_JPEG_SUPPORT /D DLIB_PNG_SUPPORT /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc140.pdb" /Gd /TP /errorReport:prompt Classifiers\BaseClassifier.cpp Classifiers\Classifiers.cpp Classifiers\MulticlassSVM.cpp FacialExpressions.cpp
+         BaseClassifier.cpp
          Classifiers.cpp
-         LinearSVM.cpp
-         MLP.cpp
          MulticlassSVM.cpp
          FacialExpressions.cpp
          All outputs are up-to-date.
@@ -103,9 +101,9 @@
          x64\Release\FacialExpressions.obj
          x64\Release\MulticlassSVM.obj
          Generating code
-         216 of 10512 functions ( 2.1%) were compiled, the rest were copied from previous compilation.
-           0 functions were new in current compilation
-           102 functions had inline decision re-evaluated but remain unchanged
+         212 of 10426 functions ( 2.0%) were compiled, the rest were copied from previous compilation.
+           3 functions were new in current compilation
+           138 functions had inline decision re-evaluated but remain unchanged
          Finished generating code
          FacialExpressions.vcxproj -> C:\_Projects\FacialExpressions\x64\Release\FacialExpressions.exe
        FinalizeBuildStatus:
@@ -115,4 +113,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:01:09.15
+Time Elapsed 00:00:57.63

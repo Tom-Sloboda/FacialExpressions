@@ -18,6 +18,7 @@ public:
 	MulticlassSVM();
 	~MulticlassSVM();
 
+	float go(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, std::vector<std::vector<float>> testData, std::vector<float> testLabels);
 	Ptr<ml::SVM> svm;
 
 	void train(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, float C = 83.9666, float gamma = 3.375e-06);
