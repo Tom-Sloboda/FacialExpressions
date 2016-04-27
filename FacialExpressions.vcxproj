@@ -156,6 +156,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Classifiers\AdaBoost.h" />
+    <ClInclude Include="Classifiers\Bayes.h" />
+    <ClInclude Include="Classifiers\BaseClassifier.h" />
     <ClInclude Include="Capture.h" />
     <ClInclude Include="Classifiers\Classifiers.h" />
     <ClInclude Include="dirent.h" />
@@ -192,6 +195,7 @@
     <ClInclude Include="FeatureExtractor.h" />
     <ClInclude Include="GUI.h" />
     <ClInclude Include="ImgPreprocessor.h" />
+    <ClInclude Include="Classifiers\LinearSVM.h" />
     <ClInclude Include="Loader.h" />
     <ClInclude Include="Classifiers\MLP.h" />
     <ClInclude Include="stdafx.h" />
@@ -199,6 +203,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Classifiers\AdaBoost.cpp" />
+    <ClCompile Include="Classifiers\Bayes.cpp" />
+    <ClCompile Include="Classifiers\BaseClassifier.cpp" />
     <ClCompile Include="Capture.cpp" />
     <ClCompile Include="Classifiers\Classifiers.cpp" />
     <ClCompile Include="dlib\all\source.cpp" />
@@ -280,6 +287,7 @@
     <ClCompile Include="FeatureExtractor.cpp" />
     <ClCompile Include="GUI.cpp" />
     <ClCompile Include="ImgPreprocessor.cpp" />
+    <ClCompile Include="Classifiers\LinearSVM.cpp" />
     <ClCompile Include="Loader.cpp" />
     <ClCompile Include="Classifiers\MLP.cpp" />
     <ClCompile Include="stdafx.cpp" />

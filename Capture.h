@@ -9,6 +9,9 @@
 #include <string>
 using namespace std;
 using namespace cv;
+
+#ifndef CAPTURE_H
+#define CAPTURE_H
 class Capture
 {
 public:
@@ -23,3 +26,4 @@ public:
 	Mat screenshot();
 };
 
+#endif // !CAPTURE_H

@@ -29,13 +29,14 @@ instructions.  Note that AVX is the fastest but requires a CPU from at least
 
 #include "FeatureExtractor.h"
 #include "Loader.h"
-#include "Classifiers/MulticlassSVM.h"
 #include "Capture.h"
 #include "GUI.h"
-//#include "Classifier.h"
+#include "Classifiers/Classifiers.h"
 
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/core/core.hpp>
+
+#define DEBUG
 
 using namespace dlib;
 using namespace std;
@@ -51,10 +52,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		FeatureExtractor FE;
 		ImgPreprocessor IP;
 		Loader LDR(&FE, &IP);
-		MulticlassSVM SVM;
 		Capture CAP;
-		//Classifier CLS;
-		LDR.saveProgressCSV();
+		Classifiers CLS;
 		std::vector<std::vector<float>> trainingData;
 		std::vector<float> trainingLabels;
 		//std::cout << "1";
@@ -69,7 +68,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		{
 			cout << i << " - " << countArr[i] << endl;
 		}
-		//cin >> wait;
 
 		int INDEX = LDR.labels.size()/2;
 		for (int i = 0; i < LDR.labels.size()- INDEX; i++)
@@ -93,9 +91,37 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			}
 		}
 
-		float precision = SVM.go(trainingData, trainingLabels, testData, testLabels);
-		//CLS.go(trainingData, trainingLabels, testData, testLabels);
-		cout << "Success rate: " << setprecision(2) << precision << "\n";
+		//CLS.train(trainingData, trainingLabels);
+		//cout << "ALL CLASSIFIERS TRAINED\n";
+
+
+		std::vector<float> res;
+		CLS.multiSvm.train(trainingData, trainingLabels);
+		CLS.multiSvm.predict(testData, testLabels, res);
+
+
+
+		Mat testDataMat = CLS.vectorToMat(testData);
+		for (int i = 0; i < testLabels.size(); i++)
+		{
+			float res = CLS.predict(testDataMat.row(i));
+			cout << "Predicted: " << res << "Actual: " << testLabels[i] << endl;
+		}
+		//Mat resMat;// (testLabels.size(), 8, CV_32FC1);
+		//float precision = SVM.go(trainingData, trainingLabels, testData, testLabels);
+		//Mat mplLabelMat(vec.size(), vec[0].size(), CV_32FC1);
+		//CLS.bayes.go(CLS.vectorToMat(trainingData), CLS.vectorToMat(trainingLabels), CLS.vectorToMat(testData), CLS.vectorToMat(testLabels));
+		//CLS.bayes.train(CLS.vectorToMat(trainingData), CLS.vectorToMat(trainingLabels));
+		//CLS.bayes.predict(CLS.vectorToMat(testData), CLS.vectorToMat(testLabels));
+
+		//CLS.mlp.train(CLS.vectorToMat(trainingData), CLS.vectorToMat(trainingLabels));
+		//CLS.mlp.predict(CLS.vectorToMat(testData), CLS.vectorToMat(testLabels), resMat);
+		////CLS.mlp.go(CLS.vectorToMat(trainingData), CLS.vectorToMat(trainingLabels), CLS.vectorToMat(testData), CLS.vectorToMat(testLabels));
+		//std::vector<std::vector<float>> resVec;
+		//CLS.linSVM.train(trainingData, trainingLabels);
+		//CLS.linSVM.predict(testData, testLabels, resVec);
+		////CLS.go(trainingData, trainingLabels, testData, testLabels);
+		//cout << "Success rate: " << setprecision(2) << precision << "\n";
 		
 		HWND hwnd = GUI.createScrnCapWnd(hInstance);
 		Mat neutralFace, otherFace, combined;
@@ -166,44 +192,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 							waitKey(10);
 							std::vector<float> testData = FE.getDifference(neutral->landmarks, other->landmarks);
 							cv::Mat testDataMat(1, testData.size(), CV_32FC1, testData.data());
-							cout << SVM.classToEmotion(SVM.svm->predict(testDataMat)) << endl;
+							//cout << SVM.classToEmotion(SVM.svm->predict(testDataMat)) << endl;
 						}
 					}
 				}
 			}
-			
-			/*
-			currentImg.empty();
-			currentImg = CAP.hwnd2mat(hwnd);
-			namedWindow("CurrentImg", WINDOW_AUTOSIZE);
-			imshow("CurrentImg", currentImg);
-			waitKey(100);
-			*/
-			//sleep(100);
 		}
-
 		cin >> wait;
-
-		
-		/*
-		Mat image;
-		image = imread("img.png", CV_LOAD_IMAGE_COLOR);   // Read the file
-
-		if (!image.data)                              // Check for invalid input
-		{
-			cout << "Could not open or find the image" << std::endl;
-			return -1;
-		}
-
-		namedWindow("Display window", WINDOW_AUTOSIZE);// Create a window for display.
-                 // Show our image inside it.
-		imshow("Display window", image);
-		putText(image, "Differencing the two images.", cvPoint(30, 30),
-			FONT_HERSHEY_COMPLEX_SMALL, 0.8, cvScalar(200, 200, 250), 1, CV_AA);
-
-		waitKey(0);                                          // Wait for a keystroke in the window
-		return 0;
-		*/
 	}
 	catch (exception& e)
 	{
@@ -213,4 +208,3 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	}
 
 }
-

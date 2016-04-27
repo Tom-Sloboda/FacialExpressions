@@ -1,3 +1,5 @@
+//#ifndef GUI
+//#define GUI
 #pragma once
 #include <windows.h>
 #include <stdio.h>
@@ -5,6 +7,7 @@
 #include <io.h>
 #include <iostream>
 #include <fstream>
+
 
 using namespace std;
 
@@ -23,3 +26,5 @@ public:
 
 };
 
+
+//#endif // !GUI

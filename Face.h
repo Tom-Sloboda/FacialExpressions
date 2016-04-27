@@ -10,7 +10,8 @@
 #include <dlib/image_processing.h>
 #include <dlib/gui_widgets.h>
 #include "FeatureExtractor.h"
-
+#ifndef FACE_H
+#define FACE_H
 using namespace std;
 using namespace dlib;
 using namespace cv;
@@ -36,3 +37,5 @@ public:
 	float label;
 };
 
+
+#endif // !FACE_H

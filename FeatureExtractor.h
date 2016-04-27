@@ -8,7 +8,8 @@
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
 #include <dlib/gui_widgets.h>
-
+#ifndef FEATUREEXTRACTOR_H
+#define FEATUREEXTRACTOR_H
 using namespace std;
 using namespace dlib;
 using namespace cv;
@@ -20,7 +21,7 @@ public:
 	~FeatureExtractor();
 	std::vector<dlib::full_object_detection> detectFeatures(dlib::cv_image<dlib::bgr_pixel> cimg, std::vector<dlib::rectangle> faces);
 	std::vector<dlib::full_object_detection> detectFeatures(dlib::array2d<dlib::rgb_pixel> *cimg, std::vector<dlib::rectangle> faces);
-	
+
 	std::vector<dlib::rectangle> detectFaces(dlib::cv_image<dlib::bgr_pixel> cimg);
 	std::vector<dlib::rectangle> detectFaces(dlib::array2d<dlib::rgb_pixel> *cimg);
 
@@ -33,3 +34,5 @@ public:
 	dlib::shape_predictor pose_model;
 };
 
+
+#endif // !FEATUREEXTRACTOR_H

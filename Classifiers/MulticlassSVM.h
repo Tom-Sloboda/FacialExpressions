@@ -1,7 +1,10 @@
 #pragma once
-
+#include "BaseClassifier.h"
 #include "../FeatureExtractor.h"
 #include "../Loader.h"
+
+#ifndef MULTICLASS_H_
+#define MULTICLASS_H_
 
 using namespace std;
 using namespace dlib;
@@ -9,7 +12,7 @@ using namespace cv;
 using namespace cv::ml;
 
 
-class MulticlassSVM
+class MulticlassSVM:public BaseClassifier
 {
 public:
 	MulticlassSVM();
@@ -17,18 +20,10 @@ public:
 
 	Ptr<ml::SVM> svm;
 
-	float go(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, std::vector<std::vector<float>> testData, std::vector<float> testLabels);
-	float go(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, std::vector<std::vector<float>> testData, std::vector<float> testLabels, float C, float gamma);
-	float go_auto(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, std::vector<std::vector<float>> testData, std::vector<float> testLabels, float start_C = 0.000001, float end_C = 10000, float start_gamma = 0.000001, float end_gamma = 10000);
+	void train(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, float C = 83.9666, float gamma = 3.375e-06);
+	void predict(std::vector<std::vector<float>> testData, std::vector<float> testLabels, std::vector<float> &result );
 
-	float** samples;
-	float* labels;
-
-
-	void train(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels);
-	void train(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, float C, float gamma);
-
-	void predict(std::vector<std::vector<float>> testData, std::vector<float> testLabels );
-
+	float predict(Mat testData);
 };
 
+#endif

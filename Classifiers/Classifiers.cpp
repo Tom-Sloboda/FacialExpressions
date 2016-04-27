@@ -4,6 +4,11 @@
 
 Classifiers::Classifiers()
 {
+	mlp = MLP();
+	multiSvm = MulticlassSVM();
+	linSVM = LinearSVM();
+	bayes = Bayes();
+	boost = AdaBoost();
 }
 
 
@@ -11,31 +16,56 @@ Classifiers::~Classifiers()
 {
 }
 
-std::string Classifiers::classToEmotion(int n)
+
+
+
+void Classifiers::train(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels)
 {
-	switch (n)
-	{
-	case 1:
-		return "Anger";
-	case 2:
-		return "Contempt";
-	case 3:
-		return "Disgust";
-	case 4:
-		return "Fear";
-	case 5:
-		return "Happiness";
-	case 6:
-		return "Sadness";
-	case 7:
-		return "Surprise";
-	case 0:
-		return "Neutral";
-	default:
-		return "Undefined";
-	}
+	multiSvm.train(trainingData, trainingLabels);
+	boost.train(trainingData, trainingLabels);
+	bayes.train(vectorToMat(trainingData), vectorToMat(trainingLabels));
+	mlp.train(vectorToMat(trainingData), vectorToMat(trainingLabels));
+	linSVM.train(trainingData, trainingLabels);
 }
 
+void Classifiers::predict(std::vector<std::vector<float>> testData, std::vector<float> testLabels)
+{
+	std::vector<std::vector<float>> resultVecBoost;
+	boost.predict(testData, testLabels, resultVecBoost);
+
+	/*
+	bayes.predict(vectorToMat(testData), vectorToMat(testLabels));
+	
+	Mat resMat;
+	mlp.predict(vectorToMat(testData), vectorToMat(testLabels), resMat);
+
+	std::vector<std::vector<float>> resVecLinSMV;
+	linSVM.predict(testData, testLabels, resVecLinSMV);
+	*/
+}
+
+float Classifiers::predict(Mat testData)
+{
+	std::vector<float> resAdaBoost = boost.predict(testData);
+	float resBayes = bayes.predict(testData);
+	std::vector<float> resLinSVM = linSVM.predict(testData);
+	std::vector<float> resMLP = mlp.predict(testData);
+	float resMultiSVM = multiSvm.predict(testData);
+
+	std::vector<float> result = { 0,0,0,0,0,0,0,0 };
+
+	for (int i : resAdaBoost)
+		result[i]++;
+	result[(int)resBayes]++;
+	for (int i : resLinSVM)
+		result[i]++;
+	for (int i = 0; i < 8; i++)
+		result[i] += resMLP[i];
+	result[(int)resMultiSVM]++;
+	return getHighestProbability(vectorToMat(result));
+}
+
+/*
 void Classifiers::go(std::vector<std::vector<float>> trData, std::vector<float> trLabels, std::vector<std::vector<float>> teData, std::vector<float> teLabels)
 {
 	cv::Mat trainingData(trData.size(), trData[0].size(), CV_32FC1);
@@ -59,37 +89,18 @@ void Classifiers::go(std::vector<std::vector<float>> trData, std::vector<float> 
 		}
 	}
 
-	svm(trainingData, trainingLabels, testData, testLabels);
+	//svm(trainingData, trainingLabels, testData, testLabels);
 	//mlp(trainingData, trainingLabels, testData, testLabels);
-	knn(trainingData, trainingLabels, testData, testLabels, 3);
-	bayes(trainingData, trainingLabels, testData, testLabels);
+	//knn(trainingData, trainingLabels, testData, testLabels, 3);
+//	bayes(trainingData, trainingLabels, testData, testLabels);
 	//decisiontree(trainingData, trainingLabels, testData, testLabels);
 }
+*/
 
 
-float evaluate(cv::Mat& predicted, cv::Mat& actual) 
-{
-	assert(predicted.rows == actual.rows);
-	int t = 0;
-	int f = 0;
-	for (int i = 0; i < actual.rows; i++) 
-	{
-		float p = predicted.at<float>(i, 0);
-		float a = actual.at<float>(i, 0);
-		if ((p == a) || (abs(p-a) < 0.4) )
-		{
-			t++;
-		}
-		else
-		{
-			f++;
-		}
-	}
-	return (t * 1.0) / (t + f);
-}
-
+/*
 void Classifiers::svm(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& testData, cv::Mat& testClasses) {
-	/*
+
 	CvSVMParams param = CvSVMParams();
 
 	param.svm_type = CvSVM::C_SVC;
@@ -123,14 +134,13 @@ void Classifiers::svm(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& 
 	}
 
 	cout << "Accuracy_{SVM} = " << evaluate(predicted, testClasses) << endl;
-	*/
+
 }
 
 
 
 void Classifiers::mlp(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& testData, cv::Mat& testClasses)
 {
-	/*
 	cv::Mat layers = cv::Mat(6, 1, CV_32SC1);
 	layers.row(0) = cv::Scalar(trainingData.size().width);
 	layers.row(1) = cv::Scalar(trainingData.size().width*2);
@@ -162,14 +172,13 @@ void Classifiers::mlp(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& 
 		predicted.at<float>(i, 0) = response.at<float>(0, 0);
 	}
 	cout << "Accuracy_{MLP} = " << evaluate(predicted, testClasses) << endl;
-	*/
 }
 
-
-
+*/
+/*
 void Classifiers::knn(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& testData, cv::Mat& testClasses, int K)
 {
-	/*
+
 	CvKNearest knn(trainingData, trainingClasses, cv::Mat(), false, K);
 	cv::Mat predicted(testClasses.rows, 1, CV_32F);
 	for (int i = 0; i < testData.rows; i++) 
@@ -178,14 +187,14 @@ void Classifiers::knn(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& 
 		predicted.at<float>(i, 0) = knn.find_nearest(sample, K);
 	}
 	cout << "Accuracy_{KNN} = " << evaluate(predicted, testClasses) << endl;
-	*/
+
 }
 
 
 
 void Classifiers::bayes(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& testData, cv::Mat& testClasses)
 {
-	/*
+
 	CvNormalBayesClassifier bayes(trainingData, trainingClasses);
 	cv::Mat predicted(testClasses.rows, 1, CV_32F);
 	for (int i = 0; i < testData.rows; i++) 
@@ -194,14 +203,14 @@ void Classifiers::bayes(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat
 		predicted.at<float>(i, 0) = bayes.predict(sample);
 	}
 	cout << "Accuracy_{BAYES} = " << evaluate(predicted, testClasses) << endl;
-	*/
+
 }
 
 
 
 void Classifiers::decisiontree(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& testData, cv::Mat& testClasses)
 {
-	/*
+
 	CvDTree dtree;
 	cv::Mat var_type(3, 1, CV_8U);
 
@@ -219,5 +228,5 @@ void Classifiers::decisiontree(cv::Mat& trainingData, cv::Mat& trainingClasses, 
 		predicted.at<float>(i, 0) = prediction->value;
 	}
 	cout << "Accuracy_{TREE} = " << evaluate(predicted, testClasses) << endl;
-	*/
-}
+
+}*/
