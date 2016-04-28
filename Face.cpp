@@ -51,7 +51,7 @@ void Face::showLandmarks()
 	namedWindow(to_string(Face::label), WINDOW_AUTOSIZE);// Create a window for display.
 	for (int i = 0; i < Face::landmarks.size(); i += 2)
 	{
-		putText(landmark_overlay, to_string(i), cvPoint(Face::landmarks[i], Face::landmarks[i+1]), FONT_HERSHEY_COMPLEX_SMALL, 0.5, cvScalar(100, 200, 250), 1, CV_AA);
+		putText(landmark_overlay, to_string(i/2), cvPoint(Face::landmarks[i], Face::landmarks[i+1]), FONT_HERSHEY_COMPLEX_SMALL, 0.5, cvScalar(100, 200, 250), 1, CV_AA);
 	}
 	imshow(to_string(Face::label), landmark_overlay);
 	waitKey(0);
@@ -65,7 +65,7 @@ Mat Face::getLandmarkOverlay()
 	//namedWindow(to_string(Face::label), WINDOW_AUTOSIZE);// Create a window for display.
 	for (int i = 0; i < Face::landmarks.size(); i += 2)
 	{
-		putText(landmark_overlay, to_string(i), cvPoint(Face::landmarks[i], Face::landmarks[i + 1]), FONT_HERSHEY_COMPLEX_SMALL, 0.5, cvScalar(100, 200, 250), 1, CV_AA);
+		putText(landmark_overlay, to_string(i/2), cvPoint(Face::landmarks[i], Face::landmarks[i + 1]), FONT_HERSHEY_COMPLEX_SMALL, 0.5, cvScalar(100, 200, 250), 1, CV_AA);
 	}
 	//imshow(to_string(Face::label), landmark_overlay);
 	return landmark_overlay;

@@ -1,14 +1,113 @@
-﻿Build started 27-Apr-16 06:46:31 AM.
-     1>Project "C:\_Projects\FacialExpressions\FacialExpressions\FacialExpressions.vcxproj" on node 2 (Build target(s)).
-     1>InitializeBuildStatus:
-         Touching "x64\Release\FacialEx.1EF8BCF4.tlog\unsuccessfulbuild".
+﻿Build started 28-Apr-16 12:39:32 PM.
+     1>Project "C:\_Projects\FacialExpressions\FacialExpressions\FacialExpressions.vcxproj" on node 2 (Rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "x64\Release\FacialEx.1EF8BCF4.tlog\FacialExpressions.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "x64\Release\FacialEx.1EF8BCF4.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\opencv-3.1\opencv\build\include" /IC:\boost /IC:\DLIB\dlib\external /IC:\DLIB\dlib\external\zlib /IC:\DLIB\dlib\external\libjpeg /IC:\DLIB\dlib\external\libpng /IC:\DLIB /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _CRT_SECURE_NO_WARNINGS /D DLIB_JPEG_SUPPORT /D DLIB_PNG_SUPPORT /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc140.pdb" /Gd /TP /errorReport:prompt Classifiers\BaseClassifier.cpp Classifiers\Classifiers.cpp Classifiers\MulticlassSVM.cpp FacialExpressions.cpp
+         C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\opencv-3.1\opencv\build\include" /IC:\boost /IC:\DLIB\dlib\external /IC:\DLIB\dlib\external\zlib /IC:\DLIB\dlib\external\libjpeg /IC:\DLIB\dlib\external\libpng /IC:\DLIB /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D CODE_ANALYSIS /D _CRT_SECURE_NO_WARNINGS /D DLIB_JPEG_SUPPORT /D DLIB_PNG_SUPPORT /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc140.pdb" /Gd /TP /analyze /analyze:plugin"C:\Microsoft Visual Studio 14.0\VC\\bin\localespc.dll" /errorReport:prompt   /analyze:quiet Classifiers\AdaBoost.cpp Classifiers\Bayes.cpp Classifiers\BaseClassifier.cpp Capture.cpp Classifiers\Classifiers.cpp dlib\all\source.cpp dlib\external\libjpeg\jcapimin.cpp dlib\external\libjpeg\jcapistd.cpp dlib\external\libjpeg\jccoefct.cpp dlib\external\libjpeg\jccolor.cpp dlib\external\libjpeg\jcdctmgr.cpp dlib\external\libjpeg\jchuff.cpp dlib\external\libjpeg\jcinit.cpp dlib\external\libjpeg\jcmainct.cpp dlib\external\libjpeg\jcmarker.cpp dlib\external\libjpeg\jcmaster.cpp dlib\external\libjpeg\jcomapi.cpp dlib\external\libjpeg\jcparam.cpp dlib\external\libjpeg\jcphuff.cpp dlib\external\libjpeg\jcprepct.cpp dlib\external\libjpeg\jcsample.cpp dlib\external\libjpeg\jdapimin.cpp dlib\external\libjpeg\jdapistd.cpp dlib\external\libjpeg\jdatadst.cpp dlib\external\libjpeg\jdatasrc.cpp dlib\external\libjpeg\jdcoefct.cpp dlib\external\libjpeg\jdcolor.cpp dlib\external\libjpeg\jddctmgr.cpp dlib\external\libjpeg\jdhuff.cpp dlib\external\libjpeg\jdinput.cpp dlib\external\libjpeg\jdmainct.cpp dlib\external\libjpeg\jdmarker.cpp dlib\external\libjpeg\jdmaster.cpp dlib\external\libjpeg\jdmerge.cpp dlib\external\libjpeg\jdphuff.cpp dlib\external\libjpeg\jdpostct.cpp dlib\external\libjpeg\jdsample.cpp dlib\external\libjpeg\jerror.cpp dlib\external\libjpeg\jfdctflt.cpp dlib\external\libjpeg\jfdctfst.cpp dlib\external\libjpeg\jfdctint.cpp dlib\external\libjpeg\jidctflt.cpp dlib\external\libjpeg\jidctfst.cpp dlib\external\libjpeg\jidctint.cpp dlib\external\libjpeg\jidctred.cpp dlib\external\libjpeg\jmemmgr.cpp dlib\external\libjpeg\jmemnobs.cpp dlib\external\libjpeg\jquant1.cpp dlib\external\libjpeg\jquant2.cpp dlib\external\libjpeg\jutils.cpp Face.cpp FeatureExtractor.cpp GUI.cpp ImgPreprocessor.cpp Classifiers\LinearSVM.cpp Loader.cpp Classifiers\MLP.cpp stdafx.cpp FacialExpressions.cpp Classifiers\MulticlassSVM.cpp
+         AdaBoost.cpp
+         Bayes.cpp
          BaseClassifier.cpp
+         Capture.cpp
          Classifiers.cpp
-         MulticlassSVM.cpp
+         source.cpp
+         jcapimin.cpp
+         jcapistd.cpp
+         jccoefct.cpp
+         jccolor.cpp
+         jcdctmgr.cpp
+         jchuff.cpp
+         jcinit.cpp
+         jcmainct.cpp
+         jcmarker.cpp
+         jcmaster.cpp
+         jcomapi.cpp
+         jcparam.cpp
+         jcphuff.cpp
+         jcprepct.cpp
+         Running Code Analysis for C/C++...
+         Compiling...
+         jcsample.cpp
+         jdapimin.cpp
+         jdapistd.cpp
+         jdatadst.cpp
+         jdatasrc.cpp
+         jdcoefct.cpp
+         jdcolor.cpp
+         jddctmgr.cpp
+         jdhuff.cpp
+         jdinput.cpp
+         jdmainct.cpp
+         jdmarker.cpp
+         jdmaster.cpp
+         jdmerge.cpp
+         jdphuff.cpp
+         jdpostct.cpp
+         jdsample.cpp
+         jerror.cpp
+         jfdctflt.cpp
+         jfdctfst.cpp
+         Running Code Analysis for C/C++...
+         Compiling...
+         jfdctint.cpp
+         jidctflt.cpp
+         jidctfst.cpp
+         jidctint.cpp
+         jidctred.cpp
+         jmemmgr.cpp
+         jmemnobs.cpp
+         jquant1.cpp
+         jquant2.cpp
+         jutils.cpp
+         Face.cpp
+         FeatureExtractor.cpp
+         GUI.cpp
+     1>GUI.cpp(85): warning C4311: 'type cast': pointer truncation from 'HBRUSH' to 'LONG'
+     1>GUI.cpp(85): warning C4302: 'type cast': truncation from 'HBRUSH' to 'LONG'
+     1>GUI.cpp(92): warning C4244: '=': conversion from 'double' to 'BYTE', possible loss of data
+         ImgPreprocessor.cpp
+         LinearSVM.cpp
+         Loader.cpp
+         MLP.cpp
+         stdafx.cpp
          FacialExpressions.cpp
-         All outputs are up-to-date.
+         MulticlassSVM.cpp
+         Running Code Analysis for C/C++...
+         C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\opencv-3.1\opencv\build\include" /IC:\boost /IC:\DLIB\dlib\external /IC:\DLIB\dlib\external\zlib /IC:\DLIB\dlib\external\libjpeg /IC:\DLIB\dlib\external\libpng /IC:\DLIB /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D CODE_ANALYSIS /D _CRT_SECURE_NO_WARNINGS /D DLIB_JPEG_SUPPORT /D DLIB_PNG_SUPPORT /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc140.pdb" /Gd /TC /analyze /analyze:plugin"C:\Microsoft Visual Studio 14.0\VC\\bin\localespc.dll" /errorReport:prompt   /analyze:quiet dlib\external\libpng\png.c dlib\external\libpng\pngerror.c dlib\external\libpng\pngget.c dlib\external\libpng\pngmem.c dlib\external\libpng\pngpread.c dlib\external\libpng\pngread.c dlib\external\libpng\pngrio.c dlib\external\libpng\pngrtran.c dlib\external\libpng\pngrutil.c dlib\external\libpng\pngset.c dlib\external\libpng\pngtrans.c dlib\external\libpng\pngwio.c dlib\external\libpng\pngwrite.c dlib\external\libpng\pngwtran.c dlib\external\libpng\pngwutil.c dlib\external\zlib\adler32.c dlib\external\zlib\compress.c dlib\external\zlib\crc32.c dlib\external\zlib\deflate.c dlib\external\zlib\gzclose.c dlib\external\zlib\gzlib.c dlib\external\zlib\gzread.c dlib\external\zlib\gzwrite.c dlib\external\zlib\infback.c dlib\external\zlib\inffast.c dlib\external\zlib\inflate.c dlib\external\zlib\inftrees.c dlib\external\zlib\trees.c dlib\external\zlib\uncompr.c dlib\external\zlib\zutil.c
+         png.c
+         pngerror.c
+         pngget.c
+         pngmem.c
+         pngpread.c
+         pngread.c
+         pngrio.c
+         pngrtran.c
+         pngrutil.c
+         pngset.c
+         pngtrans.c
+         pngwio.c
+         pngwrite.c
+         pngwtran.c
+         pngwutil.c
+         adler32.c
+         compress.c
+         crc32.c
+         deflate.c
+         gzclose.c
+         Running Code Analysis for C/C++...
+         Compiling...
+         gzlib.c
+         gzread.c
+         gzwrite.c
+         infback.c
+         inffast.c
+         inflate.c
+         inftrees.c
+         trees.c
+         uncompr.c
+         zutil.c
+         Running Code Analysis for C/C++...
        Link:
          C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\_Projects\FacialExpressions\x64\Release\FacialExpressions.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\opencv-3.1\opencv\build\x64\vc14\bin" /LIBPATH:"C:\opencv-3.1\opencv\build\x64\vc14\lib" /LIBPATH:C:\boost\lib opencv_world310.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\_Projects\FacialExpressions\x64\Release\FacialExpressions.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\_Projects\FacialExpressions\x64\Release\FacialExpressions.lib" /MACHINE:X64 x64\Release\AdaBoost.obj
          x64\Release\Bayes.obj
@@ -101,16 +200,95 @@
          x64\Release\FacialExpressions.obj
          x64\Release\MulticlassSVM.obj
          Generating code
-         212 of 10426 functions ( 2.0%) were compiled, the rest were copied from previous compilation.
-           3 functions were new in current compilation
-           138 functions had inline decision re-evaluated but remain unchanged
+         All 10382 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
          Finished generating code
          FacialExpressions.vcxproj -> C:\_Projects\FacialExpressions\x64\Release\FacialExpressions.exe
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\mat.inl.hpp(412): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\mat.inl.hpp(445): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\mat.inl.hpp(1886): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\mat.inl.hpp(2330): warning C6011: Dereferencing NULL pointer 'm'. See line 2327 for an earlier location where this can occur
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\mat.inl.hpp(2344): warning C6011: Dereferencing NULL pointer 'm'. See line 2341 for an earlier location where this can occur
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\utility.hpp(341): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+     1>c:\dlib\dlib\threads\threads_kernel_1.h(46): warning C28125: The function 'InitializeCriticalSection' must be called from within a try/except block:  The requirement might be conditional.
+     1>c:\dlib\dlib\serialize.h(289): warning C6385: Reading invalid data from 'buf':  the readable size is '8' bytes, but '-2' bytes may be read.
+     1>c:\dlib\dlib\serialize.h(401): warning C6385: Reading invalid data from 'buf':  the readable size is '8' bytes, but '-2' bytes may be read.
+     1>c:\dlib\dlib\rand\mersenne_twister.h(185): warning C6385: Reading invalid data from 'this->x':  the readable size is '4992' bytes, but 'i' bytes may be read.
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(513): warning C6294: Ill-defined for-loop:  initial condition does not satisfy test.  Loop body not executed.
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(513): warning C6201: Index '3' is out of valid index range '0' to '2' for possibly stack allocated buffer 'this->val'.
+     1>c:\dlib\dlib\entropy_decoder_model\entropy_decoder_model_kernel_5.h(531): warning C6011: Dereferencing NULL pointer 'new_node'. 
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(505): warning C6294: Ill-defined for-loop:  initial condition does not satisfy test.  Loop body not executed.
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(505): warning C6201: Index '2' is out of valid index range '0' to '1' for possibly stack allocated buffer 'this->val'.
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(521): warning C6294: Ill-defined for-loop:  initial condition does not satisfy test.  Loop body not executed.
+     1>c:\opencv-3.1\opencv\build\include\opencv2\core\matx.hpp(521): warning C6201: Index '4' is out of valid index range '0' to '3' for possibly stack allocated buffer 'this->val'.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\unicode\unicode.cpp(120): warning C6386: Buffer overrun while writing to 'wstr':  the writable size is '(wlen+1)*2' bytes, but '4' bytes might be written.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\threads\threads_kernel_1.h(46): warning C28125: The function 'InitializeCriticalSection' must be called from within a try/except block:  The requirement might be conditional.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\sockets\sockets_kernel_1.cpp(81): warning C6031: Return value ignored: 'WSAStartup'.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\serialize.h(289): warning C6385: Reading invalid data from 'buf':  the readable size is '8' bytes, but '-2' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\serialize.h(401): warning C6385: Reading invalid data from 'buf':  the readable size is '8' bytes, but '-2' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\rand\mersenne_twister.h(185): warning C6385: Reading invalid data from 'this->x':  the readable size is '4992' bytes, but 'i' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\entropy_decoder_model\entropy_decoder_model_kernel_5.h(531): warning C6011: Dereferencing NULL pointer 'new_node'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\gui_widgets\nativefont.h(234): warning C28183: 'hBmp' could be '0', and is a copy of the value found in 'CreateDIBSection()`233':  this does not adhere to the specification for the function 'SelectObject'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jccoefct.cpp(194): warning C6385: Reading invalid data from 'coef->MCU_buffer':  the readable size is '80' bytes, but '-8' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(69): warning C6385: Reading invalid data from 'cinfo->quant_tbl_ptrs':  the readable size is '32' bytes, but 'qtblno' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(79): warning C6386: Buffer overrun while writing to 'fdct->divisors':  the writable size is '32' bytes, but 'qtblno' bytes might be written.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(78): warning C6385: Reading invalid data from 'fdct->divisors':  the readable size is '32' bytes, but 'qtblno' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(85): warning C28182: Dereferencing NULL pointer. 'qtbl' contains the same NULL value as 'cinfo->quant_tbl_ptrs[qtblno]' did. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(146): warning C6386: Buffer overrun while writing to 'fdct->float_divisors':  the writable size is '32' bytes, but 'qtblno' bytes might be written.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcdctmgr.cpp(145): warning C6385: Reading invalid data from 'fdct->float_divisors':  the readable size is '32' bytes, but 'qtblno' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(143): warning C6385: Reading invalid data from 'entropy->ac_count_ptrs':  the readable size is '32' bytes, but 'actbl' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(142): warning C6387: 'entropy->dc_count_ptrs[dctbl]' could be '0':  this does not adhere to the specification for the function 'memset'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(139): warning C6386: Buffer overrun while writing to 'entropy->dc_count_ptrs':  the writable size is '32' bytes, but 'dctbl' bytes might be written.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(138): warning C6385: Reading invalid data from 'entropy->dc_count_ptrs':  the readable size is '32' bytes, but 'dctbl' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(147): warning C6387: 'entropy->ac_count_ptrs[actbl]' could be '0':  this does not adhere to the specification for the function 'memset'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(144): warning C6386: Buffer overrun while writing to 'entropy->ac_count_ptrs':  the writable size is '32' bytes, but 'actbl' bytes might be written.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jchuff.cpp(212): warning C6011: Dereferencing NULL pointer 'htbl'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcmarker.cpp(157): warning C6011: Dereferencing NULL pointer 'qtbl'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcmarker.cpp(200): warning C6011: Dereferencing NULL pointer 'htbl'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcmaster.cpp(235): warning C6001: Using uninitialized memory 'component_sent'.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcphuff.cpp(165): warning C6385: Reading invalid data from 'entropy->count_ptrs':  the readable size is '32' bytes, but 'tbl' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcphuff.cpp(166): warning C6386: Buffer overrun while writing to 'entropy->count_ptrs':  the writable size is '32' bytes, but 'tbl' bytes might be written.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jcphuff.cpp(169): warning C6387: 'entropy->count_ptrs[tbl]' could be '0':  this does not adhere to the specification for the function 'memset'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdhuff.cpp(223): warning C6385: Reading invalid data from 'huffcode':  the readable size is '1028' bytes, but '-8' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdinput.cpp(240): warning C28183: 'qtbl' could be '0', and is a copy of the value found in 'compptr->quant_table':  this does not adhere to the specification for the function 'memcpy'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdinput.cpp(240): warning C6387: 'cinfo->quant_tbl_ptrs[qtblno]' could be '0':  this does not adhere to the specification for the function 'memcpy'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdinput.cpp(240): warning C6385: Reading invalid data from 'cinfo->quant_tbl_ptrs':  the readable size is '32' bytes, but 'qtblno' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdmarker.cpp(513): warning C6386: Buffer overrun while writing to 'cinfo->quant_tbl_ptrs':  the writable size is '32' bytes, but 'n' bytes might be written.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jdmarker.cpp(512): warning C6385: Reading invalid data from 'cinfo->quant_tbl_ptrs':  the readable size is '32' bytes, but 'n' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(291): warning C6385: Reading invalid data from 'first_pool_slop':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(293): warning C6385: Reading invalid data from 'extra_pool_slop':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(312): warning C6386: Buffer overrun while writing to 'mem->small_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(278): warning C6385: Reading invalid data from 'mem->small_list':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(369): warning C6011: Dereferencing NULL pointer 'hdr_ptr'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(369): warning C6385: Reading invalid data from 'mem->large_list':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(375): warning C6386: Buffer overrun while writing to 'mem->large_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(824): warning C6011: Dereferencing NULL pointer 'ptr->mem_buffer'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(909): warning C6011: Dereferencing NULL pointer 'ptr->mem_buffer'. 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(981): warning C6385: Reading invalid data from 'mem->small_list':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(967): warning C6385: Reading invalid data from 'mem->large_list':  the readable size is '16' bytes, but 'pool_id' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(968): warning C6386: Buffer overrun while writing to 'mem->large_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(982): warning C6386: Buffer overrun while writing to 'mem->small_list':  the writable size is '16' bytes, but 'pool_id' bytes might be written.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\jmemmgr.cpp(1067): warning C6011: Dereferencing NULL pointer 'mem'. 
+     1>c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(130): warning C28252: Inconsistent annotation for 'strcpy': _Param_(1) has 'SAL_writableTo(elementCount(_String_length_(__formal(1,parameter1))+1))' on the prior instance. See <no file>(0). 
+     1>c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(130): warning C28253: Inconsistent annotation for 'strcpy': _Param_(1) has 'SAL_writableTo(elementCount(_String_length_(_Source)+1))' on this instance. See <no file>(0). 
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\pngrtran.c(4646): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\pngrtran.c(4807): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\pngrtran.c(4861): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\libpng\pngrtran.c(4884): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\gzread.c(95): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\gzread.c(453): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\gzread.c(469): warning C6297: Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\trees.c(536): warning C6385: Reading invalid data from 's->bl_count':  the readable size is '32' bytes, but '-2' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\dlib\external\zlib\trees.c(552): warning C6385: Reading invalid data from 's->bl_count':  the readable size is '32' bytes, but 'bits' bytes may be read.
+     1>c:\_projects\facialexpressions\facialexpressions\gui.cpp(16): warning C6387: '_Param_(1)' could be '0':  this does not adhere to the specification for the function 'WinMain'. 
+     1>c:\_projects\facialexpressions\facialexpressions\gui.cpp(40): warning C6031: Return value ignored: 'freopen'.
+     1>c:\_projects\facialexpressions\facialexpressions\gui.cpp(41): warning C6031: Return value ignored: 'freopen'.
+     1>c:\_projects\facialexpressions\facialexpressions\gui.cpp(42): warning C6031: Return value ignored: 'freopen'.
+     1>c:\_projects\facialexpressions\facialexpressions\facialexpressions.cpp(45): warning C28251: Inconsistent annotation for 'WinMain': this instance has no annotations. See c:\program files (x86)\windows kits\8.1\include\um\winbase.h(905). 
        FinalizeBuildStatus:
          Deleting file "x64\Release\FacialEx.1EF8BCF4.tlog\unsuccessfulbuild".
          Touching "x64\Release\FacialEx.1EF8BCF4.tlog\FacialExpressions.lastbuildstate".
-     1>Done Building Project "C:\_Projects\FacialExpressions\FacialExpressions\FacialExpressions.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\_Projects\FacialExpressions\FacialExpressions\FacialExpressions.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:57.63
+Time Elapsed 00:13:23.98

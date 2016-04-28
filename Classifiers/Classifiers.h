@@ -10,7 +10,7 @@
 #include "Bayes.h"
 #include "AdaBoost.h"
 
-
+#define DEBUG
 
 
 class Classifiers:public BaseClassifier

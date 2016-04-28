@@ -36,7 +36,6 @@ instructions.  Note that AVX is the fastest but requires a CPU from at least
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/core/core.hpp>
 
-#define DEBUG
 
 using namespace dlib;
 using namespace std;
@@ -94,20 +93,26 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//CLS.train(trainingData, trainingLabels);
 		//cout << "ALL CLASSIFIERS TRAINED\n";
 
-		CLS.multiSvm.go(trainingData, trainingLabels, testData, testLabels);
-		cin >> wait;
-		std::vector<float> res;
+		/*
+		
+		
+		CLS.multiSvm.predict(Mat(1, testData[i].size(), CV_32FC1, &testData[i].data));
+		*/
+		std::vector<float> resultSVM;
+
+		//CLS.multiSvm.go(trainingData, trainingLabels, testData, testLabels);
 		CLS.multiSvm.train(trainingData, trainingLabels);
-		CLS.multiSvm.predict(testData, testLabels, res);
-
-
-
+		//CLS.multiSvm.predict(testData, testLabels, resultSVM);
+		int successfullyPredicted = 0;
 		Mat testDataMat = CLS.vectorToMat(testData);
 		for (int i = 0; i < testLabels.size(); i++)
 		{
-			float res = CLS.predict(testDataMat.row(i));
+			float res = CLS.multiSvm.predict(testDataMat.row(i));
+			//float res = CLS.predict(testDataMat.row(i));
 			cout << "Predicted: " << res << "Actual: " << testLabels[i] << endl;
+			if (res == testLabels[i]) successfullyPredicted++;
 		}
+		cout << "Precision: " << (float)successfullyPredicted/testDataMat.rows << endl;
 		//Mat resMat;// (testLabels.size(), 8, CV_32FC1);
 		//float precision = SVM.go(trainingData, trainingLabels, testData, testLabels);
 		//Mat mplLabelMat(vec.size(), vec[0].size(), CV_32FC1);
@@ -138,7 +143,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			}
 			if (msg.message == WM_KEYUP) 
 			{
-				cout << msg.wParam << endl;
 				if (msg.wParam == 'N')
 				{
 					neutralFace = CAP.hwnd2mat(hwnd);
@@ -193,7 +197,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 							waitKey(10);
 							std::vector<float> testData = FE.getDifference(neutral->landmarks, other->landmarks);
 							cv::Mat testDataMat(1, testData.size(), CV_32FC1, testData.data());
-							//cout << SVM.classToEmotion(SVM.svm->predict(testDataMat)) << endl;
+							cout << CLS.multiSvm.classToEmotion(CLS.multiSvm.predict(testDataMat)) << endl;
 						}
 					}
 				}

@@ -55,8 +55,8 @@ float MulticlassSVM::go(std::vector<std::vector<float>> trainingData, std::vecto
 	{
 		cv::Mat testDataMat(1, testData[i].size(), CV_32FC1, testData[i].data());
 		float predictedLabel = svm->predict(testDataMat);
-		//std::cout << "Predicted: " << classToEmotion(predictedLabel) << "\n";
-		//std::cout << "Actual: " << classToEmotion(testLabels[i]) << ((predictedLabel == testLabels[i])? " << Success\n" : "\n");
+		std::cout << "Predicted: " << classToEmotion(predictedLabel) << "\n";
+		std::cout << "Actual: " << classToEmotion(testLabels[i]) << ((predictedLabel == testLabels[i])? " << Success\n" : "\n");
 
 		if (floor(predictedLabel) == floor(testLabels[i]))
 		{
@@ -71,10 +71,15 @@ float MulticlassSVM::go(std::vector<std::vector<float>> trainingData, std::vecto
 void MulticlassSVM::train(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, float C, float gamma)
 {
 	cv::Mat trainingDataMat = vectorToMat(trainingData);
-	printMat(trainingDataMat.row(0));
-	cv::Mat trainingLabelsMat = convertFloatToIntMat(vectorToMat(trainingLabels));
-	printMat(trainingLabelsMat);
-	int wait; cin >> wait;
+	cv::Mat trainingLabelsMat((trainingLabels.size()), 1, CV_32SC1);
+	for (int i = 0; i < trainingData.size(); i++)
+	{
+		trainingLabelsMat.at<int>(i) = (int)trainingLabels[i];
+		for (int j = 0; j < trainingData[0].size(); j++)
+		{
+			trainingDataMat.at<float>(i, j) = trainingData.data()[i][j];
+		}
+	}
 #ifndef DEBUG
 	cout << "\nWould you like to load MulticlassSVM.xml? y/n\n";
 	std::string input;
@@ -94,7 +99,7 @@ void MulticlassSVM::train(std::vector<std::vector<float>> trainingData, std::vec
 		svm->setC(C);
 		svm->setTermCriteria(cvTermCriteria(CV_TERMCRIT_ITER, 100, 0.1));
 		Ptr<ml::TrainData> tData = ml::TrainData::create(trainingDataMat, ml::SampleTypes::ROW_SAMPLE, trainingLabelsMat);
-		svm->train(tData);
+		svm->trainAuto(tData);
 		svm->save("SVM.xml");
 		std::cout << "Finished training\n";
 	}
@@ -102,28 +107,20 @@ void MulticlassSVM::train(std::vector<std::vector<float>> trainingData, std::vec
 
 void MulticlassSVM::predict(std::vector<std::vector<float>> testData, std::vector<float> testLabels, std::vector<float> &result)
 {
-	int successfullyPredicted = 0;
+	FeatureExtractor FE;
 	for (int i = 0; i < testLabels.size(); i++)
 	{
-		Mat res;
 		cv::Mat testDataMat(1, testData[i].size(), CV_32FC1, testData[i].data());
-		float predictedLabel = predict(testDataMat);
-		result.push_back(predictedLabel);
+		float predictedLabel = svm->predict(testDataMat);
 		std::cout << "Predicted: " << classToEmotion(predictedLabel) << "\n";
-		std::cout << "Actual: " << classToEmotion(testLabels[i]) << ((predictedLabel == testLabels[i])? " << Success\n" : "\n");
-		
-		if (floor(predictedLabel) == floor(testLabels[i]))
-		{
-			successfullyPredicted += 1;
-		}
-		
+		std::cout << "Actual: " << classToEmotion(testLabels[i]) << ((predictedLabel == testLabels[i]) ? " << Success\n" : "\n");
+
 	}
-	float precision = ((float)successfullyPredicted / (testLabels.size()));
-	
 }
 
 float MulticlassSVM::predict(Mat testData)
 {
 		float predictedLabel = svm->predict(testData);
-		return predictedLabel;	
+		std::cout << "Predicted: " << predictedLabel << "\n";
+		return predictedLabel;
 }

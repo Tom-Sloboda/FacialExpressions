@@ -51,7 +51,7 @@ void LinearSVM::train(std::vector<std::vector<float>> trainingData, std::vector<
 			tmpSVM->setTermCriteria(cvTermCriteria(CV_TERMCRIT_ITER, 1000, 0.1));
 			//BUG: Something is very wrong here
 			Ptr<ml::TrainData> tData = ml::TrainData::create(trainingDataMat, ml::SampleTypes::ROW_SAMPLE, convertMultiClassToSingleClassLabels(trainingLabelsMat, i));
-			tmpSVM->train(tData);
+			tmpSVM->trainAuto(tData);
 			tmpSVM->save("LinearSVM"+to_string(i)+".xml");
 			svm.push_back(tmpSVM);
 		}
