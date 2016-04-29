@@ -19,8 +19,6 @@
 #include <boost/foreach.hpp>
 #include <boost/range/algorithm/count.hpp>
 #include <boost/algorithm/string/replace.hpp>
-#ifndef LOADER_H
-#define LOADER_H
 using namespace std;
 using namespace dlib;
 using namespace boost::filesystem;
@@ -49,13 +47,8 @@ public:
 	std::vector<std::vector<float>> data;
 	std::vector<float> labels;
 	std::vector<std::string> img_path_list, label_path_list;
-	//string img_dir = "C:\\Users\\dell490\\Downloads\\CK_dataset\\CK+\\extended-cohn-kanade-images\\cohn-kanade-images";
 	string img_dir = "./dataset/images";
-	//string label_dir = "C:\\Users\\dell490\\Downloads\\CK_dataset\\CK+\\Emotion_labels\\Emotion";
 	string label_dir = "./dataset/labels";
 
 	std::vector<Face> faces;
 };
-
-
-#endif // !LOADER_H

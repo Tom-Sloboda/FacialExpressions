@@ -30,9 +30,6 @@ Loader::Loader(FeatureExtractor *FE, ImgPreprocessor *IP)
 		data.clear();
 		getAllDirectories(img_dir, &(directory_list));
 
-
-		//findFilesRecursively(label_dir.c_str(), ".txt", &file_list);
-
 		//image_window  win;
 		
 		Mat f1, f2, combined;
@@ -106,7 +103,6 @@ string Loader::getImgPath(string path)
 {
 	string img_name;
 	path.erase(0, label_dir.size());
-	//cout << path << "\n";
 	char* split = strtok((char*)(path.c_str()), "_");
 	img_name = split;
 	img_name.append("_");
@@ -218,12 +214,6 @@ void Loader::loadProgress(string filename)
 	{
 		while (std::getline(savefile, line))
 		{
-			//label_path_list.push_back(line);
-
-			//std::getline(savefile, line);
-			//img_path_list.push_back(line);
-
-			//std::getline(savefile, line);
 			labels.push_back(stof(line));
 
 			std::getline(savefile, line);
@@ -242,8 +232,6 @@ void Loader::saveProgress(string filename)
 	savefile.open(filename);
 	for (int i = 0; i < Loader::labels.size(); i++)
 	{
-		//savefile << label_path_list[i] << "\n";
-		//savefile << img_path_list[i] << "\n";
 		savefile << labels[i] << "\n";
 		savefile << FeatureExtractor::getFlattenedStr(data[i]) << "\n\n";
 	}
@@ -257,8 +245,6 @@ void Loader::saveProgressCSV(string filename)
 	string dataStr;
 	for (int i = 0; i < Loader::labels.size(); i++)
 	{
-		//savefile << label_path_list[i] << "\n";
-		//savefile << img_path_list[i] << "\n";
 		savefile << labels[i] << ", ";
 		savefile << boost::replace_all_copy(FeatureExtractor::getFlattenedStr(data[i]), " ", ",") << "\n";
 	}

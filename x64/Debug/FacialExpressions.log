@@ -1,11 +1,18 @@
-﻿Build started 27-Apr-16 06:22:32 AM.
+﻿Build started 28-Apr-16 08:47:53 PM.
      1>Project "C:\_Projects\FacialExpressions\FacialExpressions\FacialExpressions.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
-         Touching "x64\Debug\FacialEx.1EF8BCF4.tlog\unsuccessfulbuild".
+         Creating "x64\Debug\FacialEx.1EF8BCF4.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\opencv-3.1\opencv\build\include" /IC:\boost /IC:\DLIB\dlib\external /IC:\DLIB\dlib\external\zlib /IC:\DLIB\dlib\external\libjpeg /IC:\DLIB\dlib\external\libpng /IC:\DLIB /ZI /nologo /W3 /WX- /sdl /Od /D _CRT_SECURE_NO_WARNINGS /D DLIB_JPEG_SUPPORT /D DLIB_PNG_SUPPORT /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Classifiers\MulticlassSVM.cpp FacialExpressions.cpp
+         C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\opencv-3.1\opencv\build\include" /IC:\boost /IC:\DLIB\dlib\external /IC:\DLIB\dlib\external\zlib /IC:\DLIB\dlib\external\libjpeg /IC:\DLIB\dlib\external\libpng /IC:\DLIB /ZI /nologo /W3 /WX- /sdl /Od /D _CRT_SECURE_NO_WARNINGS /D DLIB_JPEG_SUPPORT /D DLIB_PNG_SUPPORT /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Classifiers\AdaBoost.cpp Classifiers\BaseClassifier.cpp Classifiers\Bayes.cpp Classifiers\Classifiers.cpp Classifiers\LinearSVM.cpp Classifiers\MLP.cpp Classifiers\MulticlassSVM.cpp Face.cpp FacialExpressions.cpp
          FacialExpressions.cpp
+         Face.cpp
          MulticlassSVM.cpp
+         MLP.cpp
+         LinearSVM.cpp
+         Classifiers.cpp
+         Bayes.cpp
+         BaseClassifier.cpp
+         AdaBoost.cpp
          Generating Code...
          All outputs are up-to-date.
        Link:
@@ -107,4 +114,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:45.25
+Time Elapsed 00:02:44.27

@@ -13,12 +13,8 @@
 #define NOSE2_X landmarks[56]
 #define NOSE2_Y landmarks[57]
 
-ImgPreprocessor::ImgPreprocessor() //FeatureExtractor *FE)
+ImgPreprocessor::ImgPreprocessor()
 {
- 	//ImgPreprocessor::FE = FE;
-	//ImgPreprocessor::faceTemplate = new Face(FE, "C:/Users/dell490/Downloads/CK_dataset/CK+/extended-cohn-kanade-images/cohn-kanade-images/S037/001/S037_001_00000001.png", 0);
-	//float angle = atan2f(ImgPreprocessor::faceTemplate->RIGHT_EYE_OUTER_Y - ImgPreprocessor::faceTemplate->LEFT_EYE_OUTER_Y, ImgPreprocessor::faceTemplate->RIGHT_EYE_OUTER_X - ImgPreprocessor::faceTemplate->LEFT_EYE_OUTER_X);
-	//rotate(*(ImgPreprocessor::faceTemplate), Point2f(ImgPreprocessor::faceTemplate->LEFT_EYE_OUTER_X, ImgPreprocessor::faceTemplate->LEFT_EYE_OUTER_Y), angle*(180 / pi), 1.5);
 }
 
 ImgPreprocessor::~ImgPreprocessor()
@@ -50,37 +46,6 @@ void ImgPreprocessor::align(Face &face, Face &neutralFace)
 	crop(face, 0.1);
 	resize(face, 300, 300);
 	transpositionAlign(face, neutralFace);
-	/*
-	//resize(face, neutralFace.mat.cols*scale, neutralFace.mat.rows*scale);
-	//imshow("dbg", face.getLandmarkOverlay()); waitKey();
-	cout << "neutralFace - " << distance(Point2f(neutralFace.RIGHT_EYE_OUTER_X, neutralFace.RIGHT_EYE_OUTER_Y), Point2f(neutralFace.LEFT_EYE_OUTER_X,	neutralFace.LEFT_EYE_OUTER_Y)) << endl;
-	cout << "face - " <<		distance(Point2f(face.RIGHT_EYE_OUTER_X,		face.RIGHT_EYE_OUTER_Y),		Point2f(face.LEFT_EYE_OUTER_X,			face.LEFT_EYE_OUTER_Y)) << endl;
-
-	cout << "neutralFace - " << distance(Point2f(neutralFace.RIGHT_EYE_OUTER_X, neutralFace.RIGHT_EYE_OUTER_Y), Point2f(neutralFace.LEFT_EYE_OUTER_X,	neutralFace.LEFT_EYE_OUTER_Y)) << endl;
-	cout << "face - " <<		distance(Point2f(face.RIGHT_EYE_OUTER_X,		face.RIGHT_EYE_OUTER_Y),		Point2f(face.LEFT_EYE_OUTER_X,			face.LEFT_EYE_OUTER_Y)) << endl;
-	*/
-
-	//crop(face, 0.1);
-	//resize(face, 300, 300);
-
-	//float angle2 = atan2f(neutralFace.RIGHT_EYE_OUTER_Y - neutralFace.LEFT_EYE_OUTER_Y, neutralFace.RIGHT_EYE_OUTER_X - neutralFace.LEFT_EYE_OUTER_X);
-	//rotate(neutralFace, Point2f(neutralFace.LEFT_EYE_OUTER_X, neutralFace.LEFT_EYE_OUTER_Y), angle2*(180/pi));
-	//imshow("rotation", face.getLandmarkOverlay()); waitKey();
-	//perspectiveTransform(face, neutralFace);
-	//transform(face, neutralFace);
-	//transformEEC(face, neutralFace);
-	//crop(face, 0);
-	//imshow("resize", face.getLandmarkOverlay()); waitKey();
-	//imshow("transposition", face.getLandmarkOverlay()); waitKey();
-	//crop(face, 0.1);
-	//imshow("dbg", face.getLandmarkOverlay()); waitKey();
-	
-	//imshow("dbg", face.getLandmarkOverlay()); waitKey();
-	//imshow("crop", face.getLandmarkOverlay()); waitKey();
-	//resize(face, neutralFace.mat.cols, neutralFace.mat.rows);*/
-
-	//imshow("dbg", face.getLandmarkOverlay()); waitKey();
-
 }
 
 void ImgPreprocessor::rotate(Face &face, cv::Point2f center_of_rotation, float angle, float scale)
@@ -161,23 +126,6 @@ void ImgPreprocessor::reshape(Face &face, int width, int height)
 	face.mat = face.mat(cv::Rect(0, 0, width, height));
 }
 
-/*
-void ImgPreprocessor::transform(Face &face)
-{
-	Point2f srcTri[3];
-	srcTri[0] = Point2f(face.LEFT_EYE_OUTER_X, face.LEFT_EYE_OUTER_Y);
-	srcTri[1] = Point2f(face.NOSE2_X, face.NOSE2_Y);
-	srcTri[2] = Point2f(face.RIGHT_EYE_OUTER_X, face.RIGHT_EYE_OUTER_Y);
-	Point2f dstTri[3];
-	dstTri[0] = Point2f(ImgPreprocessor::faceTemplate->LEFT_EYE_OUTER_X, ImgPreprocessor::faceTemplate->LEFT_EYE_OUTER_Y);
-	dstTri[1] = Point2f(ImgPreprocessor::faceTemplate->NOSE2_X, ImgPreprocessor::faceTemplate->NOSE2_Y);
-	dstTri[2] = Point2f(ImgPreprocessor::faceTemplate->RIGHT_EYE_OUTER_X, ImgPreprocessor::faceTemplate->RIGHT_EYE_OUTER_Y);
-	Mat warp_mat(2, 3, CV_32FC1);
-	warp_mat = getAffineTransform(srcTri, dstTri);
-	warpAffine(face.mat, face.mat, warp_mat, face.mat.size());
-	ImgPreprocessor::transformLandmarks(face, warp_mat);
-}
-*/
 //Transform face to be more like neutralFace
 void ImgPreprocessor::transform(Face &face1, Face &face2)
 {
@@ -227,9 +175,6 @@ void ImgPreprocessor::transformEEC(Face &face1, Face &face2, int warp_mode)
 
 void ImgPreprocessor::transpositionAlign(Face & face, Face & neutralFace)
 {
-	//int x, y;
-	//x = cos(60 * M_PI / 180.0) * (srcTri[0].x - srcTri[1].x) - sin(60 * M_PI / 180.0) * (srcTri[0].y - srcTri[1].y) + srcTri[1].x;
-	//y = sin(60 * M_PI / 180.0) * (srcTri[0].x - srcTri[1].x) + cos(60 * M_PI / 180.0) * (srcTri[0].y - srcTri[1].y) + srcTri[1].y;
 	long double M_PI = 3.141592653589793238L;
 	Point2f srcTri[3];
 	srcTri[0] = Point2f(face.RIGHT_EYE_OUTER_X, face.RIGHT_EYE_OUTER_Y);
@@ -269,31 +214,6 @@ void ImgPreprocessor::transformLandmarks(Face &face, Mat warp_mat)
 
 void ImgPreprocessor::perspectiveTransform(Face &face1, Face &face2)
 {
-	/*
-	Point2f srcPoints[4];
-	srcPoints[0] = Point2f(face.landmarks[72], face.landmarks[2]);
-	srcPoints[1] = Point2f(face.landmarks[2], face.landmarks[2]);
-	srcPoints[2] = Point2f(face.landmarks[2], face.landmarks[2]);
-	srcPoints[3] = Point2f(face.landmarks[2], face.landmarks[2]);
-	Point2f dstPoints[4];
-	dstPoints[0] = Point2f(neutralFace.landmarks[2], neutralFace.landmarks[2]);
-	dstPoints[1] = Point2f(neutralFace.landmarks[2], neutralFace.landmarks[2]);
-	dstPoints[2] = Point2f(neutralFace.landmarks[2], neutralFace.landmarks[2]);
-	dstPoints[3] = Point2f(neutralFace.landmarks[2], neutralFace.landmarks[2]);
-	*/
-	/*
-	Point2f srcPoints[4];
-	srcPoints[0] = Point2f(face.landmarks[72], face.landmarks[73]);
-	srcPoints[1] = Point2f(face.landmarks[2], face.landmarks[3]);
-	srcPoints[2] = Point2f(face.landmarks[30], face.landmarks[31]);
-	srcPoints[3] = Point2f(face.landmarks[90], face.landmarks[91]);
-	Point2f dstPoints[4];
-	dstPoints[0] = Point2f(neutralFace.landmarks[72], neutralFace.landmarks[73]);
-	dstPoints[1] = Point2f(neutralFace.landmarks[2], neutralFace.landmarks[3]);
-	dstPoints[2] = Point2f(neutralFace.landmarks[30], neutralFace.landmarks[31]);
-	dstPoints[3] = Point2f(neutralFace.landmarks[90], neutralFace.landmarks[91]);
-	*/
-	///*
 	Point2f srcPoints[4];
 	srcPoints[0] = Point2f(face1.landmarks[0], face1.landmarks[1]);
 	srcPoints[1] = Point2f(face1.landmarks[2], face1.landmarks[3]);
@@ -312,18 +232,6 @@ void ImgPreprocessor::perspectiveTransform(Face &face1, Face &face2)
 
 void ImgPreprocessor::transformPerspectiveLandmarks(Face &face, Mat perspective_mat)
 {
-	/*
-	std::vector<float> new_landmarks;
-	int x, y;
-	for (int i = 0; i<face.landmarks.size(); i += 2) {
-		x = face.landmarks[i];
-		y = face.landmarks[i + 1];
-
-		new_landmarks.push_back();
-		new_landmarks.push_back(point_result.y);
-	}
-	face.landmarks = new_landmarks;
-	*/
 	std::vector<float> new_landmarks;
 	for (int i = 0; i<face.landmarks.size(); i += 2) {
 

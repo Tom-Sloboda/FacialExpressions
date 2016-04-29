@@ -24,6 +24,16 @@ cv::Mat BaseClassifier::vectorToMat(std::vector<std::vector<float>> vec)
 	return mat;
 }
 
+cv::Mat BaseClassifier::vectorToMat(std::vector<int> vec)
+{
+	cv::Mat mat((vec.size()), 1, CV_32SC1);
+	for (int i = 0; i < vec.size(); i++)
+	{
+		mat.at<int>(i, 0) = vec[i];
+	}
+	return mat;
+}
+
 cv::Mat BaseClassifier::vectorToMat(std::vector<float> vec)
 {
 	cv::Mat mat((vec.size()), 1, CV_32FC1);
@@ -74,9 +84,8 @@ Mat BaseClassifier::convertMultiClassToSingleClassLabels(Mat labels, float class
 	Mat singleClassLabels(labels.rows, labels.cols, CV_32SC1);
 	for (int j = 0; j < labels.rows; j++)
 	{
-		singleClassLabels.at<float>(j, 0) = (labels.at<float>(j, 0) == classLabel) ? 1 : -1;
+		singleClassLabels.at<int>(j, 0) = (labels.at<float>(j, 0) == classLabel) ? 1 : -1;
 	}
-	//printMat(singleClassLabels);
 	return singleClassLabels;
 }
 
@@ -87,7 +96,7 @@ void BaseClassifier::printMat(Mat mat)
 	{
 		for (int j = 0; j < mat.cols; j++)
 		{
-			cout << mat.at<float>(i, j) << " ";
+			cout << mat.at<float>(i, j) << ",";
 		}
 		cout << endl;
 	}
@@ -125,7 +134,7 @@ Mat BaseClassifier::convertFloatToIntMat(Mat mat)
 	{
 		for (int i = 0; i < mat.rows; i++)
 		{
-			intMat.at<float>(i, j) = (int)(mat.at<float>(i, j));
+			intMat.at<int>(i, j) = (int)(mat.at<float>(i, j));
 		}
 	}
 	return intMat;
@@ -144,3 +153,4 @@ float BaseClassifier::getHighestProbability(Mat probability)
 	}
 	return maxIndex;
 }
+

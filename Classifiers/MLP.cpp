@@ -13,7 +13,6 @@ MLP::~MLP()
 
 void MLP::train(cv::Mat& trainingData, cv::Mat trainingLabels)
 {
-#ifndef DEBUG
 	cout << "\nWould you like to load MLP.xml? y/n\n";
 	std::string input;
 	cin >> input;
@@ -21,7 +20,6 @@ void MLP::train(cv::Mat& trainingData, cv::Mat trainingLabels)
 		mlp = StatModel::load<ANN_MLP>("MLP.xml");
 	}
 	if (mlp == NULL)
-#endif // !DEBUG
 	{
 		cout << "Starting training\n";
 		cv::Mat layers = cv::Mat(4, 1, CV_32SC1);
@@ -55,23 +53,6 @@ void MLP::train(cv::Mat& trainingData, cv::Mat trainingLabels)
 	}
 }
 
-float MLP::probabilityToClass(cv::Mat mat)
-{
-	int maxPos = 0;
-	float maxProbability = 0;
-	for (int i = 0; i < 8; i++)
-	{
-		cout << mat.at<float>(0, i) << " ";
-		if (mat.at<float>(0, i) > maxProbability)
-		{
-			maxProbability = mat.at<float>(0, i);
-			maxPos = i;
-		}
-	}
-	cout << endl;
-	return maxPos;
-}
-
 void MLP::predict(Mat &testData, Mat &testLabels,  Mat &result)
 {
 	cv::Mat response(1, 8, CV_32FC1);
@@ -81,7 +62,6 @@ void MLP::predict(Mat &testData, Mat &testLabels,  Mat &result)
 		cv::Mat sample = testData.row(i);
 
 		mlp->predict(sample, response);
-		//printMat(response);
 
 		int maxIndex = 0; float maxValue = 0;
 		for (int j = 0; j < 8; j++)
@@ -99,7 +79,7 @@ void MLP::predict(Mat &testData, Mat &testLabels,  Mat &result)
 	cout << "Accuracy_{MLP} = " << evaluate(predicted, testLabels) << endl;
 }
 
-std::vector<float> MLP::predict(Mat &testData)
+std::vector<float> MLP::predict(Mat &testData, float threshold)
 {
 	Mat probability = Mat::zeros(1, 8, CV_32FC1);
 	std::vector<float> result;
@@ -107,7 +87,8 @@ std::vector<float> MLP::predict(Mat &testData)
 
 	for (int j = 0; j < 8; j++)
 	{
-		result.push_back(probability.at<float>(0, j));
+		if(probability.at<float>(0, j) > threshold)
+			result.push_back(j);
 	}
 	return result;
 }

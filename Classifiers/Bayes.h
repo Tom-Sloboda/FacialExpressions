@@ -13,10 +13,11 @@ public:
 	Bayes();
 	~Bayes();
 
-	Ptr<ml::NormalBayesClassifier> bayes;
-
 	void train(cv::Mat& trainingData, cv::Mat& trainingLabels);
 	void predict(cv::Mat &testData, cv::Mat &testLabels);
 	float predict(cv::Mat &testData);
+
+private:
+	Ptr<ml::NormalBayesClassifier> bayes;
 };
 

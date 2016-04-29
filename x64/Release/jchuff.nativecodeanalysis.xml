@@ -4,6 +4,188 @@
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
       <FILENAME>jchuff.cpp</FILENAME>
+      <LINE>143</LINE>
+      <COLUMN>40</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'entropy-&gt;ac_count_ptrs':  the readable size is '32' bytes, but 'actbl' bytes may be read.</DESCRIPTION>
+    <FUNCTION>start_pass_huff</FUNCTION>
+    <DECORATED>?start_pass_huff@@YAXPEAUjpeg_compress_struct@@H@Z</DECORATED>
+    <FUNCLINE>106</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>108</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>109</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>109</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>109</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>110</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>112</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>114</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>115</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>124</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>124</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;comps_in_scan')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>125</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>126</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>127</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>128</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>132</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>134</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'actbl&lt;0||actbl&gt;=4')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>135</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>138</LINE>
+        <COLUMN>40</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>142</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>143</LINE>
+        <COLUMN>40</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>143</LINE>
+        <COLUMN>40</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'entropy-&gt;ac_count_ptrs[4]', (readable range is 0 to 3)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jchuff.cpp</FILENAME>
       <LINE>142</LINE>
       <COLUMN>6</COLUMN>
     </SFA>
@@ -288,176 +470,6 @@
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
       <FILENAME>jchuff.cpp</FILENAME>
-      <LINE>138</LINE>
-      <COLUMN>40</COLUMN>
-    </SFA>
-    <DEFECTCODE>6385</DEFECTCODE>
-    <DESCRIPTION>Reading invalid data from 'entropy-&gt;dc_count_ptrs':  the readable size is '32' bytes, but 'dctbl' bytes may be read.</DESCRIPTION>
-    <FUNCTION>start_pass_huff</FUNCTION>
-    <DECORATED>?start_pass_huff@@YAXPEAUjpeg_compress_struct@@H@Z</DECORATED>
-    <FUNCLINE>106</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>4</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>108</LINE>
-        <COLUMN>19</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>109</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>109</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>109</LINE>
-        <COLUMN>17</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>110</LINE>
-        <COLUMN>24</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>112</LINE>
-        <COLUMN>6</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>114</LINE>
-        <COLUMN>28</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>115</LINE>
-        <COLUMN>29</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>124</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>124</LINE>
-        <COLUMN>18</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;comps_in_scan')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>125</LINE>
-        <COLUMN>12</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>126</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>127</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>128</LINE>
-        <COLUMN>8</COLUMN>
-        <KEYEVENT>
-          <ID>3</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>132</LINE>
-        <COLUMN>20</COLUMN>
-        <KEYEVENT>
-          <ID>4</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'dctbl&lt;0||dctbl&gt;=4')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>133</LINE>
-        <COLUMN>1</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>134</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>138</LINE>
-        <COLUMN>40</COLUMN>
-        <KEYEVENT>
-          <ID>5</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>138</LINE>
-        <COLUMN>40</COLUMN>
-        <KEYEVENT>
-          <ID>6</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>Invalid read from 'entropy-&gt;dc_count_ptrs[4]', (readable range is 0 to 3)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-    </PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-      <FILENAME>jchuff.cpp</FILENAME>
       <LINE>139</LINE>
       <COLUMN>31</COLUMN>
     </SFA>
@@ -628,193 +640,11 @@
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
       <FILENAME>jchuff.cpp</FILENAME>
-      <LINE>144</LINE>
-      <COLUMN>31</COLUMN>
-    </SFA>
-    <DEFECTCODE>6386</DEFECTCODE>
-    <DESCRIPTION>Buffer overrun while writing to 'entropy-&gt;ac_count_ptrs':  the writable size is '32' bytes, but 'actbl' bytes might be written.</DESCRIPTION>
-    <FUNCTION>start_pass_huff</FUNCTION>
-    <DECORATED>?start_pass_huff@@YAXPEAUjpeg_compress_struct@@H@Z</DECORATED>
-    <FUNCLINE>106</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>4</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>108</LINE>
-        <COLUMN>19</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>109</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>109</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>109</LINE>
-        <COLUMN>17</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>110</LINE>
-        <COLUMN>24</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>112</LINE>
-        <COLUMN>6</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>114</LINE>
-        <COLUMN>28</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>115</LINE>
-        <COLUMN>29</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>124</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>124</LINE>
-        <COLUMN>18</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;comps_in_scan')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>125</LINE>
-        <COLUMN>12</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>126</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>127</LINE>
-        <COLUMN>10</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>128</LINE>
-        <COLUMN>8</COLUMN>
-        <KEYEVENT>
-          <ID>3</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>132</LINE>
-        <COLUMN>20</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>134</LINE>
-        <COLUMN>20</COLUMN>
-        <KEYEVENT>
-          <ID>4</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'actbl&lt;0||actbl&gt;=4')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>135</LINE>
-        <COLUMN>1</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>138</LINE>
-        <COLUMN>40</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>142</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>143</LINE>
-        <COLUMN>40</COLUMN>
-        <KEYEVENT>
-          <ID>5</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>144</LINE>
-        <COLUMN>31</COLUMN>
-        <KEYEVENT>
-          <ID>6</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>Invalid write to 'entropy-&gt;ac_count_ptrs[4]', (writable range is 0 to 3)</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-    </PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-      <FILENAME>jchuff.cpp</FILENAME>
-      <LINE>143</LINE>
+      <LINE>138</LINE>
       <COLUMN>40</COLUMN>
     </SFA>
     <DEFECTCODE>6385</DEFECTCODE>
-    <DESCRIPTION>Reading invalid data from 'entropy-&gt;ac_count_ptrs':  the readable size is '32' bytes, but 'actbl' bytes may be read.</DESCRIPTION>
+    <DESCRIPTION>Reading invalid data from 'entropy-&gt;dc_count_ptrs':  the readable size is '32' bytes, but 'dctbl' bytes may be read.</DESCRIPTION>
     <FUNCTION>start_pass_huff</FUNCTION>
     <DECORATED>?start_pass_huff@@YAXPEAUjpeg_compress_struct@@H@Z</DECORATED>
     <FUNCLINE>106</FUNCLINE>
@@ -931,41 +761,29 @@
         <FILENAME>jchuff.cpp</FILENAME>
         <LINE>132</LINE>
         <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'dctbl&lt;0||dctbl&gt;=4')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>133</LINE>
+        <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
         <FILENAME>jchuff.cpp</FILENAME>
         <LINE>134</LINE>
         <COLUMN>20</COLUMN>
-        <KEYEVENT>
-          <ID>4</ID>
-          <KIND>branch</KIND>
-          <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>Enter this branch, (assume 'actbl&lt;0||actbl&gt;=4')</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>135</LINE>
-        <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
         <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
         <FILENAME>jchuff.cpp</FILENAME>
         <LINE>138</LINE>
-        <COLUMN>40</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>142</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
-        <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>143</LINE>
         <COLUMN>40</COLUMN>
         <KEYEVENT>
           <ID>5</ID>
@@ -977,13 +795,13 @@
       <SFA>
         <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
         <FILENAME>jchuff.cpp</FILENAME>
-        <LINE>143</LINE>
+        <LINE>138</LINE>
         <COLUMN>40</COLUMN>
         <KEYEVENT>
           <ID>6</ID>
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>Invalid read from 'entropy-&gt;ac_count_ptrs[4]', (readable range is 0 to 3)</MESSAGE>
+          <MESSAGE>Invalid read from 'entropy-&gt;dc_count_ptrs[4]', (readable range is 0 to 3)</MESSAGE>
         </KEYEVENT>
       </SFA>
     </PATH>
@@ -1280,6 +1098,188 @@
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
           <MESSAGE>'entropy-&gt;ac_count_ptrs[actbl]' should not be NULL, because this is not consistent with the SAL annotation on 'memset'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+      <FILENAME>jchuff.cpp</FILENAME>
+      <LINE>144</LINE>
+      <COLUMN>31</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'entropy-&gt;ac_count_ptrs':  the writable size is '32' bytes, but 'actbl' bytes might be written.</DESCRIPTION>
+    <FUNCTION>start_pass_huff</FUNCTION>
+    <DECORATED>?start_pass_huff@@YAXPEAUjpeg_compress_struct@@H@Z</DECORATED>
+    <FUNCLINE>106</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>108</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>109</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>109</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>109</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>110</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>112</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>114</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>115</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>124</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>124</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'ci&lt;cinfo-&gt;comps_in_scan')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>125</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>126</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>127</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>128</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'gather_statistics')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>132</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>134</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'actbl&lt;0||actbl&gt;=4')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>135</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>138</LINE>
+        <COLUMN>40</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>142</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>143</LINE>
+        <COLUMN>40</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume '&lt;branch condition&gt;')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\dlib\external\libjpeg\</FILEPATH>
+        <FILENAME>jchuff.cpp</FILENAME>
+        <LINE>144</LINE>
+        <COLUMN>31</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'entropy-&gt;ac_count_ptrs[4]', (writable range is 0 to 3)</MESSAGE>
         </KEYEVENT>
       </SFA>
     </PATH>

@@ -479,11 +479,11 @@
     <SFA>
       <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
       <FILENAME>facialexpressions.cpp</FILENAME>
-      <LINE>147</LINE>
-      <COLUMN>25</COLUMN>
+      <LINE>185</LINE>
+      <COLUMN>11</COLUMN>
     </SFA>
     <DEFECTCODE>6246</DEFECTCODE>
-    <DESCRIPTION>Local declaration of 'testData' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '84' of 'c:\_projects\facialexpressions\facialexpressions\facialexpressions.cpp'.</DESCRIPTION>
+    <DESCRIPTION>Local declaration of 'combined' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '133' of 'c:\_projects\facialexpressions\facialexpressions\facialexpressions.cpp'.</DESCRIPTION>
     <FUNCTION>WinMain</FUNCTION>
     <DECORATED>WinMain</DECORATED>
     <FUNCLINE>45</FUNCLINE>
@@ -491,8 +491,50 @@
       <SFA>
         <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
         <FILENAME>facialexpressions.cpp</FILENAME>
-        <LINE>84</LINE>
+        <LINE>133</LINE>
+        <COLUMN>38</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+      <FILENAME>facialexpressions.cpp</FILENAME>
+      <LINE>198</LINE>
+      <COLUMN>26</COLUMN>
+    </SFA>
+    <DEFECTCODE>6246</DEFECTCODE>
+    <DESCRIPTION>Local declaration of 'testData' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '81' of 'c:\_projects\facialexpressions\facialexpressions\facialexpressions.cpp'.</DESCRIPTION>
+    <FUNCTION>WinMain</FUNCTION>
+    <DECORATED>WinMain</DECORATED>
+    <FUNCLINE>45</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+        <FILENAME>facialexpressions.cpp</FILENAME>
+        <LINE>81</LINE>
         <COLUMN>42</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+      <FILENAME>facialexpressions.cpp</FILENAME>
+      <LINE>199</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>6246</DEFECTCODE>
+    <DESCRIPTION>Local declaration of 'testDataMat' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '107' of 'c:\_projects\facialexpressions\facialexpressions\facialexpressions.cpp'.</DESCRIPTION>
+    <FUNCTION>WinMain</FUNCTION>
+    <DECORATED>WinMain</DECORATED>
+    <FUNCLINE>45</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\_projects\facialexpressions\facialexpressions\</FILEPATH>
+        <FILENAME>facialexpressions.cpp</FILENAME>
+        <LINE>107</LINE>
+        <COLUMN>18</COLUMN>
       </SFA>
     </PATH>
   </DEFECT>

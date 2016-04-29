@@ -10,13 +10,6 @@ GUI::~GUI()
 {
 }
 
-
-void GUI::show()
-{
-	int win = WinMain(NULL, NULL, NULL, 0);
-}
-
-
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
 	switch (msg)
@@ -92,17 +85,6 @@ HWND GUI::createScrnCapWnd(HINSTANCE hInstance)// LPSTR lpCmdLine, int nCmdShow)
 	blend.SourceConstantAlpha = 0.5;
 	SetLayeredWindowAttributes(hwnd, RGB(0, 0, 255), 50, LWA_COLORKEY);
 	HRGN winRgn = CreateRectRgn(0, 0, 100, 100);
-	//GetWindowRgn(hwnd, winRgn);
-	//SetWindowRgn(hwnd, winRgn, true);
-	//UpdateLayeredWindow(hwnd, NULL, NULL, &SIZE(100, 100, 100, 100), hdc, &ptSrc, 0,		&blend, ULW_ALPHA);
-	// Step 3: The Message Loop
-	/*
-	while (GetMessage(&Msg, NULL, 0, 0) > 0)
-	{
-		TranslateMessage(&Msg);
-		DispatchMessage(&Msg);
-	}
-	*/
 	SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, 200, 200, SWP_SHOWWINDOW);
 	return hwnd;
 }

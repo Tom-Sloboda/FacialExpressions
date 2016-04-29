@@ -1,59 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
-  <Class Name="Capture" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="FacialExpressions - main">
+    <Position X="10.248" Y="5.618" Height="0.292" Width="1.7" />
+  </Comment>
+  <Class Name="Capture">
+    <Position X="15.5" Y="4" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAQCAAIBAAAAAAAAA=</HashCode>
       <FileName>Capture.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="mySVM" Collapsed="true">
-    <Position X="2.25" Y="2.5" Width="1.5" />
+  <Class Name="Loader">
+    <Position X="6.75" Y="7.75" Width="6" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAABAAACAQAAAAACAAIABAgAAAAAAIAAA=</HashCode>
-      <FileName>mySVM.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Loader" Collapsed="true">
-    <Position X="0.5" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gCAAAAAAKAEcABAAAAAAAICAIBAQAAAAAAASIAACQAA=</HashCode>
+      <HashCode>gCAAAgAAKAEcABAAAAAAAICAIBAQAAAAAAASIAACQAA=</HashCode>
       <FileName>Loader.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ImgPreprocessor" Collapsed="true">
-    <Position X="4" Y="1.5" Width="1.5" />
+  <Class Name="ImgPreprocessor">
+    <Position X="0.75" Y="8.75" Width="4.75" />
     <TypeIdentifier>
       <HashCode>ABIAgAAAACCgAAAEAAAQAAAAAEQGAAAAAQIAAAAAAAA=</HashCode>
       <FileName>ImgPreprocessor.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GUI" Collapsed="true">
-    <Position X="2.25" Y="1.5" Width="1.5" />
+  <Class Name="GUI">
+    <Position X="0.5" Y="0.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAgAAAAAAAAAAAAAAABBAAAAAABAAAAAAABAA=</HashCode>
       <FileName>GUI.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="FeatureExtractor" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+  <Class Name="FeatureExtractor">
+    <Position X="5.5" Y="0.5" Width="6.25" />
     <TypeIdentifier>
       <HashCode>AYAAAAAAQAAAAAAAACABAEAAAAkQAAAAAAAAAACAAAA=</HashCode>
       <FileName>FeatureExtractor.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Face" Collapsed="true">
-    <Position X="4" Y="0.5" Width="1.5" />
+  <Class Name="Face">
+    <Position X="0.5" Y="3.25" Width="4.75" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAgQAAEBAAAIAABAAAAgAABAAAACAAAAAABAA=</HashCode>
       <FileName>Face.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Classifier" Collapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+  <Class Name="Classifiers">
+    <Position X="8.5" Y="14" Width="5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAAAAAAAAQAAAIAAgBAAAAAAAAAAAICAA=</HashCode>
-      <FileName>Classifier.h</FileName>
+      <HashCode>AAAAAAAAIAAAAAAAAABAAAAIAAgAAAQAAAAACAIIABA=</HashCode>
+      <FileName>Classifiers\Classifiers.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdaBoost">
+    <Position X="0.5" Y="17.75" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAABAAAACAAAAAABAAAAACAAAAAA=</HashCode>
+      <FileName>Classifiers\AdaBoost.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseClassifier">
+    <Position X="8" Y="20.75" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAACAAAAAAAAKAAAAAAAAIAAACAgAAAAAAGAAA=</HashCode>
+      <FileName>Classifiers\BaseClassifier.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bayes">
+    <Position X="7.25" Y="17.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAIAAAACAAAAAAQCAAAAAA=</HashCode>
+      <FileName>Classifiers\Bayes.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinearSVM">
+    <Position X="11" Y="17.75" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAACAAAAAAAAAAAAAACEAIAAA=</HashCode>
+      <FileName>Classifiers\LinearSVM.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLP">
+    <Position X="26.25" Y="17.75" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIICAAAAAAAAAQAAAAAAAAAAAAAAAACAAICAA=</HashCode>
+      <FileName>Classifiers\MLP.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MulticlassSVM">
+    <Position X="17.75" Y="17.75" Width="8.25" />
+    <TypeIdentifier>
+      <HashCode>AAIACAAAIAAAAAAAAAAQAAAAAAAAAAAAAAAACAAIAAA=</HashCode>
+      <FileName>Classifiers\MulticlassSVM.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

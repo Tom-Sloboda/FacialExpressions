@@ -15,7 +15,6 @@ void LinearSVM::train(std::vector<std::vector<float>> trainingData, std::vector<
 {
 	cv::Mat trainingDataMat = vectorToMat(trainingData);
 	cv::Mat trainingLabelsMat = vectorToMat(trainingLabels);
-#ifndef DEBUG
 
 	cout << "\nWould you like to load LinearSVM[0-7].xml? y/n\n";
 	std::string input;
@@ -38,7 +37,6 @@ void LinearSVM::train(std::vector<std::vector<float>> trainingData, std::vector<
 		}
 	}
 	if (svm.size() < 8)
-#endif // !1
 	{
 		std::cout << "Start training\n";
 		for (int i = 0; i < 8; i++)
@@ -91,11 +89,5 @@ std::vector<float> LinearSVM::predict(Mat testData)
 		if (predictions.at<float>(0, j) > 0)
 			result.push_back(j);
 	}
-	//printMat(predictions.row(i));
-	if (result.size() == 0) result.push_back(8);
-	/*for (int k : res) cout << k;
-	cout << endl;
-	int wait; cin >> wait;
-	result.push_back(res);*/
 	return result;
 }

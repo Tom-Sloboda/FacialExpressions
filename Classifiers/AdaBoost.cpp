@@ -64,7 +64,6 @@ void AdaBoost::predict(std::vector<std::vector<float>> testData, std::vector<flo
 			if (predictions.at<float>(i, j) > 0)
 				res.push_back(j);
 		}
-		//printMat(predictions.row(i));
 		if (res.size() == 0) res.push_back(8);
 		for (int k : res) cout << k;
 		cout << endl;
@@ -83,9 +82,5 @@ std::vector<float> AdaBoost::predict(Mat testData)
 		if (predictions.at<float>(0, j) > 0)
 			result.push_back(j);
 	}
-	if (result.size() == 0) result.push_back(8);
-	//for (int k : res) cout << k;
-	//cout << endl;
-	//int wait; cin >> wait;
 	return result;
 }

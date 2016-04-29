@@ -3,9 +3,6 @@
 #include "../FeatureExtractor.h"
 #include "../Loader.h"
 
-#ifndef MLP_H_
-#define MLP_H_
-
 using namespace std;
 using namespace dlib;
 using namespace cv;
@@ -17,13 +14,10 @@ public:
 	MLP();
 	~MLP();
 
-	Ptr<ml::ANN_MLP> mlp;
-
 	void train(cv::Mat& trainingData, cv::Mat trainingLabels);
-	float probabilityToClass(cv::Mat mat);
 	void predict(Mat &testData, Mat &testLabels, Mat &result);
-	std::vector<float> predict(Mat &testData);
-	void go(cv::Mat& trainingData, cv::Mat& trainingClasses, cv::Mat& testData, cv::Mat& testClasses);
-};
+	std::vector<float> predict(Mat &testData, float threshold = 0.5);
 
-#endif
+private:
+		Ptr<ml::ANN_MLP> mlp;
+};

@@ -30,19 +30,11 @@ FeatureExtractor::~FeatureExtractor()
 
 std::vector<dlib::rectangle> FeatureExtractor::detectFaces(cv_image<bgr_pixel> cimg)
 {
-	//pyramid_up(cimg);
-	//image_window win;
-	//win.set_image(cimg);
-	//waitKey(0);
 	return detector(cimg);
 }
 
 std::vector<dlib::rectangle> FeatureExtractor::detectFaces(array2d<rgb_pixel> *cimg)
 {
-	//pyramid_up(*cimg);
-	//image_window win;
-	//win.set_image(*cimg);
-	//waitKey(0);
 	return detector(*cimg);
 }
 
@@ -74,14 +66,11 @@ std::vector<full_object_detection> FeatureExtractor::detectFeatures(array2d<rgb_
 
 std::vector<float> FeatureExtractor::getFlattened(std::vector<dlib::full_object_detection> shapes)
 {
-	//cout << "!getFlattened() - SIZE=" << shapes.at(0).num_parts() << "\n";
-
 	std::vector<float> flattened;
 	for (unsigned long i = 0; i < shapes.at(0).num_parts(); i++)
 	{
 		flattened.push_back(shapes.at(0).part(i).x());
 		flattened.push_back(shapes.at(0).part(i).y());
-		//cout << "!XY - " << shapes.at(0).part(i).x() << " " << shapes.at(0).part(i).y() << "\n";
 	}
 	return flattened;
 }
@@ -98,21 +87,17 @@ std::vector<float> FeatureExtractor::getDifference(std::vector<float> shapes1, s
 
 string FeatureExtractor::getFlattenedStr(std::vector<float> flattened)
 {
-	//string out = "";
 	stringstream flt;
 	for (int i = 0; i < flattened.size(); i ++)
 	{
 		flt << flattened.at(i);
 		flt << " ";
-		//out.append(flt.str()+" ");
 	}
 	return flt.str();
 }
 
 void FeatureExtractor::showFlattned(std::vector<float> flattened)
 {
-	//cout << "!showFlattned() - SIZE=" << flattened.size() << "\n";
-
 	for (int i = 0; i < flattened.size(); i++)
 	{
 		cout << flattened[i] << " ";

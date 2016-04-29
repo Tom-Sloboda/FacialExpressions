@@ -13,7 +13,6 @@ Bayes::~Bayes()
 
 void Bayes::train(cv::Mat& trainingData, cv::Mat& trainingLabels)
 {
-#ifndef DEBUG
 	cout << "\nWould you like to load Bayes.xml? y/n\n";
 	std::string input;
 	cin >> input;
@@ -21,12 +20,11 @@ void Bayes::train(cv::Mat& trainingData, cv::Mat& trainingLabels)
 		bayes = StatModel::load<NormalBayesClassifier>("Bayes.xml");
 	}
 	if (bayes == NULL)
-
-#endif // !DEBUG	
 	{
 		cout << "Starting training\n";
 		bayes = NormalBayesClassifier::create();
 		bayes->train(trainingData, ml::SampleTypes::ROW_SAMPLE, convertFloatToIntMat(trainingLabels));
+		//bayes->train(trainingData, ml::SampleTypes::ROW_SAMPLE, trainingLabels);
 		bayes->save("Bayes.xml");
 		cout << "Training finished\n";
 	}
@@ -52,7 +50,5 @@ void Bayes::predict(Mat &testData, Mat &testLabels)
 
 float Bayes::predict(cv::Mat &testData)
 {
-	Mat output;
-	bayes->predict(testData, output);
-	return output.at<float>(0, 0);
+	return bayes->predict(testData);
 }

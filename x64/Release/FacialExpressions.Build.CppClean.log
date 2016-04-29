@@ -40,7 +40,10 @@ c:\_projects\facialexpressions\facialexpressions\x64\release\jdcoefct.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\jdatasrc.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\jdatadst.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\mysvm.obj
+c:\_projects\facialexpressions\facialexpressions\x64\release\facialexpressions.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\stdafx.obj
+c:\_projects\facialexpressions\facialexpressions\x64\release\loader.obj
+c:\_projects\facialexpressions\facialexpressions\x64\release\imgpreprocessor.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\gui.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\featureextractor.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\face.obj
@@ -51,8 +54,6 @@ c:\_projects\facialexpressions\facialexpressions\x64\release\jmemnobs.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\jmemmgr.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\jidctred.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\jidctint.obj
-c:\_projects\facialexpressions\facialexpressions\x64\release\loader.obj
-c:\_projects\facialexpressions\facialexpressions\x64\release\imgpreprocessor.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\gzclose.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\deflate.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\crc32.obj
@@ -83,7 +84,13 @@ c:\_projects\facialexpressions\facialexpressions\x64\release\infback.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\gzwrite.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\gzread.obj
 c:\_projects\facialexpressions\facialexpressions\x64\release\gzlib.obj
-c:\_projects\facialexpressions\facialexpressions\x64\release\facialexpressions.obj
+c:\_projects\facialexpressions\facialexpressions\x64\release\multiclasssvm.obj
+c:\_projects\facialexpressions\facialexpressions\x64\release\mlp.obj
+c:\_projects\facialexpressions\facialexpressions\x64\release\classifiers.obj
+c:\_projects\facialexpressions\facialexpressions\x64\release\linearsvm.obj
+c:\_projects\facialexpressions\facialexpressions\x64\release\baseclassifier.obj
+c:\_projects\facialexpressions\facialexpressions\x64\release\bayes.obj
+c:\_projects\facialexpressions\facialexpressions\x64\release\adaboost.obj
 c:\_projects\facialexpressions\x64\release\facialexpressions.exe
 c:\_projects\facialexpressions\x64\release\facialexpressions.ipdb
 c:\_projects\facialexpressions\x64\release\facialexpressions.iobj

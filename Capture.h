@@ -10,20 +10,12 @@
 using namespace std;
 using namespace cv;
 
-#ifndef CAPTURE_H
-#define CAPTURE_H
 class Capture
 {
 public:
 	Capture();
 	~Capture();
 
-	Mat neutralFace;
-	Mat otherFace;
-
-	//cv::Mat getScreenCap(int x, int y, int height, int width);
 	Mat hwnd2mat(HWND hwnd);
 	Mat screenshot();
 };
-
-#endif // !CAPTURE_H

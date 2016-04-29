@@ -18,8 +18,6 @@ Face::Face(FeatureExtractor *FE, Mat mat, array2d<rgb_pixel> *img, float label)
 {
 	assign_image(Face::img, *img);
 	Face::mat = mat;
-	//Face::mat.create(img.nr(), img.nc(), img.);
-	//assign_image(Face::mat, (cv_image<bgr_pixel>)img);
 	Face::faceBoxes = FE->detectFaces(img);
 	Face::shape = FE->detectFeatures(img, Face::faceBoxes);
 	Face::landmarks = FE->getFlattened(shape);
@@ -62,12 +60,10 @@ Mat Face::getLandmarkOverlay()
 {
 	Mat landmark_overlay; 
 	Face::mat.copyTo(landmark_overlay);
-	//namedWindow(to_string(Face::label), WINDOW_AUTOSIZE);// Create a window for display.
 	for (int i = 0; i < Face::landmarks.size(); i += 2)
 	{
 		putText(landmark_overlay, to_string(i/2), cvPoint(Face::landmarks[i], Face::landmarks[i + 1]), FONT_HERSHEY_COMPLEX_SMALL, 0.5, cvScalar(100, 200, 250), 1, CV_AA);
 	}
-	//imshow(to_string(Face::label), landmark_overlay);
 	return landmark_overlay;
 }
 

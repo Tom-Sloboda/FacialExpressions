@@ -1,5 +1,3 @@
-//#ifndef GUI
-//#define GUI
 #pragma once
 #include <windows.h>
 #include <stdio.h>
@@ -18,13 +16,5 @@ public:
 	~GUI();
 
 	HWND createScrnCapWnd(HINSTANCE hInstance);
-	//static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
-
 	void console();
-
-	void show();
-
 };
-
-
-//#endif // !GUI
