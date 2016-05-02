@@ -21,7 +21,7 @@ ImgPreprocessor::~ImgPreprocessor()
 {
 }
 
-
+//rotate, crop and resize a single @face
 void ImgPreprocessor::align(Face &face)
 {
 	float angle1 = atan2f(face.RIGHT_EYE_OUTER_Y - face.LEFT_EYE_OUTER_Y, face.RIGHT_EYE_OUTER_X - face.LEFT_EYE_OUTER_X);
@@ -30,12 +30,12 @@ void ImgPreprocessor::align(Face &face)
 	crop(face, 0.1);
 	resize(face, 300, 300);
 }
-
+//calculates the distance between @p1 and @p2
 float ImgPreprocessor::distance(Point2f p1, Point2f p2)
 {
 	return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
 }
-
+//aligns @face with @neutralFace
 void ImgPreprocessor::align(Face &face, Face &neutralFace)
 {
 	//The rotation/scale might seem redundant with transpositionAlign(), however it does appear to reduce some variability
@@ -48,6 +48,7 @@ void ImgPreprocessor::align(Face &face, Face &neutralFace)
 	transpositionAlign(face, neutralFace);
 }
 
+//rotates
 void ImgPreprocessor::rotate(Face &face, cv::Point2f center_of_rotation, float angle, float scale)
 {
 	Mat rot_mat;
@@ -56,6 +57,7 @@ void ImgPreprocessor::rotate(Face &face, cv::Point2f center_of_rotation, float a
 	transformLandmarks(face, rot_mat);
 }
 
+//crops the @face out of the image and leaves @area_around_face_percentage multiplied by width and height from each side
 void ImgPreprocessor::crop(Face &face, float area_around_face_percentage)
 {
 	if (face.mat.cols == 0) {
@@ -95,7 +97,7 @@ void ImgPreprocessor::crop(Face &face, float area_around_face_percentage)
 		face.landmarks[i + 1] -= minY;
 	}
 }
-
+//changes the dimensions of the image with scaling
 void ImgPreprocessor::resize(Face &face, int width, int height)
 {
 	if (face.mat.cols == 0) {
@@ -116,6 +118,7 @@ void ImgPreprocessor::resize(Face &face, int width, int height)
 	reshape(face, width, height);
 }
 
+//changes the dimension of the Mat without scaling the image
 void ImgPreprocessor::reshape(Face &face, int width, int height)
 {
 	int max_width = (width > face.mat.size().width) ? width : face.mat.size().width;
@@ -126,7 +129,7 @@ void ImgPreprocessor::reshape(Face &face, int width, int height)
 	face.mat = face.mat(cv::Rect(0, 0, width, height));
 }
 
-//Transform face to be more like neutralFace
+//Transform @face1 to be more like @face2
 void ImgPreprocessor::transform(Face &face1, Face &face2)
 {
 	Point2f srcTri[3];
@@ -146,7 +149,7 @@ void ImgPreprocessor::transform(Face &face1, Face &face2)
 	ImgPreprocessor::transformLandmarks(face1, warp_mat);
 }
 
-
+//new alignment algorithm introduced in OpenCV 3.0, it's not very effective
 void ImgPreprocessor::transformEEC(Face &face1, Face &face2, int warp_mode)
 {
 	// Convert images to gray scale;
@@ -173,6 +176,7 @@ void ImgPreprocessor::transformEEC(Face &face1, Face &face2, int warp_mode)
 	ImgPreprocessor::transformPerspectiveLandmarks(face1, warp_matrix);
 }
 
+//transposes, scales and rotates @face to align it with @neutralFace
 void ImgPreprocessor::transpositionAlign(Face & face, Face & neutralFace)
 {
 	long double M_PI = 3.141592653589793238L;
@@ -191,7 +195,7 @@ void ImgPreprocessor::transpositionAlign(Face & face, Face & neutralFace)
 	warpAffine(face.mat, face.mat, warp_mat, face.mat.size());
 	ImgPreprocessor::transformLandmarks(face, warp_mat);
 }
-
+//transforms the landmark vector after the transformation has been applied to the Mat
 void ImgPreprocessor::transformLandmarks(Face &face, Mat warp_mat)
 {
 	std::vector<float> new_landmarks;
@@ -212,6 +216,7 @@ void ImgPreprocessor::transformLandmarks(Face &face, Mat warp_mat)
 	face.landmarks = new_landmarks;
 }
 
+//applies perspective transformation to face1 to align it with face2
 void ImgPreprocessor::perspectiveTransform(Face &face1, Face &face2)
 {
 	Point2f srcPoints[4];
@@ -230,6 +235,7 @@ void ImgPreprocessor::perspectiveTransform(Face &face1, Face &face2)
 	ImgPreprocessor::transformPerspectiveLandmarks(face1, perspective_mat);
 }
 
+//transforms the landmark vector after the transformation has been applied to the Mat, used in perspectiveTransform()
 void ImgPreprocessor::transformPerspectiveLandmarks(Face &face, Mat perspective_mat)
 {
 	std::vector<float> new_landmarks;

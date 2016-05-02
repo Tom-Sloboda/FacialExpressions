@@ -4,9 +4,9 @@
     <Position X="10.248" Y="5.618" Height="0.292" Width="1.7" />
   </Comment>
   <Class Name="Capture">
-    <Position X="15.5" Y="4" Width="2.5" />
+    <Position X="13.5" Y="0.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAQCAAIBAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAABAAAAAAAAA=</HashCode>
       <FileName>Capture.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -27,12 +27,12 @@
   <Class Name="GUI">
     <Position X="0.5" Y="0.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAABBAAAAAABAAAAAAABAA=</HashCode>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAABBAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>GUI.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FeatureExtractor">
-    <Position X="5.5" Y="0.5" Width="6.25" />
+    <Position X="6.5" Y="0.5" Width="6.25" />
     <TypeIdentifier>
       <HashCode>AYAAAAAAQAAAAAAAACABAEAAAAkQAAAAAAAAAACAAAA=</HashCode>
       <FileName>FeatureExtractor.h</FileName>
@@ -83,14 +83,14 @@
   <Class Name="MLP">
     <Position X="26.25" Y="17.75" Width="5.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIICAAAAAAAAAQAAAAAAAAAAAAAAAACAAICAA=</HashCode>
+      <HashCode>AAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAACAAICAA=</HashCode>
       <FileName>Classifiers\MLP.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MulticlassSVM">
     <Position X="17.75" Y="17.75" Width="8.25" />
     <TypeIdentifier>
-      <HashCode>AAIACAAAIAAAAAAAAAAQAAAAAAAAAAAAAAAACAAIAAA=</HashCode>
+      <HashCode>AAIACAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAACAAIAAA=</HashCode>
       <FileName>Classifiers\MulticlassSVM.h</FileName>
     </TypeIdentifier>
   </Class>

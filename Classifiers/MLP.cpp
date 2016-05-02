@@ -13,6 +13,7 @@ MLP::~MLP()
 
 void MLP::train(cv::Mat& trainingData, cv::Mat trainingLabels)
 {
+	assert(trainingData.rows == trainingLabels.rows);
 	cout << "\nWould you like to load MLP.xml? y/n\n";
 	std::string input;
 	cin >> input;
@@ -55,6 +56,7 @@ void MLP::train(cv::Mat& trainingData, cv::Mat trainingLabels)
 
 void MLP::predict(Mat &testData, Mat &testLabels,  Mat &result)
 {
+	assert(testData.rows == testLabels.rows);
 	cv::Mat response(1, 8, CV_32FC1);
 	cv::Mat predicted(testLabels.rows, 1, CV_32F);
 	for (int i = 0; i < testData.rows; i++) {

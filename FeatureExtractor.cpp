@@ -63,7 +63,7 @@ std::vector<full_object_detection> FeatureExtractor::detectFeatures(array2d<rgb_
 		shapes.push_back(pose_model(*cimg, faces[i]));
 	return shapes;
 }
-
+//converts landmarks from std::vector<dlib::full_object_detection> to std::vector<float>
 std::vector<float> FeatureExtractor::getFlattened(std::vector<dlib::full_object_detection> shapes)
 {
 	std::vector<float> flattened;
@@ -75,6 +75,7 @@ std::vector<float> FeatureExtractor::getFlattened(std::vector<dlib::full_object_
 	return flattened;
 }
 
+//returns a vector of differences between 2 vectors
 std::vector<float> FeatureExtractor::getDifference(std::vector<float> shapes1, std::vector<float> shapes2)
 {
 	std::vector<float> difference;
@@ -85,6 +86,7 @@ std::vector<float> FeatureExtractor::getDifference(std::vector<float> shapes1, s
 	return difference;
 }
 
+//converts std::vector<float> to string, used when saving data to file
 string FeatureExtractor::getFlattenedStr(std::vector<float> flattened)
 {
 	stringstream flt;
@@ -96,6 +98,7 @@ string FeatureExtractor::getFlattenedStr(std::vector<float> flattened)
 	return flt.str();
 }
 
+//debug function, prints vector<float> to console
 void FeatureExtractor::showFlattned(std::vector<float> flattened)
 {
 	for (int i = 0; i < flattened.size(); i++)

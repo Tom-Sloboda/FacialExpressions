@@ -13,6 +13,7 @@ Bayes::~Bayes()
 
 void Bayes::train(cv::Mat& trainingData, cv::Mat& trainingLabels)
 {
+	assert(trainingData.rows == trainingLabels.rows);
 	cout << "\nWould you like to load Bayes.xml? y/n\n";
 	std::string input;
 	cin >> input;
@@ -32,6 +33,7 @@ void Bayes::train(cv::Mat& trainingData, cv::Mat& trainingLabels)
 
 void Bayes::predict(Mat &testData, Mat &testLabels)
 {
+	assert(testData.rows == testData.rows);
 	cv::Mat predicted(testLabels.rows, 1, CV_32F);
 	for (int i = 0; i < testData.rows; i++)
 	{

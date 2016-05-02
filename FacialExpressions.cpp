@@ -18,17 +18,19 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	try
 	{
 		GUI GUI;
+		//allocates console
 		GUI.console();
 		FeatureExtractor FE;
 		ImgPreprocessor IP;
+		//Loads and preprocesses the dataseta
 		Loader LDR(&FE, &IP);
 		Capture CAP;
 		Classifiers CLS;
 		std::vector<std::vector<float>> trainingData;
 		std::vector<float> trainingLabels;
-		//std::cout << "1";
 		int wait;
 		
+		//counts the number of images of different classes loaded
 		int countArr[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 		for (int i = 0; i < LDR.labels.size(); i++)
 		{
@@ -39,6 +41,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			cout << i << " - " << countArr[i] << endl;
 		}
 
+		//divides the loaded data in half between training and test data
 		int INDEX = LDR.labels.size()/2;
 		for (int i = 0; i < LDR.labels.size()- INDEX; i++)
 		{
@@ -59,26 +62,30 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				testLabels.push_back(LDR.labels[i]);
 			}
 		}
-		std::vector<float> resultSVM;
-
+		//trains all of the classification algorithms
 		CLS.train(trainingData, trainingLabels);
+
+		//goes through testData to give calculate prediction accuracy
 		int successfullyPredicted = 0;
 		Mat testDataMat = CLS.vectorToMat(testData);
 		for (int i = 0; i < testLabels.size(); i++)
 		{
 			float res = CLS.predict(testDataMat.row(i));
-			cout << "Predicted: " << res << "Actual: " << testLabels[i] << endl;
+			cout << "Predicted: " << CLS.classToEmotion(res) << "Actual: " << CLS.classToEmotion(testLabels[i])  << "\n\n";
 			if (res == testLabels[i]) successfullyPredicted++;
 		}
 		cout << "Precision: " << (float)successfullyPredicted/testDataMat.rows << "\n\n";
 
-
+		//creates viewfinder window
 		HWND hwnd = GUI.createScrnCapWnd(hInstance);
+
 		Mat neutralFace, otherFace, combined;
 		array2d<rgb_pixel> dneutralFace, dotherFace;
 		Face *neutral = NULL, *other=NULL;
+		//main application loop
 		while (hwnd != NULL)
 		{
+			//check for keypress messages
 			MSG msg;
 			if (GetMessage(&msg, NULL, 0, 0) > 0)
 			{
@@ -122,11 +129,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 							IP.align(*other, *neutral);
 							imshow("Neutral Face", neutral->getLandmarkOverlay());
 							imshow("Other Face", other->getLandmarkOverlay());
-
+							//calculates the required height and width for the Mat which will combine both of the faces
 							int max_width = (neutral->mat.size().width > other->mat.size().width) ? neutral->mat.size().width : other->mat.size().width;
 							int max_height = (neutral->mat.size().height > other->mat.size().height) ? neutral->mat.size().height : other->mat.size().height;
 							Mat combined = Mat::zeros(max_height, max_width, other->mat.type());
-
+							//make both Mats the same size
 							Mat reshapedMat = Mat::zeros(max_height, max_width, other->mat.type());
 							neutral->mat.copyTo(reshapedMat(Rect(0, 0, neutral->mat.size().width, neutral->mat.size().height)));
 							neutral->mat = reshapedMat.clone();
@@ -135,11 +142,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 							other->mat.copyTo(reshapedMat(Rect(0, 0, other->mat.size().width, other->mat.size().height)));
 							other->mat = reshapedMat.clone();
 
+							//creates the overlayed images
 							cv::addWeighted(neutral->getLandmarkOverlay(), 0.5, other->getLandmarkOverlay(), 0.5, 0.0, combined);
 							imshow("Combined", combined);
 							waitKey(10);
 							std::vector<float> testData = FE.getDifference(neutral->landmarks, other->landmarks);
 							cv::Mat testDataMat(1, testData.size(), CV_32FC1, testData.data());
+							
 							cout << CLS.classToEmotion(CLS.predict(testDataMat)) << endl << endl;
 						}
 					}

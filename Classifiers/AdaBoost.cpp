@@ -13,6 +13,7 @@ AdaBoost::~AdaBoost()
 
 void AdaBoost::train(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels)
 {
+	assert(trainingData.size() == trainingLabels.size());
 	cv::Mat trainingDataMat = vectorToMat(trainingData);
 	cv::Mat trainingLabelsMat = vectorToMat(trainingLabels);
 
@@ -53,6 +54,7 @@ void AdaBoost::train(std::vector<std::vector<float>> trainingData, std::vector<f
 
 void AdaBoost::predict(std::vector<std::vector<float>> testData, std::vector<float> testLabels, std::vector<std::vector<float>> &result)
 {
+	assert(testData.size() == testLabels.size());
 	Mat predictions = Mat::zeros(testLabels.size(), 8, CV_32FC1);
 	for (int i = 0; i < testLabels.size(); i++)
 	{

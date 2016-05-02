@@ -26,7 +26,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	return 0;
 }
 
-
+//allocates console
 void GUI::console()
 {
 	AllocConsole();
@@ -35,6 +35,7 @@ void GUI::console()
 	freopen("conout$", "w", stderr);
 }
 
+//Creates viewfinder window
 HWND GUI::createScrnCapWnd(HINSTANCE hInstance)// LPSTR lpCmdLine, int nCmdShow)
 {
 	int nCmdShow = 1;

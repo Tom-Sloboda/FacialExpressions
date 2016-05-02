@@ -34,6 +34,7 @@ Face::Face(FeatureExtractor *FE, std::string img, float label)
 	Face::label = label;
 }
 
+//unused function, re-detects landmarks
 void Face::calcLandmarks(FeatureExtractor *FE)
 {
 	assign_image(Face::img, cv_image<bgr_pixel>(Face::mat));
@@ -43,6 +44,7 @@ void Face::calcLandmarks(FeatureExtractor *FE)
 	Face::label = label;
 }
 
+//displays Mat with landmarks overlayed
 void Face::showLandmarks()
 {
 	Mat landmark_overlay = Face::mat;
@@ -56,6 +58,7 @@ void Face::showLandmarks()
 	return;
 }
 
+//overlays and returns landmark text on top of Mat with face
 Mat Face::getLandmarkOverlay()
 {
 	Mat landmark_overlay; 

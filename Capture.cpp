@@ -11,13 +11,16 @@ Capture::~Capture()
 {
 }
 
+//returns the screenshot of the client area of an application as a cv::Mat
 Mat Capture::hwnd2mat(HWND hwnd) 
 {
 	Mat src = screenshot();
 	RECT clientrect;
 	GetClientRect(hwnd, &clientrect);
 
-	POINT pt = { 0,0 };	MapWindowPoints(hwnd, NULL, &pt, 1);	OffsetRect(&clientrect, pt.x, pt.y);
+	POINT pt = { 0,0 };
+	MapWindowPoints(hwnd, NULL, &pt, 1);
+	OffsetRect(&clientrect, pt.x, pt.y);
 
 	src = src(cv::Rect(clientrect.left, clientrect.top, clientrect.right - clientrect.left, clientrect.bottom - clientrect.top));
 	return src;

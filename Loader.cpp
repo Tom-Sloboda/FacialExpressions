@@ -29,10 +29,9 @@ Loader::Loader(FeatureExtractor *FE, ImgPreprocessor *IP)
 		labels.clear();
 		data.clear();
 		getAllDirectories(img_dir, &(directory_list));
-
-		//image_window  win;
 		
 		Mat f1, f2, combined;
+		//uncomment this to display images as they load
 		/*
 		namedWindow("Processing", WINDOW_AUTOSIZE);
 		namedWindow("Face1", WINDOW_AUTOSIZE);
@@ -58,6 +57,7 @@ Loader::Loader(FeatureExtractor *FE, ImgPreprocessor *IP)
 				Loader::IP->align(face, neutral_face);
 				data.push_back(FE->getDifference(neutral_face.landmarks, face.landmarks));
 				labels.push_back(0);
+				//uncomment this to display images as they load
 				/*
 				f1 = face.getLandmarkOverlay();
 				f2 = neutral_face.getLandmarkOverlay();
@@ -74,6 +74,7 @@ Loader::Loader(FeatureExtractor *FE, ImgPreprocessor *IP)
 				Loader::IP->align(face, neutral_face);
 				data.push_back(FE->getDifference(neutral_face.landmarks, face.landmarks));
 				labels.push_back(label);
+				//uncomment this to display images as they load
 				/*
 				f1 = face.getLandmarkOverlay();
 				f2 = neutral_face.getLandmarkOverlay();
@@ -98,7 +99,7 @@ Loader::Loader(FeatureExtractor *FE, ImgPreprocessor *IP)
 Loader::~Loader()
 {
 }
-
+//unused function leftover from when WinAp ws used to load files
 string Loader::getImgPath(string path)
 {
 	string img_name;
@@ -115,6 +116,7 @@ string Loader::getImgPath(string path)
 	return img_dir + img_name;
 }
 
+//reads the label file and returns the label contained within
 float Loader::readLabel(string path)
 {
 	if (!exists(path))
@@ -129,6 +131,7 @@ float Loader::readLabel(string path)
 	return label;
 }
 
+//finds all files with @extension and returns the list of paths in @file)list
 void Loader::findFilesRecursively(const path &directory, const std::string extension, std::vector<boost::filesystem::path> *file_list)
 {
 	if (!exists(directory)) 
@@ -205,6 +208,7 @@ void Loader::findFilesRecursively(LPCTSTR lpFolder, LPCTSTR lpFilePattern, std::
 }
 */
 
+//loads dataset from @filenames
 void Loader::loadProgress(string filename)
 {
 	string line;
@@ -225,7 +229,7 @@ void Loader::loadProgress(string filename)
 	savefile.close();
 }
 
-
+//saves dataset to @filename
 void Loader::saveProgress(string filename)
 {
 	std::ofstream savefile;
@@ -238,6 +242,7 @@ void Loader::saveProgress(string filename)
 	savefile.close();
 }
 
+//unused function
 void Loader::saveProgressCSV(string filename)
 {
 	std::ofstream savefile;
@@ -251,6 +256,7 @@ void Loader::saveProgressCSV(string filename)
 	savefile.close();
 }
 
+//converts a string to a vector<float> used when loading saved data
 std::vector<float> Loader::strToFloatVec(string in)
 {
 	//cout << "!!!strToFloatVec - " << in << "\n";
@@ -266,6 +272,7 @@ std::vector<float> Loader::strToFloatVec(string in)
 	return out;
 }
 
+//randomly shuffles data
 void Loader::randomizeData()
 {
 	srand(time(NULL));

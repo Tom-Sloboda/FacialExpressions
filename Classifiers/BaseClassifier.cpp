@@ -65,6 +65,7 @@ float BaseClassifier::evaluate(cv::Mat& predicted, cv::Mat& actual)
 	return (t * 1.0) / (t + f);
 }
 
+//returns all of the databelonging to @outputClass
 std::vector<std::vector<float>> BaseClassifier::getAllDataOfClass(std::vector<std::vector<float>> data, std::vector<float> labels, float outputClass)
 {
 	std::vector<std::vector<float>> outVector;
@@ -89,7 +90,7 @@ Mat BaseClassifier::convertMultiClassToSingleClassLabels(Mat labels, float class
 	return singleClassLabels;
 }
 
-
+//debug method, prints out a Mat
 void BaseClassifier::printMat(Mat mat)
 {
 	for (int i = 0; i < mat.rows; i++)
@@ -102,6 +103,7 @@ void BaseClassifier::printMat(Mat mat)
 	}
 }
 
+//converts the float class id to a string with the name of the emotion
 std::string BaseClassifier::classToEmotion(int n)
 {
 	switch (n)
@@ -127,6 +129,7 @@ std::string BaseClassifier::classToEmotion(int n)
 	}
 }
 
+//converts CV_32FC1 to CV_32SC1
 Mat BaseClassifier::convertFloatToIntMat(Mat mat)
 {
 	Mat intMat(mat.rows, mat.cols, CV_32SC1);
@@ -140,6 +143,7 @@ Mat BaseClassifier::convertFloatToIntMat(Mat mat)
 	return intMat;
 }
 
+//returns the index of the highest probability in a 1d Mat
 float BaseClassifier::getHighestProbability(Mat probability)
 {
 	int maxIndex = 0; float maxValue = 0;

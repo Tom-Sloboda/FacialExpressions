@@ -21,6 +21,7 @@ Classifiers::~Classifiers()
 
 void Classifiers::train(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels)
 {
+	assert(trainingData.size() == trainingLabels.size());
 	multiSvm.train(trainingData, trainingLabels);
 	boost.train(trainingData, trainingLabels);
 	bayes.train(vectorToMat(trainingData), vectorToMat(trainingLabels));
@@ -30,6 +31,7 @@ void Classifiers::train(std::vector<std::vector<float>> trainingData, std::vecto
 
 void Classifiers::predict(std::vector<std::vector<float>> testData, std::vector<float> testLabels)
 {
+	assert(testData.size() == testLabels.size());
 	Mat testDataMat = vectorToMat(testData);
 	std::vector<std::vector<float>> resultOverall;
 	std::vector<std::vector<float>> result0;

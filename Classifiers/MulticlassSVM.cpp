@@ -12,6 +12,7 @@ MulticlassSVM::~MulticlassSVM()
 
 void MulticlassSVM::train(std::vector<std::vector<float>> trainingData, std::vector<float> trainingLabels, float C, float gamma)
 {
+	assert(trainingData.size() == trainingLabels.size());
 	cv::Mat trainingDataMat = vectorToMat(trainingData);
 	cv::Mat trainingLabelsMat((trainingLabels.size()), 1, CV_32SC1);
 	for (int i = 0; i < trainingData.size(); i++)
@@ -47,6 +48,7 @@ void MulticlassSVM::train(std::vector<std::vector<float>> trainingData, std::vec
 
 void MulticlassSVM::predict(std::vector<std::vector<float>> testData, std::vector<float> testLabels, std::vector<float> &result)
 {
+	assert(testData.size() == testLabels.size());
 	FeatureExtractor FE;
 	for (int i = 0; i < testLabels.size(); i++)
 	{
