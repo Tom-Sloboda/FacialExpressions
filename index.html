@@ -31,29 +31,961 @@
 
       <section>
         <div id="title">
-          <h1>Facialexpressions</h1>
-          <p>Comparison of classification algorithms for the task of Facial Expression Recognition. Also includes real-time Facial Expression Recognition via screen capture (Dlib 18.18, OpenCV 2.4.11/3.1, SVM+MLP+AdaBoost+NBayes).</p>
+          <h1>Evaluation of Multiple Classification algorithms in the task of Facial Expression Recognition.</h1>
+          <p>Comparison of classification algorithms for the task of Facial Expression Recognition. Also includes real-time Facial Expression Recognition via screen capture.(LinearSVM+RbfSVM+MLP+AdaBoost+NBayes).</p>
           <hr>
           <span class="credits left">Project maintained by <a href="https://github.com/Tom-Sloboda">Tom-Sloboda</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
+  <h1 style='line-height:150%'><a name="_Toc449720696">A<span
+style='mso-spacerun:yes'>  </span>User Manual</a></h1>
 
-        <p>A  User Manual</p>
+<p class=MsoNormal style='line-height:150%'><o:p>&nbsp;</o:p></p>
 
-<p>Pre-requisites
-In order to use the system, the following is required:
-1.  Visual Studio 15 or newer
-2.  OpenCV 3.0 or newer
-3.  Dlib 18.18 or newer
-4.  Boost 1.58.0 or newer
-5.  CK+ dataset
-6.  Windows 7 or newer
-The system might run with older versions of said software, however, that is not guaranteed.</p>
+<h2 style='line-height:150%'><a name="_Toc449720697">Pre-requisites</a></h2>
 
-<p>Using the System
-To use the pre-compiled system, just run the executable. A console window will open up and you will be asked whether you would like to load the pre-processed dataset. The pre-processed dataset is stored in save.txt in the same folder as the executable.<br>
-Dataset
-The dataset itself resides in .\dataset\ and follows a specific directory structure. Firstly, it contains 2 folders – images and labels. Each of those contains a list of corresponding folders named S*** where *** is the number of the subject. Each subject (S***) folder contains folders containing image sequences or a label of a particular expression (e.g. \dataset\images\S032\005\ S032_005_00000001.png through to </p>
+<p class=MsoNormal style='line-height:150%'>In order to use the system, the
+following is required:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;line-height:150%;
+mso-list:l14 level1 lfo25'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Visual Studio 15 or newer</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l14 level1 lfo25'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>OpenCV 3.0 or newer</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l14 level1 lfo25'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Dlib 18.18 or newer</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l14 level1 lfo25'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Boost 1.58.0 or newer</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l14 level1 lfo25'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>CK+ dataset</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;line-height:150%;
+mso-list:l14 level1 lfo25'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Windows 7 or newer</p>
+
+<p class=MsoNormal style='line-height:150%'>The system might run with older
+versions of said software, however, that is not guaranteed.</p>
+
+<p class=MsoNormal style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<h2 style='line-height:150%'><a name="_Toc449720698">Using the System</a></h2>
+
+<p class=MsoNormal style='line-height:150%'>To use the pre-compiled system,
+just run the executable. A console window will open up and you will be asked
+whether you would like to load the pre-processed dataset. The pre-processed
+dataset is stored in <span style='color:#D02D00'>save.txt </span>in the same
+folder as the executable. <span style='mso-fareast-language:EN-GB;mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_1" o:spid="_x0000_i1038"
+ type="#_x0000_t75" style='width:213.75pt;height:70.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image041.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=285 height=94
+src="Manual_files/image041.png" v:shapes="Picture_x0020_1"><![endif]></span></p>
+
+<h3 style='line-height:150%'><a name="_Toc449720699">Dataset</a></h3>
+
+<p class=MsoNormal style='line-height:150%'>The dataset itself resides in <span
+style='font-size:9.5pt;line-height:150%;font-family:Consolas;mso-bidi-font-family:
+Consolas;color:#A31515;background:white;mso-highlight:white'>.\</span><span
+style='font-size:9.5pt;line-height:150%;font-family:Consolas;mso-bidi-font-family:
+Consolas;color:#D02D00;background:white;mso-highlight:white'>dataset</span><span
+style='font-size:9.5pt;line-height:150%;font-family:Consolas;mso-bidi-font-family:
+Consolas;color:#A31515;background:white;mso-highlight:white'>\</span><span
+style='font-size:9.5pt;line-height:150%;font-family:Consolas;mso-bidi-font-family:
+Consolas;color:#A31515'> </span><span style='font-size:9.5pt;line-height:150%;
+font-family:Consolas;mso-bidi-font-family:Consolas'>and </span>follows a specific
+directory structure. Firstly, it contains 2 folders – <span style='color:#D02D00'>images
+</span>and <span style='color:#D02D00'>labels</span>. Each of those contains a
+list of corresponding folders named <span style='color:#D02D00'>S*** </span>where
+*** is the number of the subject. Each subject (<span style='color:#D02D00'>S***</span>)
+folder contains folders containing image sequences or a label of a particular
+expression (e.g. <span style='color:#D02D00'>\dataset\images\S032\005\
+S032_005_00000001.png </span>through to <span style='color:#D02D00'>\dataset\images\S032\005\S032_005_00000015.png
+</span>whereas the corresponding label is stored in <span style='color:#D02D00'>\dataset\labels\S032\005\S032_005_00000016_emotion.txt</span>).</p>
+
+<p class=MsoNormal style='line-height:150%'>The CK+ dataset was used for the
+development of this software, which can be obtained from http://www.consortium.ri.cmu.edu/ckagree/</p>
+
+<h3 style='line-height:150%'><a name="_Toc449720700">Classification models</a></h3>
+
+<p class=MsoNormal style='line-height:150%'>After the dataset has been loaded,
+the software will prompt you for each of the classification algorithms whether
+you would like to train the model or load it from the corresponding XML file<span
+style='mso-fareast-language:EN-GB;mso-no-proof:yes'> (stored in the same folder
+as the executable).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-fareast-language:
+EN-GB;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_5"
+ o:spid="_x0000_i1037" type="#_x0000_t75" style='width:222.75pt;height:54.75pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image042.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=297 height=73
+src="Manual_files/image042.png" v:shapes="Picture_x0020_5"><![endif]></span></p>
+
+<h3 style='line-height:150%'><a name="_Toc449720701">Live testing</a></h3>
+
+<p class=MsoNormal style='line-height:150%'>Once everything is loaded a window
+with a transparent background will pop up. This window acts as a viewfinder.
+First, you have to select a neutral face and press the “N” key.</p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-fareast-language:
+EN-GB;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_6"
+ o:spid="_x0000_i1036" type="#_x0000_t75" style='width:264pt;height:204pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image043.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=352 height=272
+src="Manual_files/image043.png" v:shapes="Picture_x0020_6"><![endif]></span></p>
+
+<p class=MsoNormal style='line-height:150%'>After that you can select an image
+containing a facial expression and press “Spacebar”. The result will be
+displayed in the console.</p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-fareast-language:
+EN-GB;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_8"
+ o:spid="_x0000_i1035" type="#_x0000_t75" style='width:85.5pt;height:140.25pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image044.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=114 height=187
+src="Manual_files/image044.png" v:shapes="Picture_x0020_8"><![endif]></span></p>
+
+<p class=MsoNormal style='line-height:150%'>Alongside the console output the
+both pre-processed faces will be visible in separate windows, as well as,
+overlapped.</p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-fareast-language:
+EN-GB;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_9"
+ o:spid="_x0000_i1034" type="#_x0000_t75" style='width:348.75pt;height:128.25pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image045.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=465 height=171
+src="Manual_files/image045.png" v:shapes="Picture_x0020_9"><![endif]></span></p>
+
+<span style='font-size:11.0pt;line-height:150%;font-family:NimbusRomNo9L-Regu;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:
+NimbusRomNo9L-Regu;mso-ansi-language:EN-GB;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:18.0pt;
+mso-bidi-font-size:16.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:major-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:major-bidi;color:black;mso-themecolor:text1'><o:p>&nbsp;</o:p></span></p>
+
+<h1 style='line-height:150%'><a name="_Toc449720702">B<span
+style='mso-spacerun:yes'>  </span>Maintenance Manual</a></h1>
+
+<p class=MsoNormal style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<h2 style='line-height:150%'><a name="_Toc449720703">Pre-requisites</a></h2>
+
+<p class=MsoNormal style='line-height:150%'>In order to use the system, the
+following is required:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;line-height:150%;
+mso-list:l30 level1 lfo26'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Visual Studio 15 or newer</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l30 level1 lfo26'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>OpenCV 3.0 or newer</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l30 level1 lfo26'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Dlib 18.18 or newer</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l30 level1 lfo26'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Boost 1.58.0 or newer</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l30 level1 lfo26'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>CK+ dataset</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;line-height:150%;
+mso-list:l30 level1 lfo26'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Windows 7 or newer</p>
+
+<p class=MsoNormal style='line-height:150%'>The system might run with older
+versions of said software, however, that is not guaranteed.</p>
+
+<h2 style='line-height:150%'><a name="_Toc449720704">Set-up</a></h2>
+
+<p class=MsoNormal style='line-height:150%'>To compile the project you will
+need a machine running Windows 7 or newer (<i><span style='font-size:9.5pt;
+line-height:150%;font-family:Consolas;mso-bidi-font-family:Consolas;color:#880000;
+background:white;mso-highlight:white'>SetLayeredWindowAttributes</span></i><i><span
+style='font-size:9.5pt;line-height:150%;font-family:Consolas;mso-bidi-font-family:
+Consolas;color:#880000'>()</span></i> used inside the GUI class might behave
+differently on versions of Windows prior to 7). Additionally you will need to
+have Visual Studio 13 or newer (VS15 was used for the development of this
+project). After which you will need to set-up all of the required dependencies
+– OpenCV, Dlib and Boost. </p>
+
+<p class=MsoNormal style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<h3 style='line-height:150%'><a name="_Toc449720705">OpenCV</a></h3>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;line-height:150%;
+mso-list:l26 level1 lfo27'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Download the latest version of OpenCV from the
+official website (opencv.org) and extract it somewhere.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l26 level1 lfo27'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>In Visual Studio open the <i style='mso-bidi-font-style:
+normal'>Property Manager (View </i><i style='mso-bidi-font-style:normal'><span
+style='font-family:"MS Gothic";mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+minor-latin;mso-bidi-font-family:"MS Gothic"'>&#8227;</span> Property Pages)</i>
+for the project you would like to add OpenCV to.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l26 level1 lfo27'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Right click the build configuration you would
+like to use and click on <i style='mso-bidi-font-style:normal'>“Add New Project
+Property Sheet”</i></p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:150%'><span
+style='mso-fareast-language:EN-GB;mso-no-proof:yes'><span
+style='mso-spacerun:yes'> </span></span><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="Picture_x0020_10" o:spid="_x0000_s1028" type="#_x0000_t75" alt="Add a new Property Sheet"
+  style='position:absolute;left:0;text-align:left;margin-left:108.75pt;
+  margin-top:14.15pt;width:225pt;height:155.25pt;z-index:251656192;
+  visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:9pt;
+  mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+  mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+  mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+  mso-position-vertical-relative:text'>
+  <v:imagedata src="Manual_files/image046.jpg" o:title="Add a new Property Sheet"/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=145 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=300 height=1 src="Manual_files/image047.jpg"
+   alt="Add a new Property Sheet" v:shapes="Picture_x0020_10"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l26 level1 lfo27'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Click the <i style='mso-bidi-font-style:normal'>“C/C++
+&gt; General”</i> entry and under the “Additional Include Directories” add the
+path to your OpenCV include. <span style='mso-fareast-language:EN-GB;
+mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_11" o:spid="_x0000_i1033"
+ type="#_x0000_t75" alt="Add the include dir like this." style='width:375pt;
+ height:117pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image048.jpg" o:title="Add the include dir like this"/>
+</v:shape><![endif]--><![if !vml]><img width=500 height=156
+src="Manual_files/image048.jpg" alt="Add the include dir like this." v:shapes="Picture_x0020_11"><![endif]></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l26 level1 lfo27'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Next go to the “<i style='mso-bidi-font-style:
+normal'>Linker &gt; General”</i> and under the <i style='mso-bidi-font-style:
+normal'><span style='font-family:"Calibri",sans-serif;mso-bidi-font-family:
+Calibri'>“</span>Additional Library Directories</i><i style='mso-bidi-font-style:
+normal'><span style='font-family:"Calibri",sans-serif;mso-bidi-font-family:
+Calibri'>”</span></i> add the libs directory</p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:150%'><span
+style='mso-spacerun:yes'> </span><span style='mso-fareast-language:EN-GB;
+mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_12" o:spid="_x0000_i1032"
+ type="#_x0000_t75" alt="Add the library folder like this." style='width:357.75pt;
+ height:75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image049.jpg" o:title="Add the library folder like this"/>
+</v:shape><![endif]--><![if !vml]><img width=477 height=100
+src="Manual_files/image049.jpg" alt="Add the library folder like this." v:shapes="Picture_x0020_12"><![endif]></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;line-height:150%;
+mso-list:l26 level1 lfo27'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Next go to “Linker &gt; Input” and under
+“Additional Dependencies” specify the modules to use. For OpenCV 3.0+ only
+“opencv_world[version][d].lib” (replace [version] with 300 for OpenCV 3.0 or
+310 for 3.1.0; the [d] after [version] should be included for debug
+configurations and omitted for release – e.g opencv_world300d.lib for debug and
+opencv_world300.lib for release) should be included. </p>
+
+<p class=MsoNormal style='line-height:150%'>For more detailed information,
+please refer to the OpenCV website - <a
+href="http://docs.opencv.org/2.4/doc/tutorials/introduction/windows_visual_studio_Opencv/windows_visual_studio_Opencv.html">http://docs.opencv.org/2.4/doc/tutorials/introduction/windows_visual_studio_Opencv/windows_visual_studio_Opencv.html</a></p>
+
+<p class=MsoNormal style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<h3 style='line-height:150%'><a name="_Toc449720706">Dlib</a></h3>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;line-height:150%;
+mso-list:l9 level1 lfo28'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Download the latest version from dlib.org and
+extract it somewhere.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l9 level1 lfo28'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>In Visual Studio open the <i style='mso-bidi-font-style:
+normal'>Property Manager (View </i><i style='mso-bidi-font-style:normal'><span
+style='font-family:"MS Gothic";mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+minor-latin;mso-bidi-font-family:"MS Gothic"'>&#8227;</span> Property Pages)</i>
+for the project you would like to add Dlib to.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l9 level1 lfo28'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><!--[if gte vml 1]><o:wrapblock><v:shape id="Picture_x0020_14"
+  o:spid="_x0000_s1027" type="#_x0000_t75" alt="Add a new Property Sheet"
+  style='position:absolute;left:0;text-align:left;margin-left:97.5pt;
+  margin-top:35.3pt;width:225pt;height:155.25pt;z-index:251658240;visibility:visible;
+  mso-wrap-style:square;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+  mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+  mso-position-horizontal:absolute;mso-position-horizontal-relative:margin;
+  mso-position-vertical:absolute;mso-position-vertical-relative:text'>
+  <v:imagedata src="Manual_files/image046.jpg" o:title="Add a new Property Sheet"/>
+  <w:wrap type="topAndBottom" anchorx="margin"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=130 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=300 height=1 src="Manual_files/image047.jpg"
+   alt="Add a new Property Sheet" v:shapes="Picture_x0020_14"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+Right click the build configuration you would like to use and click on <i
+style='mso-bidi-font-style:normal'>“Add New Project Property Sheet”</i></p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l9 level1 lfo28'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Click the <i style='mso-bidi-font-style:normal'>“C/C++
+&gt; General”</i> entry and under the <i style='mso-bidi-font-style:normal'>“Additional
+Include Directories”</i> add the paths shown in the image below</p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:150%'><span
+style='mso-fareast-language:EN-GB;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_13" o:spid="_x0000_i1031" type="#_x0000_t75" style='width:432.75pt;
+ height:162.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image050.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=577 height=217
+src="Manual_files/image050.png" v:shapes="Picture_x0020_13"><![endif]></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l9 level1 lfo28'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Click the <i style='mso-bidi-font-style:normal'>“C/C++
+&gt; Preprocessor”</i> entry and under the <i style='mso-bidi-font-style:normal'>“Preprocessor
+Definitions”</i> add the 2 lines shown in the image below</p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:150%'><span
+style='mso-fareast-language:EN-GB;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_16" o:spid="_x0000_i1030" type="#_x0000_t75" style='width:435pt;
+ height:126pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image051.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=580 height=168
+src="Manual_files/image051.png" v:shapes="Picture_x0020_16"><![endif]></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l9 level1 lfo28'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Then you will have to copy the dlib folder and
+source.cpp to the root of your project as shown in the image below</p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoListParagraphCxSpLast style='line-height:150%'><span
+style='mso-fareast-language:EN-GB;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_18" o:spid="_x0000_i1029" type="#_x0000_t75" style='width:244.5pt;
+ height:245.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image052.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=326 height=327
+src="Manual_files/image052.png" v:shapes="Picture_x0020_18"><![endif]></span></p>
+
+<p class=MsoNormal style='line-height:150%'>More details available on their
+website - http://dlib.net/compile.html</p>
+
+<h3 style='line-height:150%'><a name="_Toc449720707">Boost</a></h3>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;line-height:150%;
+mso-list:l22 level1 lfo29'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Get the latest version from <a
+href="http://www.boost.org/">http://www.boost.org/</a></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l22 level1 lfo29'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>In Visual Studio open the <i style='mso-bidi-font-style:
+normal'>Property Manager (View </i><i style='mso-bidi-font-style:normal'><span
+style='font-family:"MS Gothic";mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+minor-latin;mso-bidi-font-family:"MS Gothic"'>&#8227;</span> Property Pages)</i>
+for the project you would like to add Boost to.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l22 level1 lfo29'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><!--[if gte vml 1]><o:wrapblock><v:shape id="Picture_x0020_19"
+  o:spid="_x0000_s1026" type="#_x0000_t75" alt="Add a new Property Sheet"
+  style='position:absolute;left:0;text-align:left;margin-left:97.5pt;
+  margin-top:35.3pt;width:225pt;height:155.25pt;z-index:251660288;visibility:visible;
+  mso-wrap-style:square;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+  mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+  mso-position-horizontal:absolute;mso-position-horizontal-relative:margin;
+  mso-position-vertical:absolute;mso-position-vertical-relative:text'>
+  <v:imagedata src="Manual_files/image046.jpg" o:title="Add a new Property Sheet"/>
+  <w:wrap type="topAndBottom" anchorx="margin"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=130 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=300 height=1 src="Manual_files/image047.jpg"
+   alt="Add a new Property Sheet" v:shapes="Picture_x0020_19"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+Right click the build configuration you would like to use and click on <i
+style='mso-bidi-font-style:normal'>“Add New Project Property Sheet”</i></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+150%;mso-list:l22 level1 lfo29'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Click the <i style='mso-bidi-font-style:normal'>“C/C++
+&gt; General”</i> entry and under the <i style='mso-bidi-font-style:normal'>“Additional
+Include Directories”</i> add the paths shown in the image below<span
+style='mso-fareast-language:EN-GB;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_21" o:spid="_x0000_i1028" type="#_x0000_t75" style='width:373.5pt;
+ height:116.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image053.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=498 height=155
+src="Manual_files/image053.png" v:shapes="Picture_x0020_21"><![endif]></span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;line-height:150%;
+mso-list:l22 level1 lfo29'><![if !supportLists]><span style='mso-fareast-font-family:
+NimbusRomNo9L-Regu'><span style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Next go to the “<i style='mso-bidi-font-style:
+normal'>Linker &gt; General”</i> and under the <i style='mso-bidi-font-style:
+normal'><span style='font-family:"Calibri",sans-serif;mso-bidi-font-family:
+Calibri'>“</span>Additional Library Directories</i><i style='mso-bidi-font-style:
+normal'><span style='font-family:"Calibri",sans-serif;mso-bidi-font-family:
+Calibri'>”</span></i> add the libs directory<span style='mso-fareast-language:
+EN-GB;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_20"
+ o:spid="_x0000_i1027" type="#_x0000_t75" style='width:434.25pt;height:99.75pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Manual_files/image054.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=579 height=133
+src="Manual_files/image054.png" v:shapes="Picture_x0020_20"><![endif]></span></p>
+
+<p class=MsoNormal style='line-height:150%'>For more details please refer to
+their website - <a
+href="http://www.boost.org/doc/libs/1_60_0/more/getting_started/windows.html">http://www.boost.org/doc/libs/1_60_0/more/getting_started/windows.html</a></p>
+
+<p class=MsoNormal style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<h3 style='line-height:150%'><a name="_Toc449720708">Summary</a></h3>
+
+<p class=MsoNormal style='line-height:150%'>After you have set-up all of the
+required libraries and have acquired the dataset or a savefile of a
+pre-processed version (save.txt). You should be able to compile and run the
+project.</p>
+
+<h2 style='line-height:150%'><a name="_Toc449720709">Porting to other OS</a></h2>
+
+<p class=MsoNormal style='line-height:150%'>The project was written with
+portability in mind. The only classes that are OS specific are – GUI and
+Capture and, as such would have to be rewritten. All of the libraries used
+support multiple operating systems and claim high adaptability. Here are some
+quotes from the library websites:</p>
+
+<p class=MsoNormal style='line-height:150%'><span style='background:white'>“Boost
+works on almost any modern operating system, including UNIX and Windows
+variants.” – www.boost.org<o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'>“The library is tested regularly on
+MS Windows, Linux, and Mac OS X systems. However, it should work on any POSIX
+system and has been used on Solaris, HPUX, and the BSDs.” – www.dlib.net</p>
+
+<p class=MsoNormal style='line-height:150%'>“It has C++, C, Python and Java
+interfaces and supports Windows, Linux, Mac OS, iOS and Android.” – <a
+href="http://www.opencv.org"><i style='mso-bidi-font-style:normal'>www.opencv.org</i></a></p>
+
+<p class=MsoNormal style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<h2 style='line-height:150%'><a name="_Toc449720710">File/Class list</a></h2>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insidev:none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Filename</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Class name</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Description</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>FacialExpressions.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>None (WinMain())</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Initialises all of the other subsystems.</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Runs a loop checking for input to facilitate the live testing part of
+  the project.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\Adaboost.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\Adaboost.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Adaboost</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Implements the AdaBoost classification algorithm.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\BaseClassifier.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\BaseClassifier.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>BaseClassifier</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>This is a base class inherited by all of the other classifiers.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\Bayes.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\Bayes.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Bayes</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Implements the Naïve Bayes classification algorithm.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Capture.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Capture.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Capture</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Implements the screen capture methods.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\Classifiers.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\Classifiers.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>A façade for all of the classification algorithms </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Face.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Face.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Face</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>A class that contains everything relevant to a face such as a Mat
+  object and it’s landmarks.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>FeatureExtractor.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>FeatureExtractor.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>FeatureExtractor</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Deals with detecting faces and extracting facial landmarks.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>GUI.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>GUI.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>GUI</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Implements the GUI.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>ImgPreprocessor.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>ImgPreprocessor.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>ImgPreprocessor</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Deals with image pre-processing.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\LinearSVM.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\LinearSVM.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>LinearSVM</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Implements 8 binary Support Vector Machines for multiclass
+  classification.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Loader.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Loader.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Loader</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Processes the dataset.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\MLP.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\MLP.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>MLP</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Implements Multi-layer Perceptron classifier.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;mso-yfti-lastrow:yes'>
+  <td width=200 valign=top style='width:150.25pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\MulticlassSVM.h</p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Classifiers\MulticlassSVM.cpp</p>
+  </td>
+  <td width=200 valign=top style='width:150.25pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>MulticlassSVM</p>
+  </td>
+  <td width=200 valign=top style='width:150.3pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'>Implements a multiclass SVM classifier.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<h2 style='line-height:150%'><a name="_Toc449720711">Known bugs</a></h2>
+
+<p class=MsoNormal style='line-height:150%'>There are a number of bugs present
+in the system at this moment, which are yet to be addressed:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;line-height:150%;
+mso-list:l2 level1 lfo33'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>In the live testing part of the application if
+two screenshots of the same neutral face are taken but the dimensions of the
+screen capture window differ between the two – the images will not align
+perfectly. I have put in quite a bit of time into trying to resolve this and
+have come to the conclusion that Dlib’s facial landmark extraction algorithm
+will return slightly different landmark positions depending on the dimensions
+of the input image. However, this should have minimal effect on the overall
+performance of the system. </p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;line-height:150%;
+mso-list:l2 level1 lfo33'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>If you attempt to take a screenshot while the
+screen capture window is moved outside of the screen region the following
+assertion will be triggered <i style='mso-bidi-font-style:normal'>“error:
+(-215) 0 &lt;= roi.x &amp;&amp; 0 &lt;= roi.width &amp;&amp; roi.x + roi.width
+&lt;= m.cols &amp;&amp; 0 &lt;= roi.y &amp;&amp; 0 &lt;= roi.height &amp;&amp;
+roi.y + roi.height &lt;= m.rows in function cv::Mat::Mat”<o:p></o:p></i></p>
+
+<p class=MsoNormal style='line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<h2 style='line-height:150%'><a name="_Toc449720712">Future development</a></h2>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;line-height:150%;
+mso-list:l25 level1 lfo34'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The main feature to be added in the future is
+automated facial expression recognition. That is, at this point the user has to
+select the neutral face and the face containing the facial expression
+themselves. In an automated version of this software both of those frames will
+have to be selected automatically. Which is a very difficult task in itself.</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;line-height:150%;
+mso-list:l25 level1 lfo34'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Another feature that could be added is the
+ability to work with multiple faces in the same image. The algorithm currently
+in place can be adjusted to detect multiple faces. After which those can be
+dealt with separately. The difficulty, however, lies in the fact that faces can
+move around. And since this algorithm requires a neutral face to be paired with
+the face showing an expression either some form of tracking needs to be in
+place or some form of facial recognition.</p>
+
+<span style='font-size:11.0pt;line-height:150%;font-family:NimbusRomNo9L-Regu;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:
+NimbusRomNo9L-Regu;mso-ansi-language:EN-GB;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+  
       </section>
 
     </div>
