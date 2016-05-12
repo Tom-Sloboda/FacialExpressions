@@ -1,10 +1,20 @@
-﻿Build started 29-Apr-16 04:35:41 PM.
+﻿Build started 06-May-16 11:21:00 AM.
      1>Project "C:\_Projects\FacialExpressions\FacialExpressions\FacialExpressions.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
          Creating "x64\Release\FacialEx.1EF8BCF4.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\opencv-3.1\opencv\build\include" /IC:\boost /IC:\DLIB\dlib\external /IC:\DLIB\dlib\external\zlib /IC:\DLIB\dlib\external\libjpeg /IC:\DLIB\dlib\external\libpng /IC:\DLIB /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _CRT_SECURE_NO_WARNINGS /D DLIB_JPEG_SUPPORT /D DLIB_PNG_SUPPORT /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc140.pdb" /Gd /TP /errorReport:prompt FacialExpressions.cpp
+         C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\opencv-3.1\opencv\build\include" /IC:\boost /IC:\DLIB\dlib\external /IC:\DLIB\dlib\external\zlib /IC:\DLIB\dlib\external\libjpeg /IC:\DLIB\dlib\external\libpng /IC:\DLIB /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _CRT_SECURE_NO_WARNINGS /D DLIB_JPEG_SUPPORT /D DLIB_PNG_SUPPORT /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc140.pdb" /Gd /TP /errorReport:prompt Capture.cpp Classifiers\BaseClassifier.cpp Face.cpp FacialExpressions.cpp FeatureExtractor.cpp GUI.cpp ImgPreprocessor.cpp Loader.cpp
+         Capture.cpp
+         BaseClassifier.cpp
+         Face.cpp
          FacialExpressions.cpp
+         FeatureExtractor.cpp
+         GUI.cpp
+     1>GUI.cpp(79): warning C4311: 'type cast': pointer truncation from 'HBRUSH' to 'LONG'
+     1>GUI.cpp(79): warning C4302: 'type cast': truncation from 'HBRUSH' to 'LONG'
+     1>GUI.cpp(86): warning C4244: '=': conversion from 'double' to 'BYTE', possible loss of data
+         ImgPreprocessor.cpp
+         Loader.cpp
          All outputs are up-to-date.
        Link:
          C:\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\_Projects\FacialExpressions\x64\Release\FacialExpressions.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\opencv-3.1\opencv\build\x64\vc14\bin" /LIBPATH:"C:\opencv-3.1\opencv\build\x64\vc14\lib" /LIBPATH:C:\boost\lib opencv_world310.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\_Projects\FacialExpressions\x64\Release\FacialExpressions.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\_Projects\FacialExpressions\x64\Release\FacialExpressions.lib" /MACHINE:X64 x64\Release\AdaBoost.obj
@@ -98,9 +108,9 @@
          x64\Release\FacialExpressions.obj
          x64\Release\MulticlassSVM.obj
          Generating code
-         214 of 10513 functions ( 2.0%) were compiled, the rest were copied from previous compilation.
+         210 of 10513 functions ( 2.0%) were compiled, the rest were copied from previous compilation.
            0 functions were new in current compilation
-           59 functions had inline decision re-evaluated but remain unchanged
+           72 functions had inline decision re-evaluated but remain unchanged
          Finished generating code
          FacialExpressions.vcxproj -> C:\_Projects\FacialExpressions\x64\Release\FacialExpressions.exe
        FinalizeBuildStatus:
@@ -110,4 +120,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:29.59
+Time Elapsed 00:02:35.55

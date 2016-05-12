@@ -1,0 +1,104 @@
+﻿Build started 09-May-16 10:20:02 AM.
+     1>Project "C:\_Projects\FacialExpressions\FacialExpressions\FacialExpressions.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Release\FacialEx.1EF8BCF4.tlog\unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       Link:
+         C:\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\_Projects\FacialExpressions\Release\FacialExpressions.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\opencv-3.1\opencv\build\x64\vc14\bin" /LIBPATH:"C:\opencv-3.1\opencv\build\x64\vc14\lib" /LIBPATH:C:\boost\lib opencv_world310.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\_Projects\FacialExpressions\Release\FacialExpressions.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\_Projects\FacialExpressions\Release\FacialExpressions.lib" /MACHINE:X86 /SAFESEH Release\AdaBoost.obj
+         Release\Bayes.obj
+         Release\BaseClassifier.obj
+         Release\Capture.obj
+         Release\Classifiers.obj
+         Release\source.obj
+         Release\jcapimin.obj
+         Release\jcapistd.obj
+         Release\jccoefct.obj
+         Release\jccolor.obj
+         Release\jcdctmgr.obj
+         Release\jchuff.obj
+         Release\jcinit.obj
+         Release\jcmainct.obj
+         Release\jcmarker.obj
+         Release\jcmaster.obj
+         Release\jcomapi.obj
+         Release\jcparam.obj
+         Release\jcphuff.obj
+         Release\jcprepct.obj
+         Release\jcsample.obj
+         Release\jdapimin.obj
+         Release\jdapistd.obj
+         Release\jdatadst.obj
+         Release\jdatasrc.obj
+         Release\jdcoefct.obj
+         Release\jdcolor.obj
+         Release\jddctmgr.obj
+         Release\jdhuff.obj
+         Release\jdinput.obj
+         Release\jdmainct.obj
+         Release\jdmarker.obj
+         Release\jdmaster.obj
+         Release\jdmerge.obj
+         Release\jdphuff.obj
+         Release\jdpostct.obj
+         Release\jdsample.obj
+         Release\jerror.obj
+         Release\jfdctflt.obj
+         Release\jfdctfst.obj
+         Release\jfdctint.obj
+         Release\jidctflt.obj
+         Release\jidctfst.obj
+         Release\jidctint.obj
+         Release\jidctred.obj
+         Release\jmemmgr.obj
+         Release\jmemnobs.obj
+         Release\jquant1.obj
+         Release\jquant2.obj
+         Release\jutils.obj
+         Release\png.obj
+         Release\pngerror.obj
+         Release\pngget.obj
+         Release\pngmem.obj
+         Release\pngpread.obj
+         Release\pngread.obj
+         Release\pngrio.obj
+         Release\pngrtran.obj
+         Release\pngrutil.obj
+         Release\pngset.obj
+         Release\pngtrans.obj
+         Release\pngwio.obj
+         Release\pngwrite.obj
+         Release\pngwtran.obj
+         Release\pngwutil.obj
+         Release\adler32.obj
+         Release\compress.obj
+         Release\crc32.obj
+         Release\deflate.obj
+         Release\gzclose.obj
+         Release\gzlib.obj
+         Release\gzread.obj
+         Release\gzwrite.obj
+         Release\infback.obj
+         Release\inffast.obj
+         Release\inflate.obj
+         Release\inftrees.obj
+         Release\trees.obj
+         Release\uncompr.obj
+         Release\zutil.obj
+         Release\Face.obj
+         Release\FeatureExtractor.obj
+         Release\GUI.obj
+         Release\ImgPreprocessor.obj
+         Release\LinearSVM.obj
+         Release\Loader.obj
+         Release\MLP.obj
+         Release\stdafx.obj
+         Release\FacialExpressions.obj
+         Release\MulticlassSVM.obj
+     1>opencv_world310.lib(opencv_world310.dll) : fatal error LNK1112: module machine type 'x64' conflicts with target machine type 'X86'
+     1>Done Building Project "C:\_Projects\FacialExpressions\FacialExpressions\FacialExpressions.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:14.21
